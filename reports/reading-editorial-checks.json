@@ -1,0 +1,17 @@
+{
+  "cases": 12,
+  "passed": true,
+  "uniqueArticles": 12,
+  "careerLinksObserved": 11,
+  "periodRelationsObserved": [
+    "natal-change",
+    "same-theme",
+    "responsibility-reputation",
+    "decade-friction-year-gain",
+    "decade-gain-year-friction"
+  ],
+  "beforeCharacters": 336952,
+  "afterCharacters": 255709,
+  "shorterPercent": 24.1,
+  "finished": "2026-11-06T04:44:41.589Z"
+}

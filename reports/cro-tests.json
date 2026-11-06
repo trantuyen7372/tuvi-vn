@@ -1,0 +1,8 @@
+{
+  "passed": false,
+  "checks": [],
+  "errors": [
+    "expect(locator).toBeVisible() failed\n\nLocator: getByText('Đại hạn 33–42 tuổi tại Điền Trạch và năm 2026 nhấn vào những chủ đề nào?', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" getByText('Đại hạn 33–42 tuổi tại Điền Trạch và năm 2026 nhấn vào những chủ đề nào?', { exact: true }) with timeout 5000ms\n  - waiting for getByText('Đại hạn 33–42 tuổi tại Điền Trạch và năm 2026 nhấn vào những chủ đề nào?', { exact: true })\n"
+  ],
+  "scope": "Browser payment responses intercepted; no real order or transfer"
+}

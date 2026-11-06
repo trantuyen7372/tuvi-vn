@@ -1,0 +1,10 @@
+{
+  "phase": "legacy",
+  "scope": "Local HTTP /api/preview, 40 different dates and 8 in flight; excludes internet/client rendering",
+  "requests": 40,
+  "concurrency": 8,
+  "medianMs": 1203.87,
+  "p95Ms": 2749.25,
+  "elapsedMs": 8303.61,
+  "finished": "2026-11-06T09:24:47.173Z"
+}

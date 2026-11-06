@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --giay: #fbf6ec; --muc: #2b2118; --son: #9b1c1c; --vien: #d9c7a3; }
+body { background: var(--giay); color: var(--muc); font-family: "Be Vietnam Pro", system-ui, sans-serif; }
+.font-serif { font-family: "Noto Serif", Georgia, serif; }
+.input { @apply w-full rounded-md border border-[#d9c7a3] bg-white px-3 py-2 text-base outline-none focus:border-son focus:ring-1 focus:ring-son; }
+.btn { @apply inline-flex items-center justify-center rounded-md bg-son px-5 py-2.5 font-semibold text-white hover:bg-son-light disabled:opacity-60; }
+.btn-outline { @apply inline-flex items-center justify-center rounded-md border border-son px-4 py-2 font-semibold text-son hover:bg-son hover:text-white; }
+.prose-tuvi h2 { @apply font-serif text-xl font-bold text-son mt-6 mb-2; }
+.prose-tuvi p { @apply mb-3 leading-relaxed; }
+.prose-tuvi ul { @apply list-disc pl-5 mb-3; }
+.prose-tuvi ol { @apply list-decimal pl-5 mb-3; }
+.prose-tuvi h3 { @apply font-serif text-lg font-bold mt-5 mb-2; }
+.prose-tuvi blockquote { @apply border-l-2 border-[#d9c7a3] pl-4 text-[#6b5b45] my-4; }
+.prose-tuvi a { text-decoration: underline; }
+.prose-tuvi h2 { scroll-margin-top: 20px; }
+@media print { .prose-tuvi h2,.prose-tuvi h3 { break-after: avoid; } .prose-tuvi p { orphans: 3; widows: 3; } }
+button:focus-visible, a:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--son); outline-offset: 3px; }
+.prose-tuvi { overflow-wrap: anywhere; }
+@media (max-width: 640px) { .btn, .btn-outline { min-height: 44px; } }
+@media print { .no-print { display: none !important; } body { background: white; } }

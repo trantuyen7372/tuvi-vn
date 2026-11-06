@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "checks": [
+    "warm hit",
+    "LRU eviction",
+    "changed file invalidation",
+    "oversized file bypass",
+    "deleted file rejection",
+    "failed decode retry",
+    "real month byte equivalence"
+  ],
+  "scope": "Đọc/giải nén và tra lời luận trên máy local, không phải tốc độ toàn trang hay tải đồng thời",
+  "iterations": 12,
+  "uncompressedUtf8Bytes": 43957334,
+  "cacheBudgetBufferBytes": 67108864,
+  "uncachedMedianMs": 129.506,
+  "warmCachedMedianMs": 0.069,
+  "finished": "2026-11-06T07:38:26.931Z",
+  "lookupCasesEquivalent": 5,
+  "lookupIterations": 7,
+  "lookupUncachedMedianMs": 767.924,
+  "lookupWarmMedianMs": 7.199
+}

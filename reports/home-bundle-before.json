@@ -1,0 +1,69 @@
+{
+  "scope": "Production JS chunks for home from client-reference/build manifests; gzip/Brotli calculated locally, not observed network encoding",
+  "chunks": [
+    {
+      "file": "static/chunks/3794-8ccaf3ad8a419c8d.js",
+      "raw": 241745,
+      "gzip": 67178,
+      "brotli": 54349
+    },
+    {
+      "file": "static/chunks/4bd1b696-e199e788e58acf79.js",
+      "raw": 203722,
+      "gzip": 64116,
+      "brotli": 54681
+    },
+    {
+      "file": "static/chunks/5050-4cc6ce5e487c4abc.js",
+      "raw": 178565,
+      "gzip": 50062,
+      "brotli": 39736
+    },
+    {
+      "file": "static/chunks/5942-faa2ee1bba1496c2.js",
+      "raw": 51687,
+      "gzip": 14606,
+      "brotli": 13113
+    },
+    {
+      "file": "static/chunks/9ca3580a-f73a45cb78ebd771.js",
+      "raw": 302540,
+      "gzip": 100124,
+      "brotli": 80411
+    },
+    {
+      "file": "static/chunks/app/layout-fd7ca46b06c8be90.js",
+      "raw": 2347,
+      "gzip": 1076,
+      "brotli": 959
+    },
+    {
+      "file": "static/chunks/app/page-cc4e6f912c0d9871.js",
+      "raw": 6435,
+      "gzip": 2352,
+      "brotli": 2083
+    },
+    {
+      "file": "static/chunks/main-app-bebceffbf19bae84.js",
+      "raw": 516,
+      "gzip": 225,
+      "brotli": 202
+    },
+    {
+      "file": "static/chunks/polyfills-42372ed130431b0a.js",
+      "raw": 112594,
+      "gzip": 39473,
+      "brotli": 35158
+    },
+    {
+      "file": "static/chunks/webpack-99e7b26d3a3b68e3.js",
+      "raw": 3347,
+      "gzip": 1671,
+      "brotli": 1478
+    }
+  ],
+  "raw": 1103498,
+  "gzip": 340883,
+  "brotli": 282170,
+  "finished": "2026-11-06T08:49:47.789Z"
+}

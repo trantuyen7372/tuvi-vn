@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "monthsMatched": 924,
+  "recordsMatched": 674976,
+  "indexHashesMatchAcrossLocalAndServer": true,
+  "existenceChecks": 924,
+  "hasReferenceFrameReads": 0,
+  "hasReferenceDecompressions": 0,
+  "storeAfterLookup": {
+    "format": "record-zstd-v1",
+    "ready": true,
+    "indexReads": 925,
+    "frameReads": 1,
+    "frameBytes": 15711,
+    "frameDecompressions": 1,
+    "indexes": 16,
+    "recordCacheBytes": 59881
+  },
+  "finished": "2026-11-06T09:21:37.531Z",
+  "localManifestSha256": "90285ed590c04efb1dd8f214038da85fe5baf1942073a6795a9708b87269d0dc",
+  "serverManifestSha256": "0e71680adb62002cf38b06144d99d2a865aab3ae6a98e8da877732ca0f50cf0c"
+}

@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+const directory=process.argv[2];
+if(!directory||!/^data\/[a-zA-Z0-9_-]+$/.test(directory))throw Error('Cần thư mục dữ liệu riêng bên trong data');
+const manifest=fs.readFileSync(path.join(directory,'manifest.json')),verification=JSON.parse(fs.readFileSync(path.join(directory,'verification.json'),'utf8'));
+if(!verification.verified||verification.months!==924||crypto.createHash('sha256').update(manifest).digest('hex')!==verification.manifestSha256)throw Error('Kho chưa đối chiếu xong');
+for(const [month,hash]of Object.entries(verification.indexSha256))if(crypto.createHash('sha256').update(fs.readFileSync(path.join(directory,month+'.index.json'))).digest('hex')!==hash)throw Error('Index thay đổi sau kiểm tra');
+const file='.env.local',before=fs.readFileSync(file,'utf8'),line='TUVI_DATASET_DIR='+directory;
+const after=/^TUVI_DATASET_DIR=.*$/m.test(before)?before.replace(/^TUVI_DATASET_DIR=.*$/gm,line):before.trimEnd()+'\n'+line+'\n';
+fs.writeFileSync(file+'.tmp-indexed',after,{mode:0o600});fs.renameSync(file+'.tmp-indexed',file);console.log('Đã chọn kho indexed được đối chiếu đầy đủ.');

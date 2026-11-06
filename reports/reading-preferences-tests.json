@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "checks": [
+    "Chỉ chủ bài tự động đã xong được cá nhân hóa",
+    "Giữ bài biên tập riêng và phiên bản tương lai",
+    "Không sửa bài mô hình ngoài hoặc bài có usage",
+    "Ghi chú an toàn, không thay URL/lượt/attempt/fingerprint",
+    "Xóa tùy chọn khôi phục bài tổng thể, không giữ ghi chú trong bản hoạt động"
+  ]
+}

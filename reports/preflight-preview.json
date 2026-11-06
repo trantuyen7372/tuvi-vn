@@ -1,0 +1,13 @@
+{
+  "mode": "preview",
+  "node": "23.11.0",
+  "datasetMonths": 924,
+  "datasetFormat": "record-zstd-v1",
+  "paymentsEnabled": false,
+  "readingEngine": "dataset",
+  "issues": [],
+  "warnings": [
+    "Chưa đủ cấu hình mở bán; chạy lại với --live để xem trường còn thiếu"
+  ],
+  "ready": true
+}

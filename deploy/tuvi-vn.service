@@ -1,0 +1,24 @@
+[Unit]
+Description=Tu Vi website
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/srv/tuvi-vn
+Environment=NODE_ENV=production
+Environment=NEXT_TELEMETRY_DISABLED=1
+ExecStart=/opt/tuvi-node/bin/node --env-file=/srv/tuvi-vn/.env.local /srv/tuvi-vn/node_modules/next/dist/bin/next start -H 127.0.0.1 -p 3100
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=720
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/srv/tuvi-vn/storage /srv/tuvi-vn/.next/cache
+
+[Install]
+WantedBy=multi-user.target

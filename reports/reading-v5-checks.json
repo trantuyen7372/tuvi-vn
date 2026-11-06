@@ -1,0 +1,109 @@
+{
+  "passed": true,
+  "newCases": 12,
+  "regressionCases": 12,
+  "uniqueArticles": 24,
+  "availableTransitions": [
+    "Khoa>Kỵ",
+    "Khoa>Lộc",
+    "Khoa>Quyền",
+    "Kỵ>Khoa",
+    "Kỵ>Lộc",
+    "Kỵ>Quyền",
+    "Lộc>Khoa",
+    "Lộc>Kỵ",
+    "Lộc>Quyền",
+    "Quyền>Khoa",
+    "Quyền>Kỵ",
+    "Quyền>Lộc"
+  ],
+  "displayedTransitions": [
+    "Khoa>Kỵ",
+    "Khoa>Lộc",
+    "Khoa>Quyền",
+    "Kỵ>Khoa",
+    "Kỵ>Lộc",
+    "Kỵ>Quyền",
+    "Lộc>Khoa",
+    "Lộc>Kỵ",
+    "Lộc>Quyền",
+    "Quyền>Khoa",
+    "Quyền>Kỵ",
+    "Quyền>Lộc"
+  ],
+  "examples": {
+    "Lộc>Kỵ": {
+      "case": "S01",
+      "year": 2036,
+      "age": 73,
+      "text": "**Bản mệnh và thời điểm:** Liêm Trinh hóa Lộc bản mệnh tại Nô Bộc, đồng thời Liêm Trinh hóa Kỵ đại hạn tại Nô Bộc gốc. Cách đọc ở Nô Bộc chuyển trọng tâm từ một mặt có điều kiện thuận sang điều cần tháo gỡ để điều kiện ấy tiếp tục phát huy. Cách phối hợp, phần việc và điều mỗi bên mong đợi đã được hiểu giống nhau chưa? Không coi hóa này xóa hóa kia."
+    },
+    "Khoa>Lộc": {
+      "case": "S01",
+      "year": 2029,
+      "age": 66,
+      "text": "**Bản mệnh và thời điểm:** Vũ Khúc hóa Khoa bản mệnh tại Tử Nữ, đồng thời Vũ Khúc hóa Lộc lưu niên tại Tử Nữ gốc. Cách đọc ở Tử Nữ chuyển trọng tâm từ kiến thức và cách làm được coi trọng sang việc sử dụng chúng để tạo một kết quả cụ thể. Nếu chủ đề con cái có liên quan, kỳ vọng và cách trao đổi giữa các thế hệ đang được điều chỉnh ra sao?"
+    },
+    "Kỵ>Lộc": {
+      "case": "S01",
+      "year": 2030,
+      "age": 67,
+      "text": "**Bản mệnh và thời điểm:** Thái Dương hóa Kỵ bản mệnh tại Phu Thê, đồng thời Thái Dương hóa Lộc lưu niên tại Phu Thê gốc. Cách đọc ở Phu Thê chuyển trọng tâm từ một điểm thường phải điều chỉnh sang điều kiện thuận hơn để thử cách tháo gỡ. Nếu đang có người đồng hành, hai bên đã thống nhất cách cùng quyết và chia trách nhiệm đến đâu? Không coi hóa này xóa hóa kia."
+    },
+    "Kỵ>Khoa": {
+      "case": "S02",
+      "year": 2024,
+      "age": 48,
+      "text": "**Bản mệnh và thời điểm:** Văn Khúc hóa Kỵ bản mệnh tại Phu Thê, đồng thời Văn Khúc hóa Khoa đại hạn tại Phu Thê gốc. Cách đọc ở Phu Thê chuyển trọng tâm từ một điểm khó sang việc hiểu rõ nguyên nhân, học thêm hoặc làm rõ thông tin để xử lý. Nếu đang có người đồng hành, hai bên đã thống nhất cách cùng quyết và chia trách nhiệm đến đâu? Không coi hóa này xóa hóa kia."
+    },
+    "Quyền>Kỵ": {
+      "case": "S02",
+      "year": 2044,
+      "age": 66,
+      "text": "**Bản mệnh và thời điểm:** Tham Lang hóa Quyền bản mệnh tại Quan Lộc, đồng thời Tham Lang hóa Kỵ đại hạn tại Quan Lộc gốc. Cách đọc ở Quan Lộc chuyển trọng tâm từ nhu cầu nắm vai trò sang giới hạn hoặc điều kiện khiến vai trò ấy khó thực hiện như mong muốn. Nếu còn tham gia công việc hoặc hoạt động chung, phần kinh nghiệm và điều kiện thực hiện đang phù hợp đến đâu? Không coi hóa này xóa hóa kia."
+    },
+    "Quyền>Lộc": {
+      "case": "S02",
+      "year": 2028,
+      "age": 50,
+      "text": "**Bản mệnh và thời điểm:** Tham Lang hóa Quyền bản mệnh tại Quan Lộc, đồng thời Tham Lang hóa Lộc lưu niên tại Quan Lộc gốc. Cách đọc ở Quan Lộc chuyển trọng tâm từ phần tự quyết và trách nhiệm sang cách dùng vai trò ấy để tạo kết quả có ích. Nếu vai trò thay đổi, phạm vi được quyết và phần việc phải chịu trách nhiệm đã rõ đến đâu?"
+    },
+    "Lộc>Quyền": {
+      "case": "S02",
+      "year": 2030,
+      "age": 52,
+      "text": "**Bản mệnh và thời điểm:** Vũ Khúc hóa Lộc bản mệnh tại Quan Lộc, đồng thời Vũ Khúc hóa Quyền lưu niên tại Quan Lộc gốc. Cách đọc ở Quan Lộc chuyển trọng tâm từ điều kiện thuận để tạo kết quả sang quyền chủ động và phần trách nhiệm khi thực hiện. Nếu vai trò thay đổi, phạm vi được quyết và phần việc phải chịu trách nhiệm đã rõ đến đâu?"
+    },
+    "Kỵ>Quyền": {
+      "case": "S03",
+      "year": 2029,
+      "age": 47,
+      "text": "**Bản mệnh và thời điểm:** Tham Lang hóa Kỵ bản mệnh tại Phụ Mẫu, đồng thời Tham Lang hóa Quyền lưu niên tại Phụ Mẫu gốc. Cách đọc ở Phụ Mẫu chuyển trọng tâm từ điều còn vướng sang nhu cầu chủ động xử lý và xác định trách nhiệm rõ hơn. Lời khuyên, sự hỗ trợ và quyền tự quyết đang được phân biệt như thế nào? Không coi hóa này xóa hóa kia."
+    },
+    "Quyền>Khoa": {
+      "case": "S04",
+      "year": 2027,
+      "age": 42,
+      "text": "**Bản mệnh và thời điểm:** Thiên Cơ hóa Quyền bản mệnh tại Huynh Đệ, đồng thời Thiên Cơ hóa Khoa lưu niên tại Huynh Đệ gốc. Cách đọc ở Huynh Đệ chuyển trọng tâm từ việc đứng ra quyết sang cách chứng minh năng lực và giải thích cơ sở của quyết định. Nếu có việc chung với anh chị em, cách hỗ trợ và giới hạn từng người đã rõ chưa?"
+    },
+    "Khoa>Kỵ": {
+      "case": "S06",
+      "year": 2045,
+      "age": 52,
+      "text": "**Bản mệnh và thời điểm:** Vũ Khúc hóa Khoa bản mệnh tại Tử Nữ, đồng thời Vũ Khúc hóa Kỵ đại hạn tại Tử Nữ gốc. Cách đọc ở Tử Nữ chuyển trọng tâm từ mặt coi trọng sự rõ ràng và chất lượng sang chỗ còn khác biệt cách hiểu hoặc cần kiểm tra lại. Nếu chủ đề con cái có liên quan, kỳ vọng và cách trao đổi giữa các thế hệ đang được điều chỉnh ra sao? Không coi hóa này xóa hóa kia."
+    },
+    "Khoa>Quyền": {
+      "case": "R03",
+      "year": 2028,
+      "age": 39,
+      "text": "**Bản mệnh và thời điểm:** Thái Âm hóa Khoa bản mệnh tại Thiên Di, đồng thời Thái Âm hóa Quyền lưu niên tại Thiên Di gốc. Cách đọc ở Thiên Di chuyển trọng tâm từ phần hiểu biết sang trách nhiệm lựa chọn, tổ chức hoặc hướng dẫn người khác thực hiện. Môi trường mới đang giúp năng lực được sử dụng ra sao, và cam kết với bên ngoài đã phù hợp chưa?"
+    },
+    "Lộc>Khoa": {
+      "case": "R05",
+      "year": 2020,
+      "age": 28,
+      "text": "**Bản mệnh và thời điểm:** Vũ Khúc hóa Lộc bản mệnh tại Tử Nữ, đồng thời Vũ Khúc hóa Khoa đại hạn tại Tử Nữ gốc. Cách đọc ở Tử Nữ chuyển trọng tâm từ điều kiện tạo thành quả sang cách làm rõ chất lượng, kiến thức và giá trị của phần đã làm. Nếu chủ đề con cái có liên quan, kỳ vọng và cách trao đổi giữa các thế hệ đang được điều chỉnh ra sao?"
+    }
+  },
+  "finished": "2026-11-06T07:00:53.338Z"
+}

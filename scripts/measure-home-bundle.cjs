@@ -1,0 +1,10 @@
+const fs=require('node:fs'),vm=require('node:vm'),path=require('node:path'),zlib=require('node:zlib');
+const phase=process.argv[2];if(!['before','after'].includes(phase))throw Error('before|after');
+const file=`reports/home-bundle-${phase}.json`;if(phase==='before'&&fs.existsSync(file))throw Error('Giữ bản đo trước');
+const context={};vm.runInNewContext(fs.readFileSync('.next/server/app/page_client-reference-manifest.js','utf8'),context);
+const modules=context.__RSC_MANIFEST['/page'].clientModules,build=JSON.parse(fs.readFileSync('.next/build-manifest.json'));
+const files=new Set([...build.rootMainFiles,...build.polyfillFiles]);
+for(const value of Object.values(modules))for(const chunk of value.chunks||[])if(chunk.endsWith('.js'))files.add(chunk);
+const chunks=[...files].sort().map(file=>{const bytes=fs.readFileSync(path.join('.next',file));return {file,raw:bytes.length,gzip:zlib.gzipSync(bytes).length,brotli:zlib.brotliCompressSync(bytes).length};});
+const result={scope:'Production JS chunks for home from client-reference/build manifests; gzip/Brotli calculated locally, not observed network encoding',chunks,raw:chunks.reduce((n,c)=>n+c.raw,0),gzip:chunks.reduce((n,c)=>n+c.gzip,0),brotli:chunks.reduce((n,c)=>n+c.brotli,0),finished:new Date().toISOString()};
+fs.writeFileSync(file,JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify({...result,chunks:chunks.length}));

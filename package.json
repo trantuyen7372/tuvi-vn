@@ -1,0 +1,42 @@
+{
+  "name": "tuvi-vn",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --webpack -p 3100",
+    "build": "next build --webpack",
+    "start": "next start -p 3100",
+    "typecheck": "tsc --noEmit",
+    "test:commerce": "node scripts/test-commerce.cjs",
+    "test:reading": "node scripts/test-reading.cjs",
+    "demo:payments": "node scripts/start-payment-demo.cjs",
+    "preflight": "node scripts/preflight.mjs",
+    "test:commerce:http": "node scripts/test-commerce-http.mjs",
+    "test:ui": "node scripts/test-ui.mjs",
+    "preview:customers": "node scripts/start-payment-demo.cjs --customers"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.4.0",
+    "@payos/node": "^2.0.5",
+    "iztro": "^2.5.8",
+    "next": "^16.4.3",
+    "qrcode": "^1.5.4",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "react-markdown": "^10.1.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^20",
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.0.0",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=22.15.0"
+  }
+}

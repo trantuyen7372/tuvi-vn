@@ -1,0 +1,37 @@
+import type { Metadata } from 'next';
+import './globals.css';
+import CustomerNavigation from '@/components/CustomerNavigation';
+import {SITE_ORIGIN,SITE_NAME} from '@/lib/seo';
+
+export const metadata: Metadata = {
+  metadataBase:new URL(SITE_ORIGIN),
+  title: {default:'Lập lá số Tử Vi miễn phí và luận giải | '+SITE_NAME,template:'%s | '+SITE_NAME},
+  description: 'Lập lá số Tử Vi Đẩu Số miễn phí, xem 12 cung, đại hạn, lưu niên và luận giải chi tiết.',
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="vi">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&family=Noto+Serif:wght@600;700&display=swap"
+        />
+      </head>
+      <body>
+        <header className="no-print border-b border-[#d9c7a3] bg-white/60">
+          <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+            <a href="/" className="mr-4 shrink-0 font-serif text-xl font-bold text-son">紫微 Tử Vi</a>
+            <nav aria-label="Điều hướng chính" className="flex flex-wrap justify-end gap-x-4 gap-y-2 text-sm text-[#6b5b45]"><a href="/#lap-la-so" className="hover:text-son">Lập lá số</a><a href="/bai-luan-mau" className="hover:text-son">Đọc thử</a><CustomerNavigation/><a href="/sao" className="hover:text-son">14 chính tinh</a><a href="/co-thu" className="hover:text-son">Cổ thư</a></nav>
+          </div>
+        </header>
+        {children}
+        <footer className="no-print mt-12 border-t border-[#d9c7a3] py-6 text-center text-xs text-[#8a7a62]">
+          <nav className="mb-3 flex flex-wrap justify-center gap-4"><a href="/chinh-sach/dieu-khoan">Điều khoản</a><a href="/chinh-sach/bao-mat">Bảo mật</a><a href="/chinh-sach/hoan-tien">Hoàn tiền</a><a href="/chinh-sach/gioi-thieu">Giới thiệu / liên hệ</a></nav>
+          An sao theo thư viện mã nguồn mở iztro (MIT). Cách cục, cổ thư và dữ liệu luận giải tham khảo dựa trên dự án ziwei-doushu (mã MIT; Ziwei Doushu Open Interpretation Dataset v4.0, CC BY 4.0). Nội dung mang tính tham khảo.
+        </footer>
+      </body>
+    </html>
+  );
+}

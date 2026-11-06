@@ -1,0 +1,7 @@
+import fs from 'node:fs';
+import {performance} from 'node:perf_hooks';
+const phase=process.argv[2];if(!['legacy','indexed'].includes(phase))throw Error('legacy|indexed');
+const base='http://localhost:3100',count=40,concurrency=8,cases=Array.from({length:count},(_,i)=>({name:'',calendar:'duong',gender:i%2?'nu':'nam',date:`${1950+(i*17)%77}-${String(1+(i*5)%12).padStart(2,'0')}-${String(1+(i*7)%28).padStart(2,'0')}`,hour:i%12,leap:false,year:2026}));
+async function run(input){const start=performance.now(),r=await fetch(base+'/api/preview',{method:'POST',headers:{Origin:base,'Content-Type':'application/json'},body:JSON.stringify({input})}),j=await r.json();if(!r.ok||!j.text)throw Error('Preview unavailable: '+r.status);return performance.now()-start;}
+await run(cases[0]);let next=0;const times=[],start=performance.now();await Promise.all(Array.from({length:concurrency},async()=>{while(next<count)times.push(await run(cases[next++]));}));const elapsed=performance.now()-start;
+times.sort((a,b)=>a-b);const result={phase,scope:'Local HTTP /api/preview, 40 different dates and 8 in flight; excludes internet/client rendering',requests:count,concurrency,medianMs:+times[Math.floor(count*.5)].toFixed(2),p95Ms:+times[Math.floor(count*.95)].toFixed(2),elapsedMs:+elapsed.toFixed(2),finished:new Date().toISOString()};fs.writeFileSync(`reports/preview-http-${phase}.json`,JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));

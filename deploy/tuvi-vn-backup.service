@@ -1,0 +1,15 @@
+[Unit]
+Description=Consistent SQLite backup for Tu Vi
+
+[Service]
+Type=oneshot
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/srv/tuvi-vn
+ExecStart=/opt/tuvi-node/bin/node --env-file=/srv/tuvi-vn/.env.local /srv/tuvi-vn/scripts/backup-db.mjs
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/srv/tuvi-vn/storage

@@ -1,0 +1,16 @@
+import fs from 'node:fs';import {chromium,expect} from '@playwright/test';
+const generated=process.argv.includes('--generated');
+const access=JSON.parse(fs.readFileSync(generated?'storage/customer-demo-access.json':'storage/editorial-preview.json','utf8'));
+const url=generated?access.readingUrl:access.url;
+if(new URL(url).origin!=='http://localhost:3100')throw Error('Chỉ mở bản local');
+const browser=await chromium.launch({channel:'chrome',headless:false});
+const page=await browser.newPage({viewport:{width:1280,height:900}});
+await page.goto(url,{waitUntil:'domcontentloaded'});
+await expect(page.getByRole('heading',{name:generated?'Tổng quan bản mệnh':/^1\. Nhìn tổng thể/,exact:generated})).toBeVisible();
+await page.screenshot({path:generated?'outputs/reading-review/generated-desktop.png':'outputs/ban-luan-doc-thu-desktop.png'});
+await page.getByText('Mục lục bài luận',{exact:true}).click();
+await page.getByRole('link',{name:generated?'Công danh, sự nghiệp':/^3\. Quan Lộc có Thất Sát/,exact:generated}).click();
+await page.screenshot({path:generated?'outputs/reading-review/generated-career.png':'outputs/ban-luan-doc-thu-noi-dung.png'});
+await page.evaluate(()=>window.scrollTo(0,0));await page.bringToFront();
+console.log('Đã mở bài đọc thử chuyên sâu trong Chrome: '+url);
+await new Promise(resolve=>browser.on('disconnected',resolve));

@@ -1,0 +1,51 @@
+{
+  "scope": "Production JS chunks for home from client-reference/build manifests; gzip/Brotli calculated locally, not observed network encoding",
+  "chunks": [
+    {
+      "file": "static/chunks/3794-8ccaf3ad8a419c8d.js",
+      "raw": 241745,
+      "gzip": 67178,
+      "brotli": 54349
+    },
+    {
+      "file": "static/chunks/4bd1b696-e199e788e58acf79.js",
+      "raw": 203722,
+      "gzip": 64116,
+      "brotli": 54681
+    },
+    {
+      "file": "static/chunks/app/layout-fd7ca46b06c8be90.js",
+      "raw": 2347,
+      "gzip": 1076,
+      "brotli": 959
+    },
+    {
+      "file": "static/chunks/app/page-3255b5344f46a561.js",
+      "raw": 9880,
+      "gzip": 3691,
+      "brotli": 3290
+    },
+    {
+      "file": "static/chunks/main-app-bebceffbf19bae84.js",
+      "raw": 516,
+      "gzip": 225,
+      "brotli": 202
+    },
+    {
+      "file": "static/chunks/polyfills-42372ed130431b0a.js",
+      "raw": 112594,
+      "gzip": 39473,
+      "brotli": 35158
+    },
+    {
+      "file": "static/chunks/webpack-d377bd9616479f7e.js",
+      "raw": 3332,
+      "gzip": 1667,
+      "brotli": 1479
+    }
+  ],
+  "raw": 574136,
+  "gzip": 177426,
+  "brotli": 150118,
+  "finished": "2026-11-06T09:11:03.186Z"
+}

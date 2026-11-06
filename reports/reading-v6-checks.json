@@ -1,0 +1,109 @@
+{
+  "passed": true,
+  "newCases": 12,
+  "regressionCases": 12,
+  "uniqueArticles": 24,
+  "availableTransitions": [
+    "Khoa>Kỵ",
+    "Khoa>Lộc",
+    "Khoa>Quyền",
+    "Kỵ>Khoa",
+    "Kỵ>Lộc",
+    "Kỵ>Quyền",
+    "Lộc>Khoa",
+    "Lộc>Kỵ",
+    "Lộc>Quyền",
+    "Quyền>Khoa",
+    "Quyền>Kỵ",
+    "Quyền>Lộc"
+  ],
+  "displayedTransitions": [
+    "Khoa>Kỵ",
+    "Khoa>Lộc",
+    "Khoa>Quyền",
+    "Kỵ>Khoa",
+    "Kỵ>Lộc",
+    "Kỵ>Quyền",
+    "Lộc>Khoa",
+    "Lộc>Kỵ",
+    "Lộc>Quyền",
+    "Quyền>Khoa",
+    "Quyền>Kỵ",
+    "Quyền>Lộc"
+  ],
+  "examples": {
+    "Lộc>Kỵ": {
+      "case": "S01",
+      "year": 2036,
+      "age": 73,
+      "text": "**Bản mệnh và thời điểm:** Liêm Trinh hóa Lộc bản mệnh tại Nô Bộc, đồng thời Liêm Trinh hóa Kỵ đại hạn tại Nô Bộc gốc. Cách đọc ở Nô Bộc chuyển trọng tâm từ một mặt có điều kiện thuận sang điều cần tháo gỡ để điều kiện ấy tiếp tục phát huy. Trong việc chung, phần việc và tiêu chuẩn kết quả cần được thống nhất; hợp ý ban đầu chưa bảo đảm phối hợp bền. Không coi hóa này xóa hóa kia."
+    },
+    "Khoa>Lộc": {
+      "case": "S01",
+      "year": 2029,
+      "age": 66,
+      "text": "**Bản mệnh và thời điểm:** Vũ Khúc hóa Khoa bản mệnh tại Tử Nữ, đồng thời Vũ Khúc hóa Lộc lưu niên tại Tử Nữ gốc. Cách đọc ở Tử Nữ chuyển trọng tâm từ kiến thức và cách làm được coi trọng sang việc sử dụng chúng để tạo một kết quả cụ thể. Nếu chủ đề con cái có liên quan, đọc qua cách trao đổi và chia trách nhiệm giữa các thế hệ, chưa suy ra một sự kiện sinh con."
+    },
+    "Kỵ>Lộc": {
+      "case": "S01",
+      "year": 2030,
+      "age": 67,
+      "text": "**Bản mệnh và thời điểm:** Thái Dương hóa Kỵ bản mệnh tại Phu Thê, đồng thời Thái Dương hóa Lộc lưu niên tại Phu Thê gốc. Cách đọc ở Phu Thê chuyển trọng tâm từ một điểm thường phải điều chỉnh sang điều kiện thuận hơn để thử cách tháo gỡ. Nếu đang có người đồng hành, trọng tâm là điều chỉnh cách cùng quyết và chia trách nhiệm; nếu độc thân, đọc như nhu cầu gắn bó về sau. Không coi hóa này xóa hóa kia."
+    },
+    "Kỵ>Khoa": {
+      "case": "S02",
+      "year": 2024,
+      "age": 48,
+      "text": "**Bản mệnh và thời điểm:** Văn Khúc hóa Kỵ bản mệnh tại Phu Thê, đồng thời Văn Khúc hóa Khoa đại hạn tại Phu Thê gốc. Cách đọc ở Phu Thê chuyển trọng tâm từ một điểm khó sang việc hiểu rõ nguyên nhân, học thêm hoặc làm rõ thông tin để xử lý. Nếu đang có người đồng hành, trọng tâm là điều chỉnh cách cùng quyết và chia trách nhiệm; nếu độc thân, đọc như nhu cầu gắn bó về sau. Không coi hóa này xóa hóa kia."
+    },
+    "Quyền>Kỵ": {
+      "case": "S02",
+      "year": 2044,
+      "age": 66,
+      "text": "**Bản mệnh và thời điểm:** Tham Lang hóa Quyền bản mệnh tại Quan Lộc, đồng thời Tham Lang hóa Kỵ đại hạn tại Quan Lộc gốc. Cách đọc ở Quan Lộc chuyển trọng tâm từ nhu cầu nắm vai trò sang giới hạn hoặc điều kiện khiến vai trò ấy khó thực hiện như mong muốn. Nếu còn tham gia công việc hoặc hoạt động chung, đọc qua cách sử dụng kinh nghiệm và điều kiện thực hiện phù hợp hiện tại. Không coi hóa này xóa hóa kia."
+    },
+    "Quyền>Lộc": {
+      "case": "S02",
+      "year": 2028,
+      "age": 50,
+      "text": "**Bản mệnh và thời điểm:** Tham Lang hóa Quyền bản mệnh tại Quan Lộc, đồng thời Tham Lang hóa Lộc lưu niên tại Quan Lộc gốc. Cách đọc ở Quan Lộc chuyển trọng tâm từ phần tự quyết và trách nhiệm sang cách dùng vai trò ấy để tạo kết quả có ích. Nếu vai trò công việc thay đổi, kết quả còn phụ thuộc phạm vi được quyết, nguồn lực và phần trách nhiệm thực sự được giao."
+    },
+    "Lộc>Quyền": {
+      "case": "S02",
+      "year": 2030,
+      "age": 52,
+      "text": "**Bản mệnh và thời điểm:** Vũ Khúc hóa Lộc bản mệnh tại Quan Lộc, đồng thời Vũ Khúc hóa Quyền lưu niên tại Quan Lộc gốc. Cách đọc ở Quan Lộc chuyển trọng tâm từ điều kiện thuận để tạo kết quả sang quyền chủ động và phần trách nhiệm khi thực hiện. Nếu vai trò công việc thay đổi, kết quả còn phụ thuộc phạm vi được quyết, nguồn lực và phần trách nhiệm thực sự được giao."
+    },
+    "Kỵ>Quyền": {
+      "case": "S03",
+      "year": 2029,
+      "age": 47,
+      "text": "**Bản mệnh và thời điểm:** Tham Lang hóa Kỵ bản mệnh tại Phụ Mẫu, đồng thời Tham Lang hóa Quyền lưu niên tại Phụ Mẫu gốc. Cách đọc ở Phụ Mẫu chuyển trọng tâm từ điều còn vướng sang nhu cầu chủ động xử lý và xác định trách nhiệm rõ hơn. Sự hỗ trợ của người lớn cần được đặt cạnh quyền tự quyết, nhất là khi lời khuyên và lựa chọn riêng chưa cùng hướng. Không coi hóa này xóa hóa kia."
+    },
+    "Quyền>Khoa": {
+      "case": "S04",
+      "year": 2027,
+      "age": 42,
+      "text": "**Bản mệnh và thời điểm:** Thiên Cơ hóa Quyền bản mệnh tại Huynh Đệ, đồng thời Thiên Cơ hóa Khoa lưu niên tại Huynh Đệ gốc. Cách đọc ở Huynh Đệ chuyển trọng tâm từ việc đứng ra quyết sang cách chứng minh năng lực và giải thích cơ sở của quyết định. Nếu có việc chung với anh chị em, mức hỗ trợ cần phù hợp khả năng từng người; quan hệ gần gũi không thay thế thỏa thuận rõ ràng."
+    },
+    "Khoa>Kỵ": {
+      "case": "S06",
+      "year": 2045,
+      "age": 52,
+      "text": "**Bản mệnh và thời điểm:** Vũ Khúc hóa Khoa bản mệnh tại Tử Nữ, đồng thời Vũ Khúc hóa Kỵ đại hạn tại Tử Nữ gốc. Cách đọc ở Tử Nữ chuyển trọng tâm từ mặt coi trọng sự rõ ràng và chất lượng sang chỗ còn khác biệt cách hiểu hoặc cần kiểm tra lại. Nếu chủ đề con cái có liên quan, đọc qua cách trao đổi và chia trách nhiệm giữa các thế hệ, chưa suy ra một sự kiện sinh con. Không coi hóa này xóa hóa kia."
+    },
+    "Khoa>Quyền": {
+      "case": "R03",
+      "year": 2028,
+      "age": 39,
+      "text": "**Bản mệnh và thời điểm:** Thái Âm hóa Khoa bản mệnh tại Thiên Di, đồng thời Thái Âm hóa Quyền lưu niên tại Thiên Di gốc. Cách đọc ở Thiên Di chuyển trọng tâm từ phần hiểu biết sang trách nhiệm lựa chọn, tổ chức hoặc hướng dẫn người khác thực hiện. Khi ra môi trường khác, khả năng thích nghi và cam kết với bên ngoài là điều kiện để năng lực được sử dụng lâu dài."
+    },
+    "Lộc>Khoa": {
+      "case": "R05",
+      "year": 2020,
+      "age": 28,
+      "text": "**Bản mệnh và thời điểm:** Vũ Khúc hóa Lộc bản mệnh tại Tử Nữ, đồng thời Vũ Khúc hóa Khoa đại hạn tại Tử Nữ gốc. Cách đọc ở Tử Nữ chuyển trọng tâm từ điều kiện tạo thành quả sang cách làm rõ chất lượng, kiến thức và giá trị của phần đã làm. Nếu chủ đề con cái có liên quan, đọc qua cách trao đổi và chia trách nhiệm giữa các thế hệ, chưa suy ra một sự kiện sinh con."
+    }
+  },
+  "finished": "2026-11-06T07:39:46.361Z"
+}

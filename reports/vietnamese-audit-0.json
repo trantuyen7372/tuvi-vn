@@ -1,0 +1,4674 @@
+{
+  "files": {
+    "1950-01.jsonl.zst": {
+      "signature": "6171261:1793863020033.3293",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4200,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1950-02.jsonl.zst": {
+      "signature": "2002092:1793861892690.8066",
+      "records": 672,
+      "fields": 8736,
+      "errors": {},
+      "examples": []
+    },
+    "1950-03.jsonl.zst": {
+      "signature": "6378589:1793863021802.7751",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4518,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1950-04.jsonl.zst": {
+      "signature": "2210720:1793861906629.6333",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": []
+    },
+    "1950-05.jsonl.zst": {
+      "signature": "6317346:1793863023831.687",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4516,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1950-06.jsonl.zst": {
+      "signature": "2180223:1793861918137.774",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": []
+    },
+    "1950-07.jsonl.zst": {
+      "signature": "6400559:1793863026137.5703",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4487,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1950-08.jsonl.zst": {
+      "signature": "2247590:1793861923661.9019",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1950-09.jsonl.zst": {
+      "signature": "6177421:1793863027971.406",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4377,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1950-10.jsonl.zst": {
+      "signature": "2258069:1793861929093.0784",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1950-11.jsonl.zst": {
+      "signature": "6195114:1793863029746.5073",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4345,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1950-12.jsonl.zst": {
+      "signature": "2321695:1793861933351.5396",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1951-01.jsonl.zst": {
+      "signature": "6377104:1793863031752.5234",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4482,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1951-02.jsonl.zst": {
+      "signature": "2094035:1793861937366.213",
+      "records": 672,
+      "fields": 8736,
+      "errors": {},
+      "examples": []
+    },
+    "1951-03.jsonl.zst": {
+      "signature": "6163157:1793863033562.8215",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4324,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1951-04.jsonl.zst": {
+      "signature": "2198811:1793861942703.5317",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": []
+    },
+    "1951-05.jsonl.zst": {
+      "signature": "6127456:1793863035608.852",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4301,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1951-06.jsonl.zst": {
+      "signature": "2215516:1793861946926.5344",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": []
+    },
+    "1951-07.jsonl.zst": {
+      "signature": "6193888:1793863037335.206",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4295,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1951-08.jsonl.zst": {
+      "signature": "2293084:1793861951426.3435",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1951-09.jsonl.zst": {
+      "signature": "5933446:1793863039045.2065",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4165,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1951-10.jsonl.zst": {
+      "signature": "2299464:1793861955893.939",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1951-11.jsonl.zst": {
+      "signature": "5944702:1793863040756.204",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4165,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1951-12.jsonl.zst": {
+      "signature": "2291250:1793861959815.4094",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1952-01.jsonl.zst": {
+      "signature": "6140014:1793863042906.3271",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4342,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1952-02.jsonl.zst": {
+      "signature": "2111601:1793861964185.5066",
+      "records": 696,
+      "fields": 9048,
+      "errors": {},
+      "examples": []
+    },
+    "1952-03.jsonl.zst": {
+      "signature": "6258844:1793863045549.5403",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4180,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1952-04.jsonl.zst": {
+      "signature": "2141355:1793861968840.8977",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": []
+    },
+    "1952-05.jsonl.zst": {
+      "signature": "6304203:1793863048309.9521",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4197,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1952-06.jsonl.zst": {
+      "signature": "2182767:1793861973002.3657",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": []
+    },
+    "1952-07.jsonl.zst": {
+      "signature": "6250208:1793863051314.2263",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4209,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1952-08.jsonl.zst": {
+      "signature": "2252944:1793861978036.7866",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1952-09.jsonl.zst": {
+      "signature": "6066237:1793863053482.644",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4100,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1952-10.jsonl.zst": {
+      "signature": "574635:1793862024446.787",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1952-11.jsonl.zst": {
+      "signature": "6066593:1793863055813.6804",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4077,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1952-12.jsonl.zst": {
+      "signature": "579935:1793862027905.2156",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1953-01.jsonl.zst": {
+      "signature": "6273840:1793863058024.3762",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4174,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1953-02.jsonl.zst": {
+      "signature": "560956:1793862030782.8433",
+      "records": 672,
+      "fields": 8736,
+      "errors": {},
+      "examples": []
+    },
+    "1953-03.jsonl.zst": {
+      "signature": "6319803:1793863059829.7778",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4299,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1953-04.jsonl.zst": {
+      "signature": "551914:1793862034035.3364",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": []
+    },
+    "1953-05.jsonl.zst": {
+      "signature": "6290188:1793863061542.9475",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4315,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1953-06.jsonl.zst": {
+      "signature": "555172:1793862037452.8577",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": []
+    },
+    "1953-07.jsonl.zst": {
+      "signature": "6311053:1793863063241.7024",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4316,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1953-08.jsonl.zst": {
+      "signature": "571156:1793862041575.621",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1953-09.jsonl.zst": {
+      "signature": "6104849:1793863064938.8699",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4173,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1953-10.jsonl.zst": {
+      "signature": "3952713:1793862081691.0447",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1953-11.jsonl.zst": {
+      "signature": "6146079:1793863066640.6667",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4172,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1953-12.jsonl.zst": {
+      "signature": "3918864:1793862089150.999",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1954-01.jsonl.zst": {
+      "signature": "6313451:1793863068602.8606",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4285,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1954-02.jsonl.zst": {
+      "signature": "3635911:1793862093809.7825",
+      "records": 672,
+      "fields": 8736,
+      "errors": {},
+      "examples": []
+    },
+    "1954-03.jsonl.zst": {
+      "signature": "6333733:1793863070594.305",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4272,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1954-04.jsonl.zst": {
+      "signature": "3881181:1793862098601.694",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": []
+    },
+    "1954-05.jsonl.zst": {
+      "signature": "6338843:1793863072516.707",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4232,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1954-06.jsonl.zst": {
+      "signature": "3875913:1793862107684.3274",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": []
+    },
+    "1954-07.jsonl.zst": {
+      "signature": "6302255:1793863074626.7043",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4249,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1954-08.jsonl.zst": {
+      "signature": "4037889:1793862114469.1555",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1954-09.jsonl.zst": {
+      "signature": "6087736:1793863076490.0583",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4123,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1954-10.jsonl.zst": {
+      "signature": "3995100:1793862118716.7683",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1954-11.jsonl.zst": {
+      "signature": "6078860:1793863078699.1257",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4107,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1954-12.jsonl.zst": {
+      "signature": "4052024:1793862125540.6958",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1955-01.jsonl.zst": {
+      "signature": "6294657:1793863080631.125",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4231,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1955-02.jsonl.zst": {
+      "signature": "3626922:1793862135359.4954",
+      "records": 672,
+      "fields": 8736,
+      "errors": {},
+      "examples": []
+    },
+    "1955-03.jsonl.zst": {
+      "signature": "6304240:1793863082541.8284",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4341,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1955-04.jsonl.zst": {
+      "signature": "3891697:1793862141515.3027",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": []
+    },
+    "1955-05.jsonl.zst": {
+      "signature": "6280679:1793863084436.188",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4429,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1955-06.jsonl.zst": {
+      "signature": "3869305:1793862145552.3909",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": []
+    },
+    "1955-07.jsonl.zst": {
+      "signature": "6342144:1793863087272.7463",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4435,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1955-08.jsonl.zst": {
+      "signature": "4095191:1793862149281.535",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1955-09.jsonl.zst": {
+      "signature": "6108652:1793863089975.5737",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4275,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1955-10.jsonl.zst": {
+      "signature": "4032227:1793862153423.3394",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1955-11.jsonl.zst": {
+      "signature": "6118175:1793863092477.3381",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4215,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1955-12.jsonl.zst": {
+      "signature": "4009758:1793862158120.8481",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1956-01.jsonl.zst": {
+      "signature": "6318730:1793863095213.738",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4383,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1956-02.jsonl.zst": {
+      "signature": "3784188:1793862164163.2527",
+      "records": 696,
+      "fields": 9048,
+      "errors": {},
+      "examples": []
+    },
+    "1956-03.jsonl.zst": {
+      "signature": "6224792:1793863097312.8142",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4195,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1956-04.jsonl.zst": {
+      "signature": "4006878:1793862168874.5874",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": []
+    },
+    "1956-05.jsonl.zst": {
+      "signature": "6173854:1793863099706.7195",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4174,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1956-06.jsonl.zst": {
+      "signature": "4042468:1793862174477.1714",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": []
+    },
+    "1956-07.jsonl.zst": {
+      "signature": "6236646:1793863102050.3057",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4158,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1956-08.jsonl.zst": {
+      "signature": "4263662:1793862182074.3762",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1956-09.jsonl.zst": {
+      "signature": "6001303:1793863104556.7239",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4053,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1956-10.jsonl.zst": {
+      "signature": "4274554:1793862187086.6614",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1956-11.jsonl.zst": {
+      "signature": "6026265:1793863106243.4165",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4045,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1956-12.jsonl.zst": {
+      "signature": "4134109:1793862193147.7551",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1957-01.jsonl.zst": {
+      "signature": "6176920:1793863108184.1282",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4209,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1957-02.jsonl.zst": {
+      "signature": "3713187:1793862197420.9905",
+      "records": 672,
+      "fields": 8736,
+      "errors": {},
+      "examples": []
+    },
+    "1957-03.jsonl.zst": {
+      "signature": "6300440:1793863110342.2117",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4514,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1957-04.jsonl.zst": {
+      "signature": "3908298:1793862203835.602",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": []
+    },
+    "1957-05.jsonl.zst": {
+      "signature": "6232223:1793863112220.8977",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4533,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1957-06.jsonl.zst": {
+      "signature": "3925444:1793862209520.0022",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": []
+    },
+    "1957-07.jsonl.zst": {
+      "signature": "6177100:1793863114622.7917",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4511,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1957-08.jsonl.zst": {
+      "signature": "4091689:1793862213114.8464",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1957-09.jsonl.zst": {
+      "signature": "6082130:1793863118087.721",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4350,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1957-10.jsonl.zst": {
+      "signature": "4084260:1793862217853.4702",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1957-11.jsonl.zst": {
+      "signature": "6031814:1793863120305.8374",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4378,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1957-12.jsonl.zst": {
+      "signature": "4080310:1793862222554.0735",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1958-01.jsonl.zst": {
+      "signature": "6274015:1793863122377.0493",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4532,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1958-02.jsonl.zst": {
+      "signature": "3503586:1793862228816.0276",
+      "records": 672,
+      "fields": 8736,
+      "errors": {},
+      "examples": []
+    },
+    "1958-03.jsonl.zst": {
+      "signature": "6335787:1793863124237.2449",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4385,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1958-04.jsonl.zst": {
+      "signature": "3757685:1793862233717.6138",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": []
+    },
+    "1958-05.jsonl.zst": {
+      "signature": "6355754:1793863126080.6082",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4441,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1958-06.jsonl.zst": {
+      "signature": "3708151:1793862237753.6262",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": []
+    },
+    "1958-07.jsonl.zst": {
+      "signature": "6349147:1793863127926.0442",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4422,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1958-08.jsonl.zst": {
+      "signature": "3823136:1793862241502.7231",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1958-09.jsonl.zst": {
+      "signature": "6119616:1793863130219.3962",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4244,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1958-10.jsonl.zst": {
+      "signature": "3964680:1793862245639.1272",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1958-11.jsonl.zst": {
+      "signature": "6186670:1793863132121.5603",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4274,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1958-12.jsonl.zst": {
+      "signature": "3875627:1793862252211.7488",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1959-01.jsonl.zst": {
+      "signature": "6399871:1793863134284.4792",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4417,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1959-02.jsonl.zst": {
+      "signature": "3598930:1793862257484.0176",
+      "records": 672,
+      "fields": 8736,
+      "errors": {},
+      "examples": []
+    },
+    "1959-03.jsonl.zst": {
+      "signature": "6198500:1793863136233.778",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4211,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1959-04.jsonl.zst": {
+      "signature": "3808284:1793862261592.7522",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": []
+    },
+    "1959-05.jsonl.zst": {
+      "signature": "6163464:1793863138033.7424",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4193,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1959-06.jsonl.zst": {
+      "signature": "3817534:1793862265697.484",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": []
+    },
+    "1959-07.jsonl.zst": {
+      "signature": "6185428:1793863139828.0503",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4204,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1959-08.jsonl.zst": {
+      "signature": "3990488:1793862269989.9219",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1959-09.jsonl.zst": {
+      "signature": "5967676:1793863141741.225",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4041,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1959-10.jsonl.zst": {
+      "signature": "3910445:1793862274856.8416",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1959-11.jsonl.zst": {
+      "signature": "5942555:1793863143552.9375",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4019,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1959-12.jsonl.zst": {
+      "signature": "3968818:1793862280633.5396",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1960-01.jsonl.zst": {
+      "signature": "6186836:1793863145731.8757",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4219,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1960-02.jsonl.zst": {
+      "signature": "3774886:1793862286095.4001",
+      "records": 696,
+      "fields": 9048,
+      "errors": {},
+      "examples": []
+    },
+    "1960-03.jsonl.zst": {
+      "signature": "6341381:1793863148012.1292",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4482,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1960-04.jsonl.zst": {
+      "signature": "3911234:1793862290473.2769",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": []
+    },
+    "1960-05.jsonl.zst": {
+      "signature": "6260692:1793863150178.099",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4506,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1960-06.jsonl.zst": {
+      "signature": "3883761:1793862295028.0503",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": []
+    },
+    "1960-07.jsonl.zst": {
+      "signature": "6333190:1793863152267.3613",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4464,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1960-08.jsonl.zst": {
+      "signature": "3993484:1793862299889.2861",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1960-09.jsonl.zst": {
+      "signature": "6170900:1793863153991.5137",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4395,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1960-10.jsonl.zst": {
+      "signature": "3980256:1793862434392.3337",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1960-11.jsonl.zst": {
+      "signature": "6157644:1793863155937.7942",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4363,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1960-12.jsonl.zst": {
+      "signature": "4051443:1793862439614.4658",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1961-01.jsonl.zst": {
+      "signature": "6342715:1793863158707.91",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4496,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1961-02.jsonl.zst": {
+      "signature": "3644893:1793862446269.705",
+      "records": 672,
+      "fields": 8736,
+      "errors": {},
+      "examples": []
+    },
+    "1961-03.jsonl.zst": {
+      "signature": "6129263:1793863161993.5942",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4341,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1961-04.jsonl.zst": {
+      "signature": "3945967:1793862451164.5164",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": []
+    },
+    "1961-05.jsonl.zst": {
+      "signature": "6080614:1793863164523.1924",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 4331,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1961-06.jsonl.zst": {
+      "signature": "3903645:1793862454343.5427",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": []
+    },
+    "1961-07.jsonl.zst": {
+      "signature": "6117043:1793863166846.295",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14096,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1961-08.jsonl.zst": {
+      "signature": "325104:1793861336426.891",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1961-09.jsonl.zst": {
+      "signature": "5946891:1793863169135.9822",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13645,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1961-10.jsonl.zst": {
+      "signature": "327661:1793861363998.3162",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1961-11.jsonl.zst": {
+      "signature": "5907399:1793863171330.0547",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13607,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1961-12.jsonl.zst": {
+      "signature": "323165:1793861321498.1753",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": []
+    },
+    "1962-01.jsonl.zst": {
+      "signature": "6079235:1793863173305.3452",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14080,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1962-03.jsonl.zst": {
+      "signature": "6334352:1793863175354.7007",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13925,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1962-05.jsonl.zst": {
+      "signature": "6295660:1793863178854.7568",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13945,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1962-07.jsonl.zst": {
+      "signature": "6314162:1793863182632.6382",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13974,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1962-09.jsonl.zst": {
+      "signature": "6095284:1793863184824.0544",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13512,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1962-11.jsonl.zst": {
+      "signature": "6089782:1793863186979.2273",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13508,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1963-01.jsonl.zst": {
+      "signature": "6233879:1793863189181.0398",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13926,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1963-03.jsonl.zst": {
+      "signature": "6242661:1793863191431.3955",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14143,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1963-05.jsonl.zst": {
+      "signature": "6256192:1793863193861.509",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14134,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1963-07.jsonl.zst": {
+      "signature": "6299149:1793863196211.3906",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14118,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1963-09.jsonl.zst": {
+      "signature": "6142947:1793863198307.4775",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13676,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1963-11.jsonl.zst": {
+      "signature": "6129855:1793863200350.4648",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13662,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1964-01.jsonl.zst": {
+      "signature": "6330126:1793863202732.251",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14092,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1964-03.jsonl.zst": {
+      "signature": "6344677:1793863204943.225",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14097,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1964-05.jsonl.zst": {
+      "signature": "6284338:1793863206840.2913",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14057,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1964-07.jsonl.zst": {
+      "signature": "6335337:1793863209182.2258",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14081,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1964-09.jsonl.zst": {
+      "signature": "6119425:1793863210965.0808",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13614,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1964-11.jsonl.zst": {
+      "signature": "6044527:1793863212817.1938",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13626,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1965-01.jsonl.zst": {
+      "signature": "6277171:1793863214834.0286",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14034,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1965-03.jsonl.zst": {
+      "signature": "6357873:1793863216767.1294",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14159,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1965-05.jsonl.zst": {
+      "signature": "6334022:1793863219066.479",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14163,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1965-07.jsonl.zst": {
+      "signature": "6331273:1793863221046.841",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14182,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1965-09.jsonl.zst": {
+      "signature": "6120907:1793863224423.4512",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13780,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1965-11.jsonl.zst": {
+      "signature": "6152960:1793863229984.2368",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13740,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1966-01.jsonl.zst": {
+      "signature": "6242574:1793863233248.1833",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14243,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1966-03.jsonl.zst": {
+      "signature": "6257956:1793863235674.7556",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13960,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1966-05.jsonl.zst": {
+      "signature": "6225551:1793863238101.5642",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13976,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1966-07.jsonl.zst": {
+      "signature": "6232988:1793863240833.3032",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13980,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1966-09.jsonl.zst": {
+      "signature": "6087279:1793863244273.1838",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13537,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1966-11.jsonl.zst": {
+      "signature": "6063896:1793863247238.2214",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13491,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1967-01.jsonl.zst": {
+      "signature": "6213574:1793863250086.5732",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13966,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1967-03.jsonl.zst": {
+      "signature": "6295135:1793863254214.1108",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14294,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1967-05.jsonl.zst": {
+      "signature": "6227021:1793863258106.9634",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14201,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1967-07.jsonl.zst": {
+      "signature": "6226808:1793863261453.65",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14284,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1967-09.jsonl.zst": {
+      "signature": "6070997:1793863264440.904",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13756,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1967-11.jsonl.zst": {
+      "signature": "6054757:1793863267267.4617",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13766,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1968-01.jsonl.zst": {
+      "signature": "6226788:1793863270602.3662",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14226,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1968-03.jsonl.zst": {
+      "signature": "6305076:1793863272998.8289",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14183,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1968-05.jsonl.zst": {
+      "signature": "6274106:1793863275481.3982",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14167,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1968-07.jsonl.zst": {
+      "signature": "6279074:1793863277852.3218",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14254,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1968-09.jsonl.zst": {
+      "signature": "6168723:1793863279865.1362",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13773,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1968-11.jsonl.zst": {
+      "signature": "6148991:1793863281658.7632",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13735,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1969-01.jsonl.zst": {
+      "signature": "6397752:1793863283639.6504",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14268,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1969-03.jsonl.zst": {
+      "signature": "6229959:1793863285633.444",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14018,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1969-05.jsonl.zst": {
+      "signature": "6204033:1793863288692.071",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13974,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1969-07.jsonl.zst": {
+      "signature": "6214968:1793863291379.8586",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14006,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1969-09.jsonl.zst": {
+      "signature": "5981491:1793863293332.6248",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13553,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1969-11.jsonl.zst": {
+      "signature": "5955403:1793863295444.1191",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13543,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1970-01.jsonl.zst": {
+      "signature": "6132789:1793863297327.2678",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14003,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1970-03.jsonl.zst": {
+      "signature": "6415006:1793863299574.6147",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14314,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1970-05.jsonl.zst": {
+      "signature": "6342416:1793863301583.4575",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14304,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1970-07.jsonl.zst": {
+      "signature": "6386066:1793863303716.8474",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14299,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1970-09.jsonl.zst": {
+      "signature": "6185965:1793863305610.0452",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13824,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1970-11.jsonl.zst": {
+      "signature": "6201466:1793863307616.6243",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13841,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1971-01.jsonl.zst": {
+      "signature": "6317702:1793863309687.0598",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14314,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1971-03.jsonl.zst": {
+      "signature": "6152436:1793863311759.2505",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14107,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1971-05.jsonl.zst": {
+      "signature": "6100726:1793863314086.8835",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14071,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1971-07.jsonl.zst": {
+      "signature": "6162504:1793863316067.25",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14126,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1971-09.jsonl.zst": {
+      "signature": "5976480:1793863317931.8933",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13646,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1971-11.jsonl.zst": {
+      "signature": "5971845:1793863319823.0144",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13651,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1972-01.jsonl.zst": {
+      "signature": "6041802:1793863321698.5068",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14046,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1972-03.jsonl.zst": {
+      "signature": "6290670:1793863323631.6487",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13964,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1972-05.jsonl.zst": {
+      "signature": "6290486:1793863325653.1394",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13960,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1972-07.jsonl.zst": {
+      "signature": "6283505:1793863328278.7905",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14004,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1972-09.jsonl.zst": {
+      "signature": "6080082:1793863330278.2354",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13516,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1972-11.jsonl.zst": {
+      "signature": "6070843:1793863331974.438",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13516,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1973-01.jsonl.zst": {
+      "signature": "6261313:1793863334511.5095",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13933,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1973-03.jsonl.zst": {
+      "signature": "6347779:1793863336585.2625",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14087,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1973-05.jsonl.zst": {
+      "signature": "6311093:1793863338945.618",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14109,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1973-07.jsonl.zst": {
+      "signature": "6284760:1793863340844.9727",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14084,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1973-09.jsonl.zst": {
+      "signature": "6114827:1793863342571.1462",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13679,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1973-11.jsonl.zst": {
+      "signature": "6130638:1793863344748.871",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13642,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1974-01.jsonl.zst": {
+      "signature": "6358805:1793863346538.4482",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14064,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1974-03.jsonl.zst": {
+      "signature": "6282757:1793863348875.947",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14033,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1974-05.jsonl.zst": {
+      "signature": "6343061:1793863350695.5413",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14036,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1974-07.jsonl.zst": {
+      "signature": "6303069:1793863352676.999",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14116,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1974-09.jsonl.zst": {
+      "signature": "6109011:1793863354660.4114",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13635,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1974-11.jsonl.zst": {
+      "signature": "6075379:1793863356412.895",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13617,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1975-01.jsonl.zst": {
+      "signature": "6265002:1793863358656.8247",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14054,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1975-03.jsonl.zst": {
+      "signature": "6366486:1793863360839.8162",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14217,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1975-05.jsonl.zst": {
+      "signature": "6291077:1793863362593.6365",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14275,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1975-07.jsonl.zst": {
+      "signature": "6341442:1793863364546.6372",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14223,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1975-09.jsonl.zst": {
+      "signature": "6141359:1793863366336.8577",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13740,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1975-11.jsonl.zst": {
+      "signature": "6127961:1793863368662.2285",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13704,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1976-01.jsonl.zst": {
+      "signature": "6337750:1793863370620.1895",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14190,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1976-03.jsonl.zst": {
+      "signature": "6228525:1793863372316.766",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13977,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1976-05.jsonl.zst": {
+      "signature": "6176924:1793863374151.0383",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13962,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1976-07.jsonl.zst": {
+      "signature": "6231857:1793863375891.3757",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14001,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1976-09.jsonl.zst": {
+      "signature": "5994148:1793863377497.0828",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13513,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1976-11.jsonl.zst": {
+      "signature": "6097222:1793863379245.7278",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13515,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1977-01.jsonl.zst": {
+      "signature": "6140961:1793863380926.2092",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13954,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1977-03.jsonl.zst": {
+      "signature": "6284465:1793863382657.1545",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14328,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1977-05.jsonl.zst": {
+      "signature": "6287529:1793863384826.9453",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14333,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1977-07.jsonl.zst": {
+      "signature": "6244894:1793863386584.095",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14313,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1977-09.jsonl.zst": {
+      "signature": "6048549:1793863388449.8706",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13813,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1977-11.jsonl.zst": {
+      "signature": "6054070:1793863390508.2874",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13778,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1978-01.jsonl.zst": {
+      "signature": "6240358:1793863392215.846",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14193,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1978-03.jsonl.zst": {
+      "signature": "6379580:1793863394090.6438",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14186,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1978-05.jsonl.zst": {
+      "signature": "6336338:1793863395882.8564",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14188,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1978-07.jsonl.zst": {
+      "signature": "6363715:1793863397729.778",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14161,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1978-09.jsonl.zst": {
+      "signature": "6191359:1793863399823.8953",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13720,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1978-11.jsonl.zst": {
+      "signature": "6173047:1793863402030.9082",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13733,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1979-01.jsonl.zst": {
+      "signature": "6322134:1793863404239.7727",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14213,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1979-03.jsonl.zst": {
+      "signature": "6175840:1793863406299.1055",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14021,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1979-05.jsonl.zst": {
+      "signature": "6183769:1793863408200.6177",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13993,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1979-07.jsonl.zst": {
+      "signature": "6163494:1793863410288.2583",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13965,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1979-09.jsonl.zst": {
+      "signature": "5989956:1793863411980.3513",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13562,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1979-11.jsonl.zst": {
+      "signature": "5981233:1793863413703.2021",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13559,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1980-01.jsonl.zst": {
+      "signature": "6168632:1793863416180.0076",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13999,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1980-03.jsonl.zst": {
+      "signature": "6349772:1793863418507.3943",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14340,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1980-05.jsonl.zst": {
+      "signature": "6314743:1793863420558.1821",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14322,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1980-07.jsonl.zst": {
+      "signature": "6364353:1793863422499.8474",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14355,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1980-09.jsonl.zst": {
+      "signature": "6149518:1793863424634.17",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13843,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1980-11.jsonl.zst": {
+      "signature": "6161920:1793863426275.564",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13849,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1981-01.jsonl.zst": {
+      "signature": "6346588:1793863428198.0938",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14298,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1981-03.jsonl.zst": {
+      "signature": "6155465:1793863429952.6848",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14094,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1981-05.jsonl.zst": {
+      "signature": "6129878:1793863431580.0813",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14095,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1981-07.jsonl.zst": {
+      "signature": "6134039:1793863433316.9326",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14113,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1981-09.jsonl.zst": {
+      "signature": "5929379:1793863436124.0488",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13649,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1981-11.jsonl.zst": {
+      "signature": "5897749:1793863438327.8062",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13638,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1982-01.jsonl.zst": {
+      "signature": "6127482:1793863440811.6196",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14089,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1982-03.jsonl.zst": {
+      "signature": "6283204:1793863442531.652",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13905,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1982-05.jsonl.zst": {
+      "signature": "6321803:1793863444363.552",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13926,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1982-07.jsonl.zst": {
+      "signature": "6305228:1793863446020.4219",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13999,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1982-09.jsonl.zst": {
+      "signature": "6043207:1793863447783.1682",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13553,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1982-11.jsonl.zst": {
+      "signature": "6059873:1793863449548.9893",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13506,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1983-01.jsonl.zst": {
+      "signature": "6307191:1793863451228.598",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13983,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1983-03.jsonl.zst": {
+      "signature": "6325632:1793863452856.7617",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14106,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1983-05.jsonl.zst": {
+      "signature": "6324023:1793863454997.0315",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14116,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1983-07.jsonl.zst": {
+      "signature": "6305582:1793863456685.451",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14127,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1983-09.jsonl.zst": {
+      "signature": "6120129:1793863458446.1904",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13675,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1983-11.jsonl.zst": {
+      "signature": "6162383:1793863460129.892",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13646,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1984-01.jsonl.zst": {
+      "signature": "6324024:1793863461769.2031",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14109,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1984-03.jsonl.zst": {
+      "signature": "6289015:1793863463492.9285",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14040,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1984-05.jsonl.zst": {
+      "signature": "6308627:1793863465537.9375",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14041,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1984-07.jsonl.zst": {
+      "signature": "6296312:1793863467373.9888",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14113,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1984-09.jsonl.zst": {
+      "signature": "6085092:1793863469085.461",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13631,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1984-11.jsonl.zst": {
+      "signature": "6025286:1793863470702.4177",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13597,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1985-01.jsonl.zst": {
+      "signature": "6276521:1793863472340.04",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14084,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1985-03.jsonl.zst": {
+      "signature": "6295176:1793863474085.3794",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14294,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1985-05.jsonl.zst": {
+      "signature": "6272540:1793863475770.1184",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14230,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1985-07.jsonl.zst": {
+      "signature": "6403022:1793863477531.5276",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14200,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1985-09.jsonl.zst": {
+      "signature": "6154195:1793863479278.2378",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13762,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1985-11.jsonl.zst": {
+      "signature": "6149802:1793863480927.1008",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13740,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1986-01.jsonl.zst": {
+      "signature": "6329549:1793863482565.4773",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14230,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1986-03.jsonl.zst": {
+      "signature": "6237887:1793863484353.092",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13956,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1986-05.jsonl.zst": {
+      "signature": "6250859:1793863486021.643",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13970,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1986-07.jsonl.zst": {
+      "signature": "6285377:1793863487825.1208",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13999,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1986-09.jsonl.zst": {
+      "signature": "6069214:1793863489539.2092",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13512,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1986-11.jsonl.zst": {
+      "signature": "6077361:1793863491164.4976",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13474,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1987-01.jsonl.zst": {
+      "signature": "6240359:1793863492836.6584",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14037,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1987-03.jsonl.zst": {
+      "signature": "6291592:1793863494740.978",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14303,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1987-05.jsonl.zst": {
+      "signature": "6224976:1793863496573.408",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14265,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1987-07.jsonl.zst": {
+      "signature": "6228105:1793863498639.4062",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14254,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1987-09.jsonl.zst": {
+      "signature": "6079044:1793863500460.1868",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13864,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1987-11.jsonl.zst": {
+      "signature": "6053216:1793863502328.8022",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13787,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1988-01.jsonl.zst": {
+      "signature": "6279799:1793863504422.7449",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14304,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1988-03.jsonl.zst": {
+      "signature": "6341567:1793863506091.2917",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14232,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1988-05.jsonl.zst": {
+      "signature": "6333421:1793863507945.9912",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14167,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1988-07.jsonl.zst": {
+      "signature": "6337496:1793863509992.6077",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14169,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1988-09.jsonl.zst": {
+      "signature": "6132188:1793863512160.1975",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13732,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1988-11.jsonl.zst": {
+      "signature": "6161115:1793863514019.062",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13765,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1989-01.jsonl.zst": {
+      "signature": "6373447:1793863515779.1604",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14187,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1989-03.jsonl.zst": {
+      "signature": "6189792:1793863517578.5974",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14023,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1989-05.jsonl.zst": {
+      "signature": "6214209:1793863519331.6528",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14037,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1989-07.jsonl.zst": {
+      "signature": "6195261:1793863520986.2466",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13940,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1989-09.jsonl.zst": {
+      "signature": "6009416:1793863522613.2317",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13531,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1989-11.jsonl.zst": {
+      "signature": "5969732:1793863524430.1838",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13531,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1990-01.jsonl.zst": {
+      "signature": "6206639:1793863526097.2593",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13970,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1990-03.jsonl.zst": {
+      "signature": "6386542:1793863528110.2937",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14302,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1990-05.jsonl.zst": {
+      "signature": "6294573:1793863529899.8052",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14301,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1990-07.jsonl.zst": {
+      "signature": "6374891:1793863531892.7493",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14337,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1990-09.jsonl.zst": {
+      "signature": "6173045:1793863533626.0903",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13891,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1990-11.jsonl.zst": {
+      "signature": "6188674:1793863535674.0693",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13863,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1991-01.jsonl.zst": {
+      "signature": "6387523:1793863537521.2588",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14303,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1991-03.jsonl.zst": {
+      "signature": "6141137:1793863539441.3196",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14072,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1991-05.jsonl.zst": {
+      "signature": "6113136:1793863541153.6584",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14134,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1991-07.jsonl.zst": {
+      "signature": "6129770:1793863542755.2217",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14113,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1991-09.jsonl.zst": {
+      "signature": "5949355:1793863544501.823",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13607,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1991-11.jsonl.zst": {
+      "signature": "5928576:1793863546091.6943",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13638,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1992-01.jsonl.zst": {
+      "signature": "6121672:1793863547849.5781",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14101,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1992-03.jsonl.zst": {
+      "signature": "6318230:1793863549910.845",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13941,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1992-05.jsonl.zst": {
+      "signature": "6274140:1793863551530.216",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13938,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1992-07.jsonl.zst": {
+      "signature": "6243070:1793863553182.2488",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14006,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1992-09.jsonl.zst": {
+      "signature": "6050923:1793863554853.5405",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13544,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1992-11.jsonl.zst": {
+      "signature": "6057010:1793863556466.7024",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13481,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1993-01.jsonl.zst": {
+      "signature": "6187115:1793863558218.6724",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14024,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1993-03.jsonl.zst": {
+      "signature": "6315578:1793863559910.4202",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14108,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1993-05.jsonl.zst": {
+      "signature": "6277864:1793863561559.588",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14091,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1993-07.jsonl.zst": {
+      "signature": "6343506:1793863563220.6648",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14141,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1993-09.jsonl.zst": {
+      "signature": "6137230:1793863564886.3206",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13683,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1993-11.jsonl.zst": {
+      "signature": "6152469:1793863566460.622",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13658,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1994-01.jsonl.zst": {
+      "signature": "6352249:1793863568386.2266",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14129,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1994-03.jsonl.zst": {
+      "signature": "6332247:1793863570256.3555",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14059,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1994-05.jsonl.zst": {
+      "signature": "6320560:1793863571897.2644",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14062,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1994-07.jsonl.zst": {
+      "signature": "6344133:1793863573589.6052",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14105,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1994-09.jsonl.zst": {
+      "signature": "6117965:1793863575250.4421",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13605,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1994-11.jsonl.zst": {
+      "signature": "6092075:1793863576891.0332",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13561,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1995-01.jsonl.zst": {
+      "signature": "6309555:1793863578663.462",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14026,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1995-03.jsonl.zst": {
+      "signature": "6363829:1793863580329.3462",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14155,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1995-05.jsonl.zst": {
+      "signature": "6315545:1793863581985.1338",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14189,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1995-07.jsonl.zst": {
+      "signature": "6326071:1793863583803.1433",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14201,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1995-09.jsonl.zst": {
+      "signature": "6144394:1793863585465.1394",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13726,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1995-11.jsonl.zst": {
+      "signature": "6096952:1793863587300.9358",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13723,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1996-01.jsonl.zst": {
+      "signature": "6300234:1793863589103.2573",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14215,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1996-03.jsonl.zst": {
+      "signature": "6246565:1793863590723.9463",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13980,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1996-05.jsonl.zst": {
+      "signature": "6187204:1793863592377.7239",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13978,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1996-07.jsonl.zst": {
+      "signature": "6222499:1793863594105.5198",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13975,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1996-09.jsonl.zst": {
+      "signature": "6054981:1793863595690.5476",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13533,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1996-11.jsonl.zst": {
+      "signature": "6043132:1793863597404.584",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13525,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1997-01.jsonl.zst": {
+      "signature": "6186285:1793863599766.5295",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13946,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1997-03.jsonl.zst": {
+      "signature": "6270962:1793863601420.9836",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14254,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1997-05.jsonl.zst": {
+      "signature": "6255189:1793863603082.5588",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14260,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1997-07.jsonl.zst": {
+      "signature": "6264508:1793863604837.2898",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14254,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1997-09.jsonl.zst": {
+      "signature": "6093776:1793863606472.3352",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13806,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1997-11.jsonl.zst": {
+      "signature": "6071093:1793863608283.4297",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13802,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1998-01.jsonl.zst": {
+      "signature": "6228169:1793863609971.027",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14183,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1998-03.jsonl.zst": {
+      "signature": "6331295:1793863611627.8079",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14210,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1998-05.jsonl.zst": {
+      "signature": "6306742:1793863613316.9885",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14168,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1998-07.jsonl.zst": {
+      "signature": "6282223:1793863615098.0603",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14255,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1998-09.jsonl.zst": {
+      "signature": "6187222:1793863616687.7764",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13756,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1998-11.jsonl.zst": {
+      "signature": "6170516:1793863618402.4563",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13740,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1999-01.jsonl.zst": {
+      "signature": "6414092:1793863620071.4478",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14243,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1999-03.jsonl.zst": {
+      "signature": "6228985:1793863621672.7378",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14019,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1999-05.jsonl.zst": {
+      "signature": "6184822:1793863623312.4255",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13965,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1999-07.jsonl.zst": {
+      "signature": "6166547:1793863625086.636",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14010,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1999-09.jsonl.zst": {
+      "signature": "5954350:1793863626663.3303",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13549,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "1999-11.jsonl.zst": {
+      "signature": "5936558:1793863628423.6748",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13543,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2000-01.jsonl.zst": {
+      "signature": "6158458:1793863630084.0632",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14002,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2000-03.jsonl.zst": {
+      "signature": "6367062:1793863631725.6086",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14316,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2000-05.jsonl.zst": {
+      "signature": "6273706:1793863633397.9724",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14285,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2000-07.jsonl.zst": {
+      "signature": "6375841:1793863635126.2026",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14292,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2000-09.jsonl.zst": {
+      "signature": "6147969:1793863636730.2065",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13853,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2000-11.jsonl.zst": {
+      "signature": "6163793:1793863638461.2673",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13845,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2001-01.jsonl.zst": {
+      "signature": "6218851:1793863640134.524",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14274,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2001-03.jsonl.zst": {
+      "signature": "6132629:1793863641748.6042",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14061,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2001-05.jsonl.zst": {
+      "signature": "6092459:1793863643380.3594",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14124,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2001-07.jsonl.zst": {
+      "signature": "6104146:1793863645060.151",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14153,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2001-09.jsonl.zst": {
+      "signature": "5945350:1793863646630.194",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13648,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2001-11.jsonl.zst": {
+      "signature": "5937783:1793863648326.1892",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13606,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2002-01.jsonl.zst": {
+      "signature": "6046798:1793863649986.034",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14107,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2002-03.jsonl.zst": {
+      "signature": "6286897:1793863651624.454",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14005,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2002-05.jsonl.zst": {
+      "signature": "6319802:1793863653313.749",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13937,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2002-07.jsonl.zst": {
+      "signature": "6283489:1793863655046.4783",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13961,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2002-09.jsonl.zst": {
+      "signature": "6071237:1793863656648.9336",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13494,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2002-11.jsonl.zst": {
+      "signature": "6086351:1793863658473.4185",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13512,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2003-01.jsonl.zst": {
+      "signature": "6304502:1793863660190.384",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13938,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2003-03.jsonl.zst": {
+      "signature": "6347006:1793863661869.3967",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14113,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2003-05.jsonl.zst": {
+      "signature": "6284847:1793863663593.2212",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14102,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2003-07.jsonl.zst": {
+      "signature": "6283536:1793863665277.317",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14115,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2003-09.jsonl.zst": {
+      "signature": "6111383:1793863666943.777",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13679,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2003-11.jsonl.zst": {
+      "signature": "6125252:1793863668677.7864",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13646,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2004-01.jsonl.zst": {
+      "signature": "6361777:1793863670408.368",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14033,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2004-03.jsonl.zst": {
+      "signature": "6294186:1793863672105.2375",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14062,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2004-05.jsonl.zst": {
+      "signature": "6342836:1793863673853.1191",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14104,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2004-07.jsonl.zst": {
+      "signature": "6312209:1793863675577.2134",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14087,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2004-09.jsonl.zst": {
+      "signature": "6105699:1793863677222.2183",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13622,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2004-11.jsonl.zst": {
+      "signature": "6062485:1793863678983.9377",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13618,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2005-01.jsonl.zst": {
+      "signature": "6275381:1793863680622.4211",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14032,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2005-03.jsonl.zst": {
+      "signature": "6353848:1793863682259.4512",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14244,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2005-05.jsonl.zst": {
+      "signature": "6329625:1793863684005.02",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14223,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2005-07.jsonl.zst": {
+      "signature": "6347642:1793863685725.2744",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14220,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2005-09.jsonl.zst": {
+      "signature": "6164990:1793863687719.056",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13730,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2005-11.jsonl.zst": {
+      "signature": "6155385:1793863689764.6306",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13726,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2006-01.jsonl.zst": {
+      "signature": "6271962:1793863691620.2034",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14191,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2006-03.jsonl.zst": {
+      "signature": "6207894:1793863693828.8293",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13929,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2006-05.jsonl.zst": {
+      "signature": "6238027:1793863697295.3342",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13970,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2006-07.jsonl.zst": {
+      "signature": "6255989:1793863702126.881",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13952,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2006-09.jsonl.zst": {
+      "signature": "5990357:1793863705347.365",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13561,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2006-11.jsonl.zst": {
+      "signature": "6111800:1793863707450.918",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13539,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2007-01.jsonl.zst": {
+      "signature": "6202234:1793863710142.6902",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13973,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2007-03.jsonl.zst": {
+      "signature": "6300754:1793863711967.6858",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14326,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2007-05.jsonl.zst": {
+      "signature": "6267198:1793863713815.247",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14327,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2007-07.jsonl.zst": {
+      "signature": "6259507:1793863716266.594",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14265,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2007-09.jsonl.zst": {
+      "signature": "6055383:1793863718958.7961",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13784,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2007-11.jsonl.zst": {
+      "signature": "6050734:1793863721212.9749",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13810,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2008-01.jsonl.zst": {
+      "signature": "6232414:1793863723346.98",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14214,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2008-03.jsonl.zst": {
+      "signature": "6365351:1793863725274.367",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14199,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2008-05.jsonl.zst": {
+      "signature": "6301024:1793863727462.1992",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14163,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2008-07.jsonl.zst": {
+      "signature": "6316895:1793863730227.4355",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14230,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2008-09.jsonl.zst": {
+      "signature": "6139497:1793863732050.648",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13719,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2008-11.jsonl.zst": {
+      "signature": "6139139:1793863734026.433",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13710,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2009-01.jsonl.zst": {
+      "signature": "6310626:1793863736605.8335",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14146,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2009-03.jsonl.zst": {
+      "signature": "6160292:1793863738552.6438",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13963,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2009-05.jsonl.zst": {
+      "signature": "6206604:1793863740472.232",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13985,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2009-07.jsonl.zst": {
+      "signature": "6227747:1793863742444.033",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14008,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2009-09.jsonl.zst": {
+      "signature": "5974818:1793863744223.1533",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13575,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2009-11.jsonl.zst": {
+      "signature": "5978302:1793863745936.6582",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13555,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2010-01.jsonl.zst": {
+      "signature": "6177524:1793863748004.617",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13996,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2010-03.jsonl.zst": {
+      "signature": "6389369:1793863750189.3474",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14325,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2010-05.jsonl.zst": {
+      "signature": "6336398:1793863752512.7385",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14358,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2010-07.jsonl.zst": {
+      "signature": "6391590:1793863754633.0588",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14351,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2010-09.jsonl.zst": {
+      "signature": "6181718:1793863756928.5898",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13885,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2010-11.jsonl.zst": {
+      "signature": "6192639:1793863759048.0557",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13871,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2011-01.jsonl.zst": {
+      "signature": "6366795:1793863761027.267",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14277,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2011-03.jsonl.zst": {
+      "signature": "6158928:1793863762682.635",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14117,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2011-05.jsonl.zst": {
+      "signature": "6127931:1793863764458.5269",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14067,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2011-07.jsonl.zst": {
+      "signature": "6170418:1793863766136.011",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14107,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2011-09.jsonl.zst": {
+      "signature": "5929336:1793863767880.6733",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13638,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2011-11.jsonl.zst": {
+      "signature": "5891674:1793863769835.2568",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13624,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2012-01.jsonl.zst": {
+      "signature": "6179349:1793863771860.9644",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14076,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2012-03.jsonl.zst": {
+      "signature": "6283109:1793863773985.2834",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13924,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2012-05.jsonl.zst": {
+      "signature": "6256917:1793863775789.6895",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13937,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2012-07.jsonl.zst": {
+      "signature": "6290943:1793863777695.2021",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14032,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2012-09.jsonl.zst": {
+      "signature": "6055895:1793863779566.5562",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13538,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2012-11.jsonl.zst": {
+      "signature": "6061229:1793863781275.3755",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13520,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2013-01.jsonl.zst": {
+      "signature": "6272265:1793863783017.8213",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13964,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2013-03.jsonl.zst": {
+      "signature": "6338077:1793863784878.3315",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14127,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2013-05.jsonl.zst": {
+      "signature": "6323091:1793863786668.9214",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14123,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2013-07.jsonl.zst": {
+      "signature": "6312532:1793863788537.4138",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14127,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2013-09.jsonl.zst": {
+      "signature": "6113798:1793863790327.8672",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13641,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2013-11.jsonl.zst": {
+      "signature": "6160108:1793863792015.1743",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13671,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2014-01.jsonl.zst": {
+      "signature": "6310716:1793863793957.453",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14078,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2014-03.jsonl.zst": {
+      "signature": "6292199:1793863795869.238",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14037,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2014-05.jsonl.zst": {
+      "signature": "6337405:1793863797759.0754",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14092,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2014-07.jsonl.zst": {
+      "signature": "6288806:1793863799678.6892",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14051,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2014-09.jsonl.zst": {
+      "signature": "6095094:1793863801444.4324",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13637,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2014-11.jsonl.zst": {
+      "signature": "6066540:1793863803189.6367",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13631,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2015-01.jsonl.zst": {
+      "signature": "6257060:1793863805135.8835",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14100,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2015-03.jsonl.zst": {
+      "signature": "6268330:1793863806903.8596",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14237,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2015-05.jsonl.zst": {
+      "signature": "6308733:1793863808751.7607",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14231,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2015-07.jsonl.zst": {
+      "signature": "6347615:1793863810529.1562",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14213,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2015-09.jsonl.zst": {
+      "signature": "6120746:1793863812283.7722",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13758,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2015-11.jsonl.zst": {
+      "signature": "6132013:1793863814181.128",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13740,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2016-01.jsonl.zst": {
+      "signature": "6312852:1793863816111.9019",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14182,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2016-03.jsonl.zst": {
+      "signature": "6223346:1793863817974.1377",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13972,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2016-05.jsonl.zst": {
+      "signature": "6199163:1793863819861.9634",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13991,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2016-07.jsonl.zst": {
+      "signature": "6250786:1793863821685.9348",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13963,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2016-09.jsonl.zst": {
+      "signature": "5997399:1793863823591.802",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13513,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2016-11.jsonl.zst": {
+      "signature": "5955988:1793863825889.395",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13490,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2017-01.jsonl.zst": {
+      "signature": "6190184:1793863828079.1577",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14066,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2017-03.jsonl.zst": {
+      "signature": "6251829:1793863830819.4849",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14247,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2017-05.jsonl.zst": {
+      "signature": "6257380:1793863833093.8933",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14264,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2017-07.jsonl.zst": {
+      "signature": "6263335:1793863835193.321",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14226,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2017-09.jsonl.zst": {
+      "signature": "6033254:1793863837592.2122",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13811,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2017-11.jsonl.zst": {
+      "signature": "6056609:1793863839648.8508",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13824,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2018-01.jsonl.zst": {
+      "signature": "6267095:1793863841400.838",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14305,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2018-03.jsonl.zst": {
+      "signature": "6348513:1793863843615.3127",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14257,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2018-05.jsonl.zst": {
+      "signature": "6325225:1793863845417.986",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14161,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2018-07.jsonl.zst": {
+      "signature": "6350296:1793863847156.5542",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14186,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2018-09.jsonl.zst": {
+      "signature": "6126464:1793863848983.9553",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13728,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2018-11.jsonl.zst": {
+      "signature": "6180138:1793863850618.3733",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13726,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2019-01.jsonl.zst": {
+      "signature": "6386953:1793863852276.4834",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14149,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2019-03.jsonl.zst": {
+      "signature": "6191883:1793863854430.8237",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14022,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2019-05.jsonl.zst": {
+      "signature": "6173413:1793863856177.1895",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14018,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2019-07.jsonl.zst": {
+      "signature": "6170512:1793863857961.3865",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13986,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2019-09.jsonl.zst": {
+      "signature": "5979764:1793863859591.4087",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13537,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2019-11.jsonl.zst": {
+      "signature": "5943879:1793863861345.9695",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13513,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2020-01.jsonl.zst": {
+      "signature": "6211005:1793863862945.4897",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14031,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2020-03.jsonl.zst": {
+      "signature": "6307421:1793863864610.064",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14282,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2020-05.jsonl.zst": {
+      "signature": "6272425:1793863866436.7356",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14266,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2020-07.jsonl.zst": {
+      "signature": "6381817:1793863868525.2107",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14366,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2020-09.jsonl.zst": {
+      "signature": "6167839:1793863870504.352",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13864,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2020-11.jsonl.zst": {
+      "signature": "6140504:1793863872306.6611",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13849,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2021-01.jsonl.zst": {
+      "signature": "6333402:1793863874313.7095",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14350,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2021-03.jsonl.zst": {
+      "signature": "6132454:1793863876048.414",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14133,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2021-05.jsonl.zst": {
+      "signature": "6078012:1793863877880.5378",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14117,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2021-07.jsonl.zst": {
+      "signature": "6114589:1793863879693.3433",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14112,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2021-09.jsonl.zst": {
+      "signature": "5924085:1793863881685.382",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13641,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2021-11.jsonl.zst": {
+      "signature": "5929955:1793863884709.7515",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13637,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2022-01.jsonl.zst": {
+      "signature": "6098618:1793863890840.2732",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14067,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2022-03.jsonl.zst": {
+      "signature": "6299665:1793863894078.0803",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13942,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2022-05.jsonl.zst": {
+      "signature": "6307033:1793863896939.091",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13990,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2022-07.jsonl.zst": {
+      "signature": "6248846:1793863901455.7642",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14001,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2022-09.jsonl.zst": {
+      "signature": "6084639:1793863906289.1714",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13540,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2022-11.jsonl.zst": {
+      "signature": "6089823:1793863909217.451",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13522,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2023-01.jsonl.zst": {
+      "signature": "6167114:1793863911198.571",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14012,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2023-03.jsonl.zst": {
+      "signature": "6297451:1793863912978.8777",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14073,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2023-05.jsonl.zst": {
+      "signature": "6276959:1793863915078.6611",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14153,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2023-07.jsonl.zst": {
+      "signature": "6305738:1793863917452.875",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14153,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2023-09.jsonl.zst": {
+      "signature": "6086768:1793863919919.8018",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13668,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2023-11.jsonl.zst": {
+      "signature": "6107178:1793863921861.2617",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13653,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2024-01.jsonl.zst": {
+      "signature": "6321763:1793863923942.7256",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14135,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2024-03.jsonl.zst": {
+      "signature": "6291063:1793863925866.6235",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14048,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2024-05.jsonl.zst": {
+      "signature": "6234378:1793863927847.066",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14113,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2024-07.jsonl.zst": {
+      "signature": "6291033:1793863929761.916",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14090,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2024-09.jsonl.zst": {
+      "signature": "6040181:1793863931525.3523",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13601,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2024-11.jsonl.zst": {
+      "signature": "6006253:1793863933299.2288",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13597,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2025-01.jsonl.zst": {
+      "signature": "6240059:1793863935178.5776",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14040,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2025-03.jsonl.zst": {
+      "signature": "6309841:1793863936926.0303",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14177,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2025-05.jsonl.zst": {
+      "signature": "6255879:1793863938715.5835",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14191,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2025-07.jsonl.zst": {
+      "signature": "6277735:1793863940588.1592",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14185,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2025-09.jsonl.zst": {
+      "signature": "6103762:1793863942429.7295",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13784,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2025-11.jsonl.zst": {
+      "signature": "6082054:1793863944516.3164",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13752,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2026-01.jsonl.zst": {
+      "signature": "6293637:1793863947451.9214",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 14224,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2026-03.jsonl.zst": {
+      "signature": "6207201:1793863949622.6113",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13999,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2026-05.jsonl.zst": {
+      "signature": "6163688:1793863951723.4905",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13987,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2026-07.jsonl.zst": {
+      "signature": "6200681:1793863953635.08",
+      "records": 744,
+      "fields": 9672,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13996,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2026-09.jsonl.zst": {
+      "signature": "6025831:1793863955805.2153",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13506,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    },
+    "2026-11.jsonl.zst": {
+      "signature": "6022580:1793863958182.1194",
+      "records": 720,
+      "fields": 9360,
+      "errors": {},
+      "examples": [],
+      "editorialReplacements": 13521,
+      "editorialRevision": "81cff078bddb484ecfbaf4e38c2d50ea33751ebd62b9e0aff027bde449444592"
+    }
+  },
+  "updatedAt": "2026-11-05T07:32:38.649Z",
+  "totals": {
+    "files": 462,
+    "records": 340032,
+    "fields": 4420416,
+    "errors": {}
+  },
+  "complete": true
+}

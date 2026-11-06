@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "scope": "Local serial interleaving of four months, record cache disabled; not HTTP concurrency or whole-site latency",
+  "samples": 48,
+  "legacy": {
+    "medianMs": 73.061,
+    "p95Ms": 134.096
+  },
+  "indexed": {
+    "medianMs": 3.441,
+    "p95Ms": 8.266
+  },
+  "frameBytesMedian": 15608,
+  "legacyBatch": {
+    "requests": 24,
+    "elapsedMs": 1631.69,
+    "eventLoopDelayMaxMs": 165.15,
+    "eventLoopDelayP95Ms": 91.75
+  },
+  "indexedBatch": {
+    "requests": 24,
+    "elapsedMs": 72.19,
+    "eventLoopDelayMaxMs": 10.36,
+    "eventLoopDelayP95Ms": 8.17
+  },
+  "finished": "2026-11-06T08:59:25.629Z"
+}

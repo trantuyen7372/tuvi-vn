@@ -1,0 +1,33 @@
+{
+  "passed": 26,
+  "checks": [
+    "Quản trị yêu cầu đăng nhập",
+    "Chặn yêu cầu từ nguồn khác",
+    "Cookie quản trị HttpOnly và SameSite=Strict",
+    "Mã 100% mở 5 lượt, không cần ngân hàng",
+    "Không rò hash bí mật đơn hàng",
+    "Đặt bài đồng thời không trừ hai lượt",
+    "Tạo lại cùng bài không gọi lại AI",
+    "Bản demo được lưu bền vững",
+    "Xem lại không mất lượt",
+    "Không gửi email thật khi chưa cấu hình",
+    "Mã kích hoạt cũ bị vô hiệu",
+    "Webhook giả bị chặn",
+    "Ngày không tồn tại bị từ chối",
+    "Quay về đơn không tự thanh toán",
+    "Đơn chưa thanh toán không tạo AI",
+    "Chỉ quản trị xác nhận đơn thử",
+    "Khôi phục link chỉ cho quản trị và vô hiệu link đơn cũ",
+    "Tặng lượt có hiệu lực",
+    "Xuất CSV có đơn hàng",
+    "Ghi nhận hoàn tiền khóa lượt còn lại",
+    "Xem trước tiếng Việt miễn phí, giới hạn độ dài",
+    "Không rò toàn bộ dữ liệu trong API đọc thử",
+    "Trang chủ có bài mẫu, bảng giá và FAQ",
+    "Bài mẫu công khai ghi rõ là trích đoạn tham khảo",
+    "Health check không lộ cấu hình",
+    "Quản trị thấy đơn, doanh thu, chi phí và email"
+  ],
+  "browserCoupon": "TEST1793871814244",
+  "readingUrl": "http://localhost:3100/luan-giai/762ff85db44d5363312efafba413a0d664050e98a1cf120564115251db44bcd2"
+}

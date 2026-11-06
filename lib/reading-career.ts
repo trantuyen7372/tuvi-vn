@@ -1,0 +1,94 @@
+import type {ChartView,PalaceView} from './tuvi';
+import {STAR_MEANINGS,starLabel} from './reading-rules';
+import {frictionEffect} from './reading-effects';
+
+export interface ReadingEvidence {
+  palace:string; star:string; layer:'bản mệnh'|'đại hạn'|'lưu niên';
+  transformation?:string; year?:number;
+  brightness?:string;
+}
+export interface ConfigurationEvidence {type:'body'|'void';palace:string;branch:string}
+export interface CareerBridge {
+  id:string; title:string; summary:string; interpretation:string; tension:string; example:string;
+  evidence:ReadingEvidence[]; specific:boolean;
+  configuration?:ConfigurationEvidence;
+}
+interface BridgeRule {
+  id:string; career:string[]; wealth:string[]; title:string; summary:string;
+  interpretation:string; tension:string; example:string;
+}
+/** Các cặp được biên tập từ tính chất sao đã dùng trong thư viện.
+ * Mọi điều kiện đều phải đồng thời có thật ở đúng cung; không phải nhận diện cách cục cổ thư. */
+const RULES:BridgeRule[]=[
+  {id:'vu-phu-tu-tuong',career:['Vũ Khúc','Thiên Phủ'],wealth:['Tử Vi','Thiên Tướng'],title:'Thực thi và giữ nền cần nối với quyền điều phối',summary:'Việc làm ra kết quả, giữ nhịp vận hành và phân bổ nguồn lực cần hỗ trợ nhau.',interpretation:'Vũ Khúc và Thiên Phủ tại Quan Lộc đặt cạnh nhau tính thực thi và khả năng duy trì nền công việc. Tử Vi và Thiên Tướng tại Tài Bạch nhấn vào tổ chức nguồn lực cùng trách nhiệm với các bên. Một hướng phát triển là chuyển năng lực làm tốt một phần sang khả năng giữ nhiều phần việc cùng vận hành.',tension:'Nếu kết quả của tập thể vẫn phụ thuộc quá nhiều vào sức tự làm, vai trò quản lý có thể chỉ làm tăng khối lượng việc mà chưa tạo thêm khả năng chủ động.',example:'Có thể đối chiếu một lúc được giao thêm nguồn lực hoặc phần việc: quyền phân công, cách theo dõi và điều kiện hoàn thành đã rõ hay chưa.'},
+  {id:'sat-pha',career:['Thất Sát'],wealth:['Phá Quân'],title:'Từ xử lý việc khó đến tổ chức lại cách làm',summary:'Vai trò nghề nghiệp thiên về sức gánh việc; thành quả gắn với khả năng thay một cách làm kém hiệu quả.',interpretation:'Thất Sát ở Quan Lộc làm nổi rõ trách nhiệm trong việc khó. Phá Quân ở Tài Bạch chuyển câu hỏi sang giá trị của việc cải tổ. Khi nối hai cung, một hướng phát triển là từ người trực tiếp cứu việc sang người xây được cách xử lý mà cả nhóm có thể dùng.',tension:'Điểm nghẽn là việc nào cũng phải qua mình: quy mô trách nhiệm tăng nhưng thành quả chưa tăng tương ứng vì cách vận hành vẫn phụ thuộc cá nhân.',example:'Chẳng hạn, sau nhiều lần xử lý dự án trục trặc, một người có thể chuyển sang thiết kế quy trình, dẫn nhóm hoặc phụ trách phần triển khai khó. Đây là ví dụ về chuyển vai trò, không xác định một chức danh sẽ có.'},
+  {id:'pha-tham',career:['Phá Quân'],wealth:['Tham Lang'],title:'Thay đổi phải tìm được người cần nó',summary:'Đổi cách vận hành và mở quan hệ cần đi cùng nhau mới làm rõ giá trị công việc.',interpretation:'Phá Quân tại Quan Lộc nhấn vào tháo gỡ cấu trúc cũ; Tham Lang tại Tài Bạch nhấn vào kết nối và khai thác khả năng mới. Một thay đổi có ý nghĩa khi giải quyết được nhu cầu của người dùng, khách hàng hoặc tập thể.',tension:'Có thể thích sửa mô hình và mở thêm hướng, nhưng mỗi lần mở lại đòi hỏi công sức duy trì. Cần phân biệt đổi vì có nhu cầu với đổi vì đã chán cách cũ.',example:'Một ví dụ là cải tiến dịch vụ rồi tìm đúng nhóm người cần cải tiến ấy, thay vì liên tục làm phiên bản mới nhưng chưa biết ai sẽ sử dụng.'},
+  {id:'tham-sat',career:['Tham Lang'],wealth:['Thất Sát'],title:'Mở cơ hội rồi phải chứng minh khả năng thực hiện',summary:'Khả năng tiếp cận việc mới cần được nối với chất lượng của phần việc đã nhận.',interpretation:'Tham Lang tại Quan Lộc gợi sức mở quan hệ và tìm hướng phát triển; Thất Sát tại Tài Bạch đặt trọng tâm ở trách nhiệm và kết quả của nhiệm vụ khó. Bước tiếp theo của một cơ hội vì thế nằm ở khả năng thực hiện được cam kết.',tension:'Mạng lưới mở rộng có thể kéo theo nhiều lời nhận việc. Nếu phạm vi cam kết đi nhanh hơn năng lực triển khai, sức ép sẽ tập trung ở khâu giao kết quả.',example:'Có thể hình dung việc kết nối được một dự án mới nhưng phải xác định rõ ai làm phần khó, mốc bàn giao và phạm vi trách nhiệm trước khi dự án thực sự tạo giá trị.'},
+  {id:'co-cu',career:['Thiên Cơ'],wealth:['Cự Môn'],title:'Giải pháp cần được giải thích đủ rõ',summary:'Chuyên môn và khả năng làm rõ vấn đề là hai mắt xích nối công việc với thành quả.',interpretation:'Thiên Cơ tại Quan Lộc nhấn vào phân tích và thiết kế phương án; Cự Môn tại Tài Bạch nhấn vào lý lẽ, trao đổi và thống nhất điều kiện. Một ý tưởng đúng chưa đủ nếu người cùng làm chưa hiểu nó giải quyết điều gì.',tension:'Dễ mắc ở chỗ sửa phương án nhiều lần hoặc dùng quá nhiều lý giải, khiến tiến độ và điều kiện ghi nhận công sức chưa chốt được.',example:'Một người làm kỹ thuật hoặc tư vấn có thể cần chuyển giải pháp phức tạp thành phạm vi công việc, kết quả bàn giao và cách trao đổi dễ hiểu.'},
+  {id:'cu-duong',career:['Cự Môn'],wealth:['Thái Dương'],title:'Tiếng nói cần đi cùng phần đóng góp nhìn thấy được',summary:'Lập luận tạo lợi thế khi giúp người khác hiểu và hành động, thay vì chỉ thắng một cuộc trao đổi.',interpretation:'Cự Môn tại Quan Lộc đặt trọng tâm ở việc phân tích, diễn đạt và thương lượng; Thái Dương tại Tài Bạch nhấn vào đóng góp được nhìn thấy. Giá trị có thể rõ hơn khi lời nói dẫn tới một quyết định hoặc kết quả chung.',tension:'Nếu việc chứng minh mình đúng chiếm nhiều chỗ hơn việc giúp tập thể tiến lên, công sức trao đổi có thể chưa chuyển thành sự ghi nhận tương xứng.',example:'Chẳng hạn, người thuyết trình hoặc giải thích một vấn đề sẽ có vai trò rõ hơn khi giúp nhóm chốt được hướng xử lý và biết phần việc tiếp theo.'},
+  {id:'duong-cu',career:['Thái Dương'],wealth:['Cự Môn'],title:'Đứng ra đại diện cần làm rõ điều kiện phối hợp',summary:'Vai trò thể hiện ra bên ngoài cần được hỗ trợ bằng thông tin và thỏa thuận rõ.',interpretation:'Thái Dương tại Quan Lộc gợi việc đứng ra, hướng dẫn hoặc đại diện; Cự Môn tại Tài Bạch đưa việc tạo giá trị về khả năng giải thích và thống nhất. Sự nhiệt tình nhận trách nhiệm cần nối với việc các bên hiểu giống nhau về phần đã nhận.',tension:'Dễ nhận cả phần việc ngoài phạm vi vì muốn giúp cho xong, trong khi điều kiện phối hợp và cách ghi nhận chưa được nói rõ.',example:'Một tình huống là đứng ra làm đầu mối dự án: ngoài trình bày với bên ngoài, còn cần xác định phần nào thuộc trách nhiệm của mình và phần nào cần người khác quyết.'},
+  {id:'phu-tuong',career:['Thiên Phủ'],wealth:['Thiên Tướng'],title:'Giữ nền vận hành bằng sự phối hợp đáng tin',summary:'Năng lực duy trì công việc thường xuyên và cách chia trách nhiệm là hai phần quan trọng.',interpretation:'Thiên Phủ tại Quan Lộc nhấn vào giữ nền và quản lý việc thường xuyên; Thiên Tướng tại Tài Bạch nhấn vào sự tin cậy và phối hợp. Một hướng phát triển là làm cho một tập thể vận hành đều, thay vì chỉ có những lần bứt lên ngắn.',tension:'Nếu người giữ nền cũng phải tự xử lý mọi việc phát sinh, sự ổn định bên ngoài có thể đi cùng khối lượng việc khó nhìn thấy.',example:'Có thể đối chiếu với vai trò vận hành một nhóm hoặc dịch vụ: giá trị nằm cả ở việc ít sai sót, phân công rõ và người khác có thể tiếp tục công việc khi mình vắng mặt.'},
+  {id:'liem-tuong-vu',career:['Liêm Trinh','Thiên Tướng'],wealth:['Vũ Khúc'],title:'Chuẩn mực cần chuyển thành hiệu quả cụ thể',summary:'Giữ nguyên tắc và điều phối chỉ có giá trị lâu dài khi giúp công việc thực hiện tốt hơn.',interpretation:'Liêm Trinh và Thiên Tướng cùng ở Quan Lộc đưa trọng tâm vào ranh giới trách nhiệm và sự công bằng. Vũ Khúc tại Tài Bạch đòi hỏi hiệu quả có thể nhận ra. Hai cung nối thành bài toán vừa giữ chuẩn, vừa làm cho công việc chạy được.',tension:'Quy trình quá cứng có thể làm chậm xử lý, nhưng linh hoạt thiếu ranh giới lại khiến trách nhiệm khó xác định.',example:'Một ví dụ là điều phối một nhóm: quy định ai duyệt, ai làm và ai kiểm tra cần giúp giảm việc làm lại, thay vì chỉ thêm một tầng thủ tục.'},
+  {id:'vu-tu-phu',career:['Vũ Khúc'],wealth:['Tử Vi','Thiên Phủ'],title:'Từ sức thực hiện đến khả năng quản lý nguồn lực',summary:'Năng lực làm ra kết quả cần phát triển cùng cách giữ và phân bổ nguồn lực.',interpretation:'Vũ Khúc tại Quan Lộc coi trọng thực thi; Tử Vi và Thiên Phủ cùng tại Tài Bạch nhấn vào tổ chức và giữ nền nguồn lực. Đường phát triển có thể chuyển từ tự làm phần quan trọng sang xác định việc nào nên được đầu tư công sức và ai phụ trách.',tension:'Dễ đo mọi thứ bằng khối lượng việc tự hoàn thành, trong khi vai trò lớn hơn lại cần năng lực phân bổ và theo dõi công việc của người khác.',example:'Có thể hình dung một người chuyên môn tốt được giao quản lý nguồn lực cho cả nhóm; kết quả lúc này nằm ở chất lượng của nhiều phần việc cùng nhau, không chỉ phần mình trực tiếp làm.'},
+  {id:'tu-tuong-liem',career:['Tử Vi','Thiên Tướng'],wealth:['Liêm Trinh'],title:'Quyền điều phối cần đi cùng ranh giới rõ',summary:'Vai trò dẫn dắt có thể được củng cố bằng cam kết và sự công bằng giữa các bên.',interpretation:'Tử Vi và Thiên Tướng tại Quan Lộc nhấn vào tổ chức, trách nhiệm với tập thể. Liêm Trinh tại Tài Bạch đưa thêm yêu cầu về nguyên tắc và sự tin tưởng trong việc ghi nhận thành quả.',tension:'Một điểm dễ vướng là trách nhiệm điều phối không đi cùng quyền quyết định rõ, hoặc việc giữ hòa khí làm chậm những trao đổi cần thiết.',example:'Nếu đứng giữa nhiều bộ phận, có thể cần phân biệt việc nào mình được quyết, việc nào phải thống nhất và điều kiện nào được xem là hoàn thành.'},
+  {id:'am-luong',career:['Thái Âm'],wealth:['Thiên Lương'],title:'Chiều sâu chuyên môn cần có cách được nhìn nhận',summary:'Sự chuẩn bị kỹ và giá trị bền có thể hỗ trợ nhau, nhưng phần đóng góp phía sau cần được làm rõ.',interpretation:'Thái Âm tại Quan Lộc nghiêng về công việc có chiều sâu và sự chuẩn bị; Thiên Lương tại Tài Bạch coi trọng kinh nghiệm, chất lượng và uy tín. Một cách phát triển là biến sự am hiểu thành sản phẩm hoặc cách hướng dẫn người khác có thể sử dụng.',tension:'Dễ dành nhiều công sức hoàn thiện trước khi đưa ra ngoài, hoặc làm phần nền quan trọng nhưng ít diễn đạt giá trị của nó.',example:'Một người nghiên cứu, chuẩn bị tài liệu hay kiểm tra chất lượng có thể cần cho thấy phần việc ấy giúp giảm sai sót hoặc giúp cả nhóm quyết định tốt hơn như thế nào.'},
+  {id:'luong-duong',career:['Thiên Lương'],wealth:['Thái Dương'],title:'Kinh nghiệm tạo giá trị khi được chia sẻ đúng chỗ',summary:'Năng lực giữ chất lượng cần có môi trường để người khác nhìn thấy và sử dụng.',interpretation:'Thiên Lương tại Quan Lộc nhấn vào kinh nghiệm và sự hướng dẫn; Thái Dương tại Tài Bạch nhấn vào đóng góp rõ với bên ngoài. Hai cung gợi hướng dùng sự am hiểu để dẫn việc, giải thích chuẩn mực hoặc hỗ trợ người khác làm tốt hơn.',tension:'Nếu chỉ giữ vai trò sửa lỗi phía sau, phần đóng góp có thể bị tách khỏi quyền tham gia quyết định ban đầu.',example:'Chẳng hạn, kinh nghiệm kiểm tra một quy trình có thể được chuyển thành tài liệu hướng dẫn hoặc vai trò tham gia từ đầu để giảm các lỗi lặp lại.'},
+  {id:'luong-dong',career:['Thiên Lương'],wealth:['Thiên Đồng'],title:'Giữ chất lượng trong một nhịp làm việc có thể duy trì',summary:'Kinh nghiệm và sự hỗ trợ cần đi cùng cách làm không phụ thuộc vào việc luôn tự gánh.',interpretation:'Thiên Lương tại Quan Lộc coi trọng hướng dẫn và chất lượng; Thiên Đồng tại Tài Bạch nghiêng về tính thích nghi và một nhịp có thể duy trì. Một hướng phát triển là tạo cách hỗ trợ có nền nếp, để việc chăm lo không chỉ dựa vào sự có mặt của mình.',tension:'Dễ làm thay cho người khác để giữ yên hoặc giữ chuẩn, rồi khó giảm phần việc đang gánh.',example:'Có thể đối chiếu với việc đào tạo một người cùng làm: hướng dẫn để họ tự thực hiện được sẽ khác với việc mình tiếp tục làm hộ mọi phần khó.'},
+  {id:'dong-co',career:['Thiên Đồng'],wealth:['Thiên Cơ'],title:'Sự dễ phối hợp cần một phương pháp rõ',summary:'Khả năng thích nghi phát huy tốt hơn khi gắn với kỹ năng và một cách giải quyết vấn đề cụ thể.',interpretation:'Thiên Đồng tại Quan Lộc gợi mặt phối hợp, phục vụ và thích nghi; Thiên Cơ tại Tài Bạch đưa giá trị về kỹ năng và phương án. Điểm nối không chỉ là dễ làm việc cùng, mà là biết giúp một việc được giải quyết như thế nào.',tension:'Có thể đổi cách làm theo yêu cầu của nhiều người, khiến phạm vi và tiến độ thiếu ổn định.',example:'Một ví dụ là nhận yêu cầu hỗ trợ thường xuyên: phân loại vấn đề và có cách xử lý lặp lại được sẽ giúp công sức bớt phân tán.'},
+  {id:'liem-sat-vu-pha',career:['Liêm Trinh','Thất Sát'],wealth:['Vũ Khúc','Phá Quân'],title:'Cải tổ cần vừa có sức thực hiện vừa giữ ranh giới',summary:'Khả năng quyết việc khó và thay cách tạo giá trị cần được đặt trong một phạm vi rõ.',interpretation:'Liêm Trinh và Thất Sát cùng ở Quan Lộc nhấn vào quyết định dưới áp lực nhưng vẫn cần nguyên tắc. Vũ Khúc và Phá Quân tại Tài Bạch nối hiệu quả thực thi với thay đổi cấu trúc. Điểm đáng đọc là khả năng sửa một hệ thống đang có vấn đề.',tension:'Muốn xử lý dứt điểm có thể khiến quá trình thay đổi đi nhanh hơn sự thống nhất vai trò, nguồn lực và cam kết giữa các bên.',example:'Nếu nhận nhiệm vụ cải tổ, một câu hỏi thực tế là ai cho phép thay đổi phần nào, kết quả nào cần đạt và phần chuyển tiếp do ai chịu trách nhiệm.'},
+];
+const hasAll=(p:PalaceView,names:string[])=>names.every(name=>p.major.some(s=>s.name===name));
+const evidence=(p:PalaceView,names:string[]):ReadingEvidence[]=>names.map(star=>({palace:p.name,star,layer:'bản mệnh',brightness:p.major.find(s=>s.name===star)?.brightness,transformation:p.major.find(s=>s.name===star)?.mutagen}));
+
+export function careerBridge(c:ChartView):CareerBridge{
+  const career=c.palaces.find(p=>p.name==='Quan Lộc')!,wealth=c.palaces.find(p=>p.name==='Tài Bạch')!;
+  // Điều kiện nhiều sao được ưu tiên trước điều kiện con để không bị che mất tổ hợp.
+  const rule=[...RULES].sort((a,b)=>(b.career.length+b.wealth.length)-(a.career.length+a.wealth.length))
+    .find(rule=>hasAll(career,rule.career)&&hasAll(wealth,rule.wealth));
+  if(rule){
+    const facts=[...evidence(career,rule.career),...evidence(wealth,rule.wealth)],weak=facts.filter(f=>['hãm','bất'].includes((f.brightness||'').toLocaleLowerCase('vi')));
+    const blocked=facts.find(f=>f.transformation==='Kỵ');
+    const caveat=(weak.length?` Ở đây ${weak.map(f=>`${f.star} (${f.brightness}) tại ${f.palace}`).join(', ')}: cần xem điều kiện để các nét này phát huy, thay vì coi là sở trường sẵn có.`:'')+(blocked?` Đồng thời, ${blocked.star} hóa Kỵ bản mệnh tại ${blocked.palace} nhắc thêm mặt ${frictionEffect(blocked.star,blocked.palace==='Quan Lộc'?'vai trò nghề nghiệp':'cách tạo và giữ nguồn lực','cần điều chỉnh')}.`:'');
+    return {...rule,interpretation:rule.interpretation+caveat,evidence:facts,specific:true};
+  }
+  const describe=(p:PalaceView,field:'work'|'money')=>p.major.map(s=>STAR_MEANINGS[s.name]?.[field]).filter(Boolean).join('; ');
+  if(!career.major.length||!wealth.major.length){
+    const target=!career.major.length?career:wealth,index=c.palaces.indexOf(target),opposite=c.palaces[(index+6)%12];
+    return {id:'void-'+target.name,title:`${target.name} cần đọc thêm đối cung`,specific:false,configuration:{type:'void',palace:target.name,branch:target.branch},
+      summary:`${target.name} vô chính diệu; không lấy việc thiếu chính tinh để kết luận thiếu sự nghiệp hoặc nguồn lực.`,
+      interpretation:`${target.name} tại ${target.branch} không có chính tinh tọa thủ. Đối cung ${opposite.name} tại ${opposite.branch} có ${opposite.major.map(starLabel).join(', ')||'cấu trúc cần khảo sát thêm'}. Các sao này được đọc theo quan hệ chiếu sang, không ghi thành sao tọa thủ tại ${target.name}.`,
+      tension:'Cần phân biệt phần công việc mình trực tiếp làm với điều kiện từ môi trường, người phối hợp và cách vận hành. Một cung trống chính tinh chưa đủ để xác định cách kiếm sống.',
+      example:'Khi đối chiếu thực tế, có thể xem việc thay môi trường hoặc cách phối hợp đã làm khả năng của mình được sử dụng khác đi ra sao.',evidence:[...evidence(career,career.major.map(s=>s.name)),...evidence(wealth,wealth.major.map(s=>s.name)),...evidence(opposite,opposite.major.map(s=>s.name))]};
+  }
+  return {id:'major-link',title:'Nối việc làm tốt với cách ghi nhận thành quả',specific:false,
+    summary:`Quan Lộc có ${career.major.map(s=>s.name).join(', ')}; Tài Bạch có ${wealth.major.map(s=>s.name).join(', ')}. Cần đọc vai trò và cách tạo nguồn lực cùng nhau.`,
+    interpretation:`Về vai trò, ${describe(career,'work')}. Về thành quả, ${describe(wealth,'money')}. Hai mặt bổ sung cho nhau khi phần đóng góp và cách tổ chức công việc được làm rõ.`,
+    tension:'Làm tốt một vai trò chưa tự động quyết định phần ghi nhận; còn có phạm vi công việc, điều kiện phối hợp và cách duy trì kết quả.',
+    example:'Có thể đối chiếu xem điều người khác cần ở mình có trùng với phần công sức đang dành nhiều nhất hay không.',
+    evidence:[...evidence(career,career.major.map(s=>s.name)),...evidence(wealth,wealth.major.map(s=>s.name))]};
+}
+
+export function careerBridgeText(c:ChartView){
+  const b=careerBridge(c);
+  return `**${b.title}:** ${b.interpretation}\n\n**Điểm cần kiểm tra:** ${b.tension}\n\n${b.example}`;
+}
+
+const QUESTIONS:Record<string,string>={
+  'vu-phu-tu-tuong':'Quyền phân công và cách theo dõi đã giúp giảm phần việc phải tự gánh chưa?',
+  'sat-pha':'Phần việc khó có thể trở thành một cách làm mà người khác cũng tiếp tục được hay chưa?',
+  'pha-tham':'Thay đổi đang giải quyết nhu cầu của ai, và phần nào cần được duy trì sau khi bắt đầu?',
+  'tham-sat':'Năng lực triển khai đã theo kịp phạm vi việc được nhận chưa?',
+  'co-cu':'Người cùng làm đã hiểu giống nhau về đầu bài, kết quả bàn giao và phần công sức chưa?',
+  'cu-duong':'Cuộc trao đổi đã giúp chốt được một hướng xử lý cụ thể hay vẫn dừng ở việc bảo vệ quan điểm?',
+  'duong-cu':'Vai trò đại diện có đi cùng phạm vi trách nhiệm và điều kiện phối hợp rõ ràng không?',
+  'phu-tuong':'Phần vận hành có tiếp tục được khi người đang giữ nhịp vắng mặt không?',
+  'liem-tuong-vu':'Nguyên tắc hiện tại đang giúp giảm việc làm lại hay khiến một việc khó được xử lý hơn?',
+  'vu-tu-phu':'Kết quả của nhóm còn phụ thuộc vào phần mình tự làm đến mức nào?',
+  'tu-tuong-liem':'Trách nhiệm điều phối có tương xứng với quyền quyết định thực tế không?',
+  'am-luong':'Phần chuẩn bị và chuyên môn phía sau đã được diễn đạt thành giá trị người khác hiểu được chưa?',
+  'luong-duong':'Kinh nghiệm có đang được sử dụng từ đầu hay chỉ xuất hiện khi phải sửa lỗi?',
+  'luong-dong':'Cách hỗ trợ đang giúp người khác tự làm được hay vẫn khiến mình phải làm thay?',
+  'dong-co':'Sự linh hoạt đã có một phương pháp để tránh công sức bị phân tán chưa?',
+  'liem-sat-vu-pha':'Phạm vi được phép thay đổi và phần trách nhiệm chuyển tiếp đã được thống nhất chưa?',
+};
+export function careerQuestion(bridge:CareerBridge){return QUESTIONS[bridge.id]||'Phần công việc đang làm tốt có trùng với điều môi trường đang cần và ghi nhận không?';}

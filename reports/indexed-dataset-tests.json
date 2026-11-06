@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "checks": [
+    "Toàn bộ 2.880 bản ghi pilot có nội dung khớp cách đọc cũ",
+    "Giải nén từng frame và nối byte khớp toàn bộ JSONL gốc",
+    "Kiểm tra tồn tại không đọc frame hoặc giải nén",
+    "Tý muộn, tháng 2 nhuận và qua năm dùng cùng key",
+    "Cache bản ghi giữ giới hạn và không trả object có thể làm hỏng lần đọc sau",
+    "Thiếu hoặc cắt ngắn data không bị coi là bản ghi sẵn sàng",
+    "Đổi index/data làm mất hiệu lực cache; checksum chặn frame hỏng",
+    "Chặn offset sai, key giả và hash sai",
+    "Đọc thiếu byte được đọc tiếp, không dùng Buffer chưa ghi đủ"
+  ],
+  "pilotRecords": 2880,
+  "finished": "2026-11-06T09:32:24.559Z"
+}

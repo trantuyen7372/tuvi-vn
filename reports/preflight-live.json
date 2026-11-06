@@ -1,0 +1,20 @@
+{
+  "mode": "live",
+  "node": "23.11.0",
+  "datasetMonths": 924,
+  "datasetFormat": "record-zstd-v1",
+  "paymentsEnabled": false,
+  "readingEngine": "dataset",
+  "issues": [
+    "Thiếu SITE_URL",
+    "Thiếu ADMIN_PASSWORD",
+    "Thiếu RESEND_API_KEY",
+    "Thiếu MAIL_FROM",
+    "Thiếu OPERATOR_NAME",
+    "Thiếu OPERATOR_ADDRESS",
+    "Thiếu SUPPORT_EMAIL",
+    "SITE_URL cần tên miền HTTPS thực tế"
+  ],
+  "warnings": [],
+  "ready": false
+}

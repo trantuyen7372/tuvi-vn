@@ -1,0 +1,17 @@
+{
+  "checks": [
+    "Chọn chủ đề và hoàn cảnh qua giao diện cập nhật đúng bài, không đổi URL, lượt hoặc lần tạo",
+    "Chặn ghi chú quá dài và cập nhật từ nguồn khác",
+    "Có link riêng vẫn không được sửa bài của tài khoản khác hoặc khi chưa đăng nhập",
+    "Xóa chủ đề xóa hoàn cảnh/ghi chú khỏi bài hoạt động, giữ nguyên lượt",
+    "Mục lục nhanh mobile mở đủ 22 mục, Escape trả focus và không tràn ngang",
+    "Chọn mục nhảy đúng nội dung và đánh dấu mục đang đọc",
+    "Chỉ lưu mã mục, không lưu link riêng hoặc nội dung bài trong bộ nhớ vị trí",
+    "Mở lại có lời mời đọc tiếp, chỉ cuộn khi người đọc chọn",
+    "Hai bài luận có vị trí lưu riêng",
+    "Vị trí hết hiệu lực được bỏ qua sau cập nhật bài",
+    "Khi trình duyệt chặn lưu trữ, điều hướng và bài luận vẫn hoạt động"
+  ],
+  "errors": [],
+  "passed": true
+}
