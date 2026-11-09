@@ -3,6 +3,8 @@ import { body, json, failure } from '@/lib/commerce/http';
 import { all, get, run, transaction } from '@/lib/commerce/db';
 import { type Order, type ReadingRow } from '@/lib/commerce/store';
 import { emailReading } from '@/lib/commerce/email';
+import {paymentConfiguration,paymentChannelFingerprint} from '@/lib/commerce/payment-setup';
+import {gateway} from '@/lib/commerce/provider';
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 function filters(req: Request) {
@@ -30,7 +32,7 @@ export async function GET(req: Request) {
     const revenue = all(`SELECT strftime('%Y-%m-%d',paid_at/1000,'unixepoch','+7 hours') day,SUM(amount) revenue,COUNT(*) orders FROM orders WHERE status='paid' AND paid_at BETWEEN ? AND ? GROUP BY day ORDER BY day DESC`, start, end);
     const monthly = all(`SELECT strftime('%Y-%m',paid_at/1000,'unixepoch','+7 hours') month,SUM(amount) revenue FROM orders WHERE status='paid' AND paid_at BETWEEN ? AND ? GROUP BY month ORDER BY month DESC`, start, end);
     const usage = get('SELECT COUNT(*) calls,COALESCE(SUM(cost_vnd),0) known_cost,SUM(CASE WHEN cost_vnd IS NULL THEN 1 ELSE 0 END) unknown_cost_calls FROM ai_usage WHERE created BETWEEN ? AND ?', start, end);
-    return json({ orders: orders.map(({ token_hash: _, qr: _q, ...o }) => o), revenue, monthly, usage,
+    return json({ orders: orders.map(({ token_hash: _, qr: _q, ...o }) => o), revenue, monthly, usage,paymentConfiguration:paymentConfiguration(),
       payments: all("SELECT * FROM payments WHERE status='review' ORDER BY created DESC LIMIT 100"),
       coupons: all('SELECT * FROM coupons ORDER BY expires DESC LIMIT 100'),
       emailFailures: all("SELECT id,order_id,email_status FROM readings WHERE status='done' AND email_status<>'sent' LIMIT 100") });
@@ -39,6 +41,13 @@ export async function GET(req: Request) {
 export async function POST(req: Request) {
   try {
     sameOrigin(req); admin(req); const b = await body(req), action = String(b.action || ''), id = String(b.orderId || '');
+    if(action==='confirm-payos-webhook'){
+      const configuration=paymentConfiguration();
+      if(configuration.provider!=='payos'||!configuration.canConfirmWebhook)throw Error('Cần đủ ba khóa PayOS và SITE_URL HTTPS công khai để đăng ký webhook');
+      try{await gateway().confirmWebhook();}catch{return json({error:'PayOS chưa xác minh được webhook. Kiểm tra khóa của kênh, SITE_URL và khả năng truy cập endpoint từ Internet.'},503);}
+      run('INSERT INTO audit_log(action,target,detail,created) VALUES (?,?,?,?)','payos-webhook-confirmed',paymentChannelFingerprint(),JSON.stringify({channel:paymentChannelFingerprint(),webhookUrl:configuration.webhookUrl}),Date.now());
+      return json({ok:true,message:'PayOS đã xác minh và đăng ký webhook cho tên miền này. Thanh toán vẫn giữ trạng thái bật/tắt hiện tại.'});
+    }
     if (action === 'recover-link') {
       const token=secret();
       transaction(()=>{

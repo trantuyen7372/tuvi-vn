@@ -25,9 +25,13 @@ export function claimReading(id: string) {
     const total = get<{ n: number }>('SELECT SUM(attempts) n FROM readings WHERE order_id=?', order.id)!.n || 0;
     if (total >= order.quantity * MAX_RETRIES) throw new Error('Đã đạt giới hạn xử lý của đơn. Vui lòng liên hệ hỗ trợ.');
     const lease = Date.now() + 12 * 60000;
-    run("UPDATE readings SET status='running',attempts=attempts+1,lease=? WHERE id=?", lease, id);
-    return { state: 'claimed' as const, reading: { ...row, attempts: row.attempts + 1, lease } };
+    run("UPDATE readings SET status='running',text='',attempts=attempts+1,lease=? WHERE id=?", lease, id);
+    return { state: 'claimed' as const, reading: { ...row, text:'', attempts: row.attempts + 1, lease } };
   });
+}
+/** A partial response stays a draft; a superseded worker cannot overwrite the current one. */
+export function saveReadingProgress(row:ReadingRow,text:string){
+  return Number(run("UPDATE readings SET text=? WHERE id=? AND status='running' AND lease=?",text,row.id,row.lease).changes)===1;
 }
 export function finishReading(row: ReadingRow, text: string) {
   return Number(run("UPDATE readings SET status='done',text=?,lease=NULL,completed=? WHERE id=? AND status='running' AND lease=?", text, Date.now(), row.id, row.lease).changes) === 1;

@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "checks": [
+    "Reference budget preserves subjects, chart facts and requested years",
+    "Real SDK publishes partial text before HTTP stream completes; concurrent request does not call AI again",
+    "Completed reading and timings are saved, cache costs included, rereading performs no API request",
+    "truncated: draft retained but never marked complete or emailed; retry clears previous draft",
+    "disconnect: draft retained but never marked complete or emailed; retry clears previous draft",
+    "429 is not automatically retried or misreported as complete",
+    "Expired worker cannot overwrite progress of a new attempt"
+  ],
+  "requests": 4,
+  "referenceCharacters": 7840,
+  "userPromptCharacters": 17579,
+  "evidence": "Application generator + actual Anthropic SDK against a local HTTP SSE stand-in; no real API calls.",
+  "limitations": "Does not establish provider latency or content quality. Installed Postman CLI 1.13.1 lacks Simulation; provider-owner mock search was unavailable.",
+  "sources": [
+    "https://platform.claude.com/docs/en/build-with-claude/streaming",
+    "https://platform.claude.com/docs/en/build-with-claude/thinking"
+  ]
+}

@@ -106,7 +106,7 @@ Nguyên tắc:
 - Trả lời rõ hướng phát triển về sau theo từng giai đoạn nhưng không hứa chắc giàu, thăng chức, kết hôn, mua nhà hoặc ly hôn. Một lời nhắc tham khảo ở đầu/cuối là đủ; tránh lặp lại lời cảnh báo ở mọi đoạn làm loãng bài.
 - Cân bằng điểm mạnh và điểm cần lưu ý. Không phán chắc chắn về bệnh tật, tai nạn, cái chết, ly hôn; dùng cách nói "nên lưu ý", "có xu hướng".
 - Không đưa lời khuyên y tế, pháp lý, đầu tư cụ thể. Không khuyên mua vật phẩm, cúng giải hạn.
-- Trình bày bằng Markdown với các tiêu đề cấp 2 (##) theo đúng thứ tự được yêu cầu, mỗi phần 2 đến 4 đoạn sâu sắc, giàu tính đối thoại.
+- Trình bày bằng Markdown với các tiêu đề cấp 2 (##) theo đúng thứ tự được yêu cầu. Chủ đề trọng tâm có thể viết 3–4 đoạn; các phần ít liên quan viết 1–2 đoạn, tránh lặp ý để kéo dài bài. Mở đầu ngay bằng nội dung bài luận, không viết lời dẫn về việc chuẩn bị bài.
 - Cuối bài thêm một câu nhắc: Tử Vi mang tính tham khảo, cuộc sống do chính mình quyết định.`;
 
 export function referenceBlock(ref: Record<string, string> | null, labels: Record<string, string>): string {

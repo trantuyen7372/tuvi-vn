@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checks": [
+    "Mobile displays a labeled draft while POST remains open; incomplete article has no print action",
+    "Reload during generation resumes draft without issuing a second POST",
+    "Completion reveals the saved article and print action; reopening does not regenerate",
+    "Failed generation retains a clearly labeled partial article and cannot be printed as complete"
+  ],
+  "posts": 1,
+  "errors": [],
+  "evidence": "Production Next.js app in Chromium with simulated browser API responses; no real AI requests."
+}

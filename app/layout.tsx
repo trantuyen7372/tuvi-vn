@@ -1,12 +1,17 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import CustomerNavigation from '@/components/CustomerNavigation';
+import BrandLogo from '@/components/BrandLogo';
 import {SITE_ORIGIN,SITE_NAME} from '@/lib/seo';
 
 export const metadata: Metadata = {
   metadataBase:new URL(SITE_ORIGIN),
   title: {default:'Lập lá số Tử Vi miễn phí và luận giải | '+SITE_NAME,template:'%s | '+SITE_NAME},
   description: 'Lập lá số Tử Vi Đẩu Số miễn phí, xem 12 cung, đại hạn, lưu niên và luận giải chi tiết.',
+  icons: {
+    icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
+    apple: [{ url: '/apple-touch-icon.svg', type: 'image/svg+xml' }],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -22,7 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <header className="no-print border-b border-[#d9c7a3] bg-white/60">
           <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-            <a href="/" className="mr-4 shrink-0 font-serif text-xl font-bold text-son">紫微 Tử Vi</a>
+            <BrandLogo />
             <nav aria-label="Điều hướng chính" className="flex flex-wrap justify-end gap-x-4 gap-y-2 text-sm text-[#6b5b45]"><a href="/#lap-la-so" className="hover:text-son">Lập lá số</a><a href="/bai-luan-mau" className="hover:text-son">Đọc thử</a><CustomerNavigation/><a href="/sao" className="hover:text-son">14 chính tinh</a><a href="/co-thu" className="hover:text-son">Cổ thư</a></nav>
           </div>
         </header>

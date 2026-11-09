@@ -13,6 +13,18 @@ npm run build && npm start   # http://localhost:3100
 
 Xem [THANH-TOAN-README.md](THANH-TOAN-README.md) để chạy bản thử, cấu hình PayOS, quản trị, email và các kiểm tra. Mã kích hoạt TUVI_CODES đã được thay bằng đơn hàng và mã giảm giá.
 
+## Luận AI và thời gian chờ
+
+Đặt `READING_ENGINE=anthropic`, `ANTHROPIC_API_KEY` và `TUVI_MODEL` trong `.env.local`. Mặc định gọi API Anthropic chính thức; chỉ dùng `TUVI_ANTHROPIC_BASE_URL` khi chủ động đổi endpoint. Biến `ANTHROPIC_BASE_URL` kế thừa từ terminal không đổi endpoint của ứng dụng.
+
+Sonnet 5.5 dùng `thinking: between_tools`, effort `medium` cho tác vụ viết bài không dùng tools. Tài liệu giải sẵn được giới hạn tổng cộng 8.000 ký tự, ưu tiên chủ đề khách chọn; dữ liệu an sao, độ sáng, các lớp tứ hóa và các năm đã tính vẫn giữ nguyên. Bài vẫn yêu cầu đủ các mục; chủ đề chính được viết kỹ hơn để tránh lặp ở các phần phụ.
+
+Trong khi gọi API, nội dung được lưu từng đợt tối đa một lần/giây và trang đọc cập nhật mỗi hai giây. Phần đang viết được ghi rõ là bản chưa hoàn tất. Khi có lỗi hoặc chạm trần token, giữ phần đã nhận để đọc, không đánh dấu hoàn thành hoặc gửi email. Thử lại sẽ viết một bản mới; xem lại bài hoàn tất không gọi AI thêm. Không cần thay schema SQLite.
+
+Nhật ký `ai_generation` trong `audit_log` ghi thời gian có chữ đầu tiên, thời gian hoàn tất, token và lý do dừng, không ghi prompt hoặc khóa API. Tốc độ thực tế vẫn phụ thuộc model, độ dài bài và tải nhà cung cấp.
+
+Kiểm tra không tốn phí AI: `node scripts/test-ai-streaming.cjs` chạy generator và SDK thật với máy chủ HTTP SSE cục bộ; `node scripts/test-ai-streaming-ui.mjs` chạy bản production với phản hồi API giả lập trong trình duyệt. Cần `npm run build` trước kiểm tra giao diện. Các phép kiểm tra này xác nhận trạng thái, chống gọi trùng và hiển thị dần, không thay thế phép đo độ trễ hoặc đánh giá chất lượng với API thật.
+
 ## Dữ liệu giải sẵn v4.0 (tuỳ chọn, giúp AI luận sâu hơn)
 Bộ "Ziwei Doushu Open Interpretation Dataset v4.0" (CC BY 4.0) của dự án ziwei-doushu, 674.976 lá số 1950–2026.
 ```bash
