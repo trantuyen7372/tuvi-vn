@@ -1,8 +1,12 @@
 {
-  "passed": false,
-  "checks": [],
-  "errors": [
-    "expect(locator).toBeVisible() failed\n\nLocator: getByText('Đại hạn 33–42 tuổi tại Điền Trạch và năm 2026 nhấn vào những chủ đề nào?', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" getByText('Đại hạn 33–42 tuổi tại Điền Trạch và năm 2026 nhấn vào những chủ đề nào?', { exact: true }) with timeout 5000ms\n  - waiting for getByText('Đại hạn 33–42 tuổi tại Điền Trạch và năm 2026 nhấn vào những chủ đề nào?', { exact: true })\n"
+  "passed": true,
+  "checks": [
+    "Xem trước đúng đại hạn, đường mở bài hoạt động và chế độ thật vẫn tắt thu tiền",
+    "Chọn cung có đường dẫn tới vùng mở bài",
+    "Giao diện thanh toán giả lập tự điền email, coupon thu gọn, gói được chọn chủ động",
+    "QR giả lập có đếm ngược, đúng hồ sơ, tải PNG và sao chép đúng nội dung",
+    "Hết thời gian thì ẩn QR và thao tác chuyển khoản"
   ],
+  "errors": [],
   "scope": "Browser payment responses intercepted; no real order or transfer"
 }
