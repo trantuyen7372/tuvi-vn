@@ -1,14 +1,17 @@
 {
-  "passed": 26,
+  "passed": 31,
   "checks": [
     "Chỉ chạy trong môi trường trải nghiệm, thu tiền tắt",
     "Chưa đăng nhập không xem được tài khoản",
     "Chặn yêu cầu từ nguồn khác",
     "Không cho mật khẩu ngắn",
     "Đăng ký cấp phiên HttpOnly và không trả mật khẩu",
-    "Tài khoản mới có đúng 3 lượt trải nghiệm",
+    "Chưa xác minh email chưa được cấp lượt trải nghiệm",
     "Email đã đăng ký không tạo tài khoản thứ hai",
+    "Chưa xác minh không tạo được bài trải nghiệm",
     "Xác minh email bằng token dùng một lần",
+    "Xác minh email được cấp đúng 1 lượt",
+    "Đăng nhập và tải lại tài khoản không cộng thêm lượt",
     "Lưu lá số trong tài khoản",
     "Tài khoản khác không xem được hồ sơ",
     "Không xóa được hồ sơ của người khác",
@@ -17,16 +20,18 @@
     "Lịch sử chỉ hiện bài của chủ tài khoản",
     "Đọc lại không dùng thêm lượt",
     "Ngày ngoài kho không làm mất lượt",
+    "Hết lượt không mở thêm bài mới",
     "Đổi giờ/giới tính sinh bài khác theo đúng lá số",
     "Thu tiền và tạo link PayOS đang bị khóa",
     "Sai mật khẩu không mở phiên",
     "Reset mật khẩu thu hồi mọi phiên cũ",
     "Token reset không dùng lần hai",
+    "Reset không cấp lại lượt trải nghiệm",
     "Đăng nhập thiết bị mới vẫn có hồ sơ và bài",
     "Đổi mật khẩu đúng thông tin hiện tại",
     "Không xóa tài khoản nếu mật khẩu sai",
     "Xóa tài khoản thu hồi phiên và bài riêng",
     "Đăng xuất khóa truy cập tài khoản"
   ],
-  "finished": "2026-11-06T14:46:10.932Z"
+  "finished": "2026-11-09T15:41:00.978Z"
 }

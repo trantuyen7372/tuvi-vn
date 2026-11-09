@@ -9,7 +9,7 @@ const credentials = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file,'utf8'
 fs.writeFileSync(file,JSON.stringify(credentials,null,2)+'\n',{mode:0o600});
 const customers=process.argv.includes('--customers');
 const env = {...process.env,...(process.argv.includes('--legacy-data')?{TUVI_DATASET_DIR:path.join(process.cwd(),'data','v4-vi')}:{}), ADMIN_PASSWORD:credentials.password, TUVI_DB_PATH:path.join(process.cwd(),'storage',customers?'customer-preview.sqlite':'payment-demo.sqlite'),
-  PAYMENTS_ENABLED:customers?'0':'1',READING_ENGINE:customers?'dataset':'demo',FREE_READING_CREDITS:'3',
+  PAYMENTS_ENABLED:customers?'0':'1',READING_ENGINE:customers?'dataset':'demo',FREE_READING_CREDITS:'1',
   SITE_URL:'http://localhost:3100', PAYMENT_PROVIDER:'mock', TUVI_ALLOW_TEST_PAYMENTS:'1', ANTHROPIC_API_KEY:'',
   RESEND_API_KEY:'', MAIL_FROM:'', PAYOS_CLIENT_ID:'',PAYOS_API_KEY:'',PAYOS_CHECKSUM_KEY:'',NEXT_TELEMETRY_DISABLED:'1'};
 console.log('Bản thử: http://localhost:3100 · quản trị /quan-tri · mật khẩu nằm trong storage/demo-credentials.json');

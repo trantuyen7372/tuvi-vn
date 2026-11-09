@@ -21,7 +21,7 @@ function AuthForm({mode}:{mode:Mode}){
     }catch(e){setError((e as Error).message);}finally{setBusy(false);}
   }
   return <main className="mx-auto max-w-lg px-4 py-10"><section className="rounded-xl border border-[#d9c7a3] bg-white p-6"><h1 className="font-serif text-3xl font-bold text-son">{titles[mode]}</h1>
-    <p className="mt-3 text-sm">{mode==='signup'?'Lưu lá số, xem lại bài luận và quản lý lượt trải nghiệm trên nhiều thiết bị.':mode==='login'?'Dùng email và mật khẩu của bạn để mở lịch sử lá số, bài luận.':mode==='verify'?'Bấm xác nhận để hoàn tất xác minh địa chỉ email.':'Link khôi phục chỉ dùng một lần và có thời hạn.'}</p>
+    <p className="mt-3 text-sm">{mode==='signup'?'Lưu lá số, xem lại bài luận trên nhiều thiết bị. Lượt trải nghiệm miễn phí được cấp sau khi xác minh email.':mode==='login'?'Dùng email và mật khẩu của bạn để mở lịch sử lá số, bài luận.':mode==='verify'?'Bấm xác nhận để hoàn tất xác minh địa chỉ email.':'Link khôi phục chỉ dùng một lần và có thời hạn.'}</p>
     <form className="mt-5 space-y-4" onSubmit={submit}>
       {['login','signup','forgot'].includes(mode)&&<label className="block">Email<input className="input mt-1" type="email" required maxLength={254} autoComplete="email" value={email} onChange={e=>setEmail(e.target.value)}/></label>}
       {['login','signup','reset'].includes(mode)&&<label className="block">{mode==='reset'?'Mật khẩu mới':'Mật khẩu'}<input className="input mt-1" type="password" required minLength={mode==='login'?1:12} maxLength={128} autoComplete={mode==='login'?'current-password':'new-password'} value={password} onChange={e=>setPassword(e.target.value)}/></label>}

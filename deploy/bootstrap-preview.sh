@@ -12,7 +12,7 @@ if not os.path.exists('.env.local'):
     values={
         'SITE_URL':'https://xemtuvionline.vn','ADMIN_PASSWORD':secrets.token_urlsafe(32),
         'TUVI_DB_PATH':'/srv/tuvi-vn/storage/tuvi.sqlite','TUVI_DATASET_DIR':'/srv/tuvi-vn/data/v4-vi',
-        'READING_ENGINE':'dataset','FREE_READING_CREDITS':'3','PAYMENTS_ENABLED':'0',
+        'READING_ENGINE':'dataset','FREE_READING_CREDITS':'1','PAYMENTS_ENABLED':'0',
         'PAYMENT_PROVIDER':'payos','TUVI_ALLOW_TEST_PAYMENTS':'0','TRUST_PROXY':'1',
         'ANTHROPIC_API_KEY':'','RESEND_API_KEY':'','MAIL_FROM':'','SUPPORT_EMAIL':'',
         'OPERATOR_NAME':'MINH ĐĂNG','OPERATOR_ADDRESS':'','OPERATOR_TAX_ID':'',

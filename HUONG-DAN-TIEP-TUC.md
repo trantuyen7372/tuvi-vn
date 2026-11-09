@@ -1,5 +1,11 @@
 # Hướng dẫn cho AI khác: tiếp tục dự án website Tử Vi (tiếng Việt)
 
+## Chính sách lượt trải nghiệm — 09/11/2026
+
+Tài khoản mới nhận đúng 1 lượt sau khi xác minh email, kể cả khi bật bán hàng. Chưa xác minh không tạo đơn welcome hoặc dùng lượt welcome cũ; vẫn lưu lá số và xem lại bài đã có. Xác minh qua link đặt lại mật khẩu cũng chứng minh quyền sở hữu email và chỉ cấp một lần. Đăng nhập, xác minh lại, reset và tải lại tài khoản không cộng thêm lượt. `FREE_READING_CREDITS` mặc định 1, giới hạn tối đa 1 để cấu hình cũ 3 không cấp sai; đặt 0 để tắt. Giữ nguyên số lượt đã cấp và bài đã lưu cho tài khoản cũ. Chưa cập nhật máy chủ trong đợt thay đổi này.
+
+Typecheck/build đạt; 6 nhóm kiểm tra cấp lượt và xác minh (`node scripts/test-welcome-credits.cjs`), 16 commerce, 31 HTTP khách và 11 nhóm Chromium tài khoản đạt. Kiểm thử dùng DB thử và link email demo, không gửi email hoặc nhận tiền thật. `smoke-server.mjs` tạo token một lần qua quyền truy cập DB cho đúng tài khoản triển khai rồi gọi endpoint xác minh thật; không phải bằng chứng gửi thư thành công. Local chạy `preview:customers` tại cổng 3100.
+
 Người dùng: MINH ĐĂNG, viết tiếng Việt không dấu, trả lời tiếng Việt. Không gắn dòng Claude/Co-Authored-By vào commit.
 
 ## Cập nhật tại máy local ngày 05/11/2026

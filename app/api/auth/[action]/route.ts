@@ -44,7 +44,8 @@ export async function POST(req:Request,ctx:{params:Promise<{action:string}>}){
     if(action==='verify'){
       limit(`customer-verify:${clientKey(req)}`,120,3600000);
       const token=String(b.token||'');if(!/^[a-f0-9]{64}$/.test(token))throw Error('Link không hợp lệ');
-      consumeAuthToken(token,'verify',c=>{run('UPDATE customers SET verified=1 WHERE id=?',c.id);claimGuestOrders({...c,verified:1});});
+      const c=consumeAuthToken(token,'verify',c=>{run('UPDATE customers SET verified=1 WHERE id=?',c.id);claimGuestOrders({...c,verified:1});});
+      welcomeAccess({...c,verified:1});
       return json({ok:true});
     }
     if(action==='resend'){
@@ -56,6 +57,7 @@ export async function POST(req:Request,ctx:{params:Promise<{action:string}>}){
       limit(`customer-reset-confirm:${clientKey(req)}`,60,3600000);const token=String(b.token||'');if(!/^[a-f0-9]{64}$/.test(token))throw Error('Link không hợp lệ');
       const encoded=await passwordHash(checkPassword(b.password));
       const c=consumeAuthToken(token,'reset',c=>{run('UPDATE customers SET password_hash=?,verified=1 WHERE id=?',encoded,c.id);run('DELETE FROM customer_sessions WHERE customer_id=?',c.id);run('UPDATE customer_auth_tokens SET used=? WHERE customer_id=? AND purpose=\'reset\'',Date.now(),c.id);claimGuestOrders({...c,verified:1});});
+      welcomeAccess({...c,verified:1});
       return signed({ok:true},createSession(c.id));
     }
     if(action==='password'){

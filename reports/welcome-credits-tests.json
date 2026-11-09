@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checks": [
+    "One welcome credit in preview and paid modes; old configuration cannot grant three",
+    "Signup and invalid verification cannot grant or spend a welcome credit",
+    "Valid verification grants once; duplicate links, new links and logins cannot add credits",
+    "Only one new reading; rereading is free and password reset never refills credits",
+    "Email ownership proven through reset grants once, even if original verification follows",
+    "Legacy unverified welcome credits require verification; previously granted balance is preserved"
+  ],
+  "scope": "Real auth route handlers and isolated SQLite; no real email or external API calls."
+}
