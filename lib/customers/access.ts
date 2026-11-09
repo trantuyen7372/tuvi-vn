@@ -22,6 +22,7 @@ export function welcomeAccess(c:Customer){
 export function customerDashboard(c:Customer){
   claimGuestOrders(c);
   return {customer:{email:c.email,verified:!!c.verified},paymentsEnabled:paymentsEnabled(),welcomeCredits:freeReadingCredits(),credits:get<{n:number}>("SELECT COALESCE(SUM(cr.remaining),0) n FROM credits cr JOIN orders o ON cr.order_id=o.id WHERE o.customer_id=? AND o.status='paid' AND (o.product!='welcome' OR ?=1)",c.id,c.verified)!.n,
+    verificationDelivery:c.verified?null:get<{status:string;created:number}>("SELECT detail status,created FROM audit_log WHERE action='customer-email-verify' AND target=? ORDER BY created DESC,id DESC LIMIT 1",c.id)||null,
     profiles:all('SELECT id,label,input,created FROM birth_profiles WHERE customer_id=? ORDER BY created DESC',c.id),
     orders:all('SELECT id,code,product,amount,status,quantity,created FROM orders WHERE customer_id=? ORDER BY created DESC',c.id),
     readings:all('SELECT r.token,r.input,r.status,r.created FROM readings r JOIN orders o ON o.id=r.order_id WHERE o.customer_id=? ORDER BY r.created DESC',c.id)};

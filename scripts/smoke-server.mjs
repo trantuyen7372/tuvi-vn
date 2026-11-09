@@ -3,7 +3,7 @@ import {readFileSync} from 'node:fs';
 import {DatabaseSync} from 'node:sqlite';
 const revision=readFileSync(new URL('../lib/personal-reading.ts',import.meta.url),'utf8').match(/READING_REVISION\s*=\s*(\d+)/)?.[1];
 assert.ok(revision,'Không xác định được phiên bản bài luận của mã vừa triển khai');
-if(process.env.READING_ENGINE!=='dataset'||process.env.PAYMENTS_ENABLED!=='0'||process.env.RESEND_API_KEY)throw Error('Chỉ kiểm tra bản trải nghiệm dùng dữ liệu, tắt thu tiền và chưa cấu hình gửi email thật');
+if(process.env.READING_ENGINE!=='dataset'||process.env.PAYMENTS_ENABLED!=='0'||process.env.RESEND_API_KEY||process.env.SMTP_PASSWORD)throw Error('Chỉ kiểm tra bản trải nghiệm dùng dữ liệu, tắt thu tiền và chưa cấu hình gửi email thật');
 const base='http://127.0.0.1:3100',origin=process.env.SITE_URL;let cookie='';
 async function req(url,method='GET',data){const r=await fetch(base+url,{method,headers:{Origin:origin,'Content-Type':'application/json',Cookie:cookie,'X-Real-IP':'127.0.0.1'},body:data===undefined?undefined:JSON.stringify(data)});const j=await r.json();if(!r.ok)throw Error(`${url}: ${r.status}: ${j.error||''}`);if(r.headers.get('set-cookie'))cookie=r.headers.get('set-cookie').split(';')[0];return j;}
 assert.equal((await req('/api/health')).ok,true);

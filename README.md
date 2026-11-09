@@ -13,6 +13,10 @@ npm run build && npm start   # http://localhost:3100
 
 Xem [THANH-TOAN-README.md](THANH-TOAN-README.md) để chạy bản thử, cấu hình PayOS, quản trị, email và các kiểm tra. Mã kích hoạt TUVI_CODES đã được thay bằng đơn hàng và mã giảm giá.
 
+## Email xác minh và hỗ trợ
+
+Gửi qua Gmail `xemtuvionlinevn@gmail.com`, dùng `MAIL_PROVIDER=gmail`, `SMTP_USER`, `SMTP_PASSWORD` (Mật khẩu ứng dụng Google), `MAIL_FROM` và `SUPPORT_EMAIL` trong `.env.local`. Xem [hướng dẫn cấu hình và kiểm thử](deploy/EMAIL.md). Tài khoản mới nhận 1 lượt sau khi xác minh email; chưa cấu hình mật khẩu ứng dụng thì chưa gửi thư thật. Các trường mật khẩu trong file mẫu để trống.
+
 ## Luận AI và thời gian chờ
 
 Đặt `READING_ENGINE=anthropic`, `ANTHROPIC_API_KEY` và `TUVI_MODEL` trong `.env.local`. Mặc định gọi API Anthropic chính thức; chỉ dùng `TUVI_ANTHROPIC_BASE_URL` khi chủ động đổi endpoint. Biến `ANTHROPIC_BASE_URL` kế thừa từ terminal không đổi endpoint của ứng dụng.

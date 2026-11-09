@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checks": [
+    "Real signup shows pending verification, zero credits and honest demo delivery state",
+    "Verification in another tab refreshes original account to one credit and hides further confirmation",
+    "Invalid or expired link offers account and resend recovery instead of a dead end",
+    "Simulated sent/failure/missing-configuration/rate-limit states have clear messages and allow appropriate recovery",
+    "Verification and reset HTML templates render at 390px with visible action and no horizontal overflow"
+  ],
+  "errors": [],
+  "evidence": "Production app in Chromium. Real demo signup, resend and cross-tab verification; delivery error UI uses intercepted responses; templates rendered from generated HTML. No real emails."
+}

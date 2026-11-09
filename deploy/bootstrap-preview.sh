@@ -14,7 +14,8 @@ if not os.path.exists('.env.local'):
         'TUVI_DB_PATH':'/srv/tuvi-vn/storage/tuvi.sqlite','TUVI_DATASET_DIR':'/srv/tuvi-vn/data/v4-vi',
         'READING_ENGINE':'dataset','FREE_READING_CREDITS':'1','PAYMENTS_ENABLED':'0',
         'PAYMENT_PROVIDER':'payos','TUVI_ALLOW_TEST_PAYMENTS':'0','TRUST_PROXY':'1',
-        'ANTHROPIC_API_KEY':'','RESEND_API_KEY':'','MAIL_FROM':'','SUPPORT_EMAIL':'',
+        'ANTHROPIC_API_KEY':'','MAIL_PROVIDER':'gmail','SMTP_USER':'xemtuvionlinevn@gmail.com','SMTP_PASSWORD':'',
+        'RESEND_API_KEY':'','MAIL_FROM':'Xem Tử Vi Online <xemtuvionlinevn@gmail.com>','SUPPORT_EMAIL':'xemtuvionlinevn@gmail.com',
         'OPERATOR_NAME':'MINH ĐĂNG','OPERATOR_ADDRESS':'','OPERATOR_TAX_ID':'',
     }
     with os.fdopen(os.open('.env.local',os.O_WRONLY|os.O_CREAT|os.O_EXCL,0o600),'w') as f:

@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "checks": [
+    "Signup sends HTML and text through real HTTP; API exposes status only, stored token and idempotency key are hashed",
+    "Email link verifies once and grants one credit; verified accounts do not send again",
+    "Missing configuration preserves account and zero credits; resend recovers after configuration is fixed",
+    "429, HTML 503, malformed success and disconnect report failure, never grant credits, and can recover by resend",
+    "Password recovery uses 30-minute template, conceals account existence and does not duplicate the welcome credit",
+    "Resend is limited to three per account per hour before any further provider call",
+    "A hanging provider is stopped by the real 15-second request timeout",
+    "Local HTTP override cannot target a public site or remote mock; HTML escapes link values"
+  ],
+  "providerRequests": 16,
+  "evidence": "Actual auth routes, isolated SQLite and actual fetch to a local HTTP Resend stand-in; no real emails.",
+  "limitations": "Postman CLI 1.13.1 has no Simulation/status command; owner mock discovery skipped. No verified Resend domain, provider delivery, inbox placement or real credentials tested.",
+  "sources": [
+    "https://resend.com/docs/api-reference/emails/send-email",
+    "https://resend.com/docs/dashboard/domains/introduction"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "checks": [
+    "Real SMTP authentication and multipart message use requested Gmail sender/reply address while recipient is the customer",
+    "Link in actual SMTP MIME verifies once and grants exactly one credit",
+    "SMTP 535 preserves unverified account with zero credits; resend succeeds after credentials recover",
+    "Rejected recipient is not reported as a sent email",
+    "Saved reading email uses Gmail; a failed delivery preserves the completed article",
+    "Silent SMTP greeting is bounded by the configured timeout",
+    "Local SMTP override is rejected for public SITE_URL; missing app password leaves email disabled"
+  ],
+  "messages": 3,
+  "evidence": "Actual Nodemailer SMTP client, auth handlers and isolated SQLite against a loopback SMTP stand-in; no real Gmail calls.",
+  "limitations": "Does not test Gmail TLS, Google authentication acceptance, network availability from server or inbox delivery.",
+  "sources": [
+    "https://developers.google.com/workspace/gmail/imap/imap-smtp",
+    "https://support.google.com/accounts/answer/185833?hl=vi"
+  ]
+}

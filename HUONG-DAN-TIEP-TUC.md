@@ -1,5 +1,13 @@
 # Hướng dẫn cho AI khác: tiếp tục dự án website Tử Vi (tiếng Việt)
 
+## Email xác minh qua Gmail — 09/11/2026
+
+Chủ website xác nhận địa chỉ gửi và nhận hỗ trợ `xemtuvionlinevn@gmail.com`. Đọc `deploy/EMAIL.md`. Gửi qua Gmail SMTP TLS 465 bằng Nodemailer; `MAIL_PROVIDER=gmail`, `SMTP_USER`, `SMTP_PASSWORD` (Mật khẩu ứng dụng Google), `MAIL_FROM`, `SUPPORT_EMAIL`. Email xác minh/khôi phục/bài luận gửi tới từng khách; Reply-To về Gmail hỗ trợ, không tự BCC dữ liệu khách. Giữ tương thích Resend khi chọn rõ provider. Đã cấu hình địa chỉ ở `.env.example` và local riêng; mật khẩu để trống, chưa gửi thư thật hoặc triển khai server.
+
+Mẫu thư HTML/văn bản thuần, hạn xác minh 24 giờ/reset 30 phút; thông báo gửi thành công/thất bại lưu trong audit chỉ gồm mã tài khoản/trạng thái/thời điểm. Dashboard có gửi lại, hướng dẫn kiểm tra Spam, nhận cập nhật xác minh từ tab khác. Link hết hạn có đường về tài khoản để gửi lại. Xác minh xong không hiện nút xác nhận lần nữa. Chính sách một lượt vẫn được giữ.
+
+Build/typecheck đạt, 8 nhóm HTTP email, 7 nhóm SMTP, 6 nhóm cấp lượt, 31 HTTP khách, 5 nhóm Chromium email và 11 UI khách đạt. Đã xem ảnh mẫu thư/trang tài khoản mobile. Mô phỏng dùng sender code thật + HTTP/SMTP loopback và SQLite riêng, không gọi Gmail/Resend thật. Postman CLI 1.13.1 không có Simulation/status nên bỏ qua tìm mock của nhà cung cấp; báo cáo ghi rõ hạn chế. Không suy ra Inbox hay Google đã chấp nhận mật khẩu. Local đang chạy `preview:customers` cổng 3100. Dependency đã đổi; updater preview cũ chặn lockfile khác, cần `npm ci` khi triển khai.
+
 ## Chính sách lượt trải nghiệm — 09/11/2026
 
 Tài khoản mới nhận đúng 1 lượt sau khi xác minh email, kể cả khi bật bán hàng. Chưa xác minh không tạo đơn welcome hoặc dùng lượt welcome cũ; vẫn lưu lá số và xem lại bài đã có. Xác minh qua link đặt lại mật khẩu cũng chứng minh quyền sở hữu email và chỉ cấp một lần. Đăng nhập, xác minh lại, reset và tải lại tài khoản không cộng thêm lượt. `FREE_READING_CREDITS` mặc định 1, giới hạn tối đa 1 để cấu hình cũ 3 không cấp sai; đặt 0 để tắt. Giữ nguyên số lượt đã cấp và bài đã lưu cho tài khoản cũ. Chưa cập nhật máy chủ trong đợt thay đổi này.

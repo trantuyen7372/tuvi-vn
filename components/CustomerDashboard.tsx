@@ -3,20 +3,25 @@ import {useEffect,useState} from 'react';
 import {useRouter} from 'next/navigation';
 import BirthForm from './BirthForm';
 import {inputToQuery,type BirthInput} from '@/lib/birth-input';
-import {notifyAuthChanged} from '@/lib/customers/client';
-interface Dashboard{customer:{email:string;verified:boolean};credits:number;paymentsEnabled?:boolean;welcomeCredits:number;profiles:{id:string;label:string;input:string}[];readings:{token:string;input:string;status:string;created:number}[];orders:{id:string;code:number;product:string;amount:number;status:string}[]}
+import {notifyAuthChanged,AUTH_STORAGE_KEY} from '@/lib/customers/client';
+import EmailVerification from './EmailVerification';
+interface Dashboard{customer:{email:string;verified:boolean};credits:number;paymentsEnabled?:boolean;welcomeCredits:number;verificationDelivery?:{status:string;created:number}|null;profiles:{id:string;label:string;input:string}[];readings:{token:string;input:string;status:string;created:number}[];orders:{id:string;code:number;product:string;amount:number;status:string}[]}
 const statusNames:Record<string,string>={done:'Đã có bài luận',pending:'Chờ tạo bài',running:'Đang xử lý',error:'Cần thử lại'};
 export default function CustomerDashboard(){
-  const router=useRouter();const[data,setData]=useState<Dashboard>(),[showForm,setShowForm]=useState(false),[error,setError]=useState(''),[message,setMessage]=useState(''),[demoUrl,setDemoUrl]=useState(''),[busy,setBusy]=useState(false),[oldPassword,setOldPassword]=useState(''),[password,setPassword]=useState(''),[erasePassword,setErasePassword]=useState('');
+  const router=useRouter();const[data,setData]=useState<Dashboard>(),[showForm,setShowForm]=useState(false),[error,setError]=useState(''),[message,setMessage]=useState(''),[busy,setBusy]=useState(false),[oldPassword,setOldPassword]=useState(''),[password,setPassword]=useState(''),[erasePassword,setErasePassword]=useState('');
   async function call(url:string,method='GET',body?:unknown){const r=await fetch(url,{method,cache:'no-store',headers:method==='GET'?{}:{'Content-Type':'application/json'},body:body===undefined?undefined:JSON.stringify(body)});const j=await r.json();if(r.status===401){notifyAuthChanged();router.replace('/dang-nhap');throw Error('Vui lòng đăng nhập');}if(!r.ok)throw Error(j.error);if(method!=='GET'&&(url.startsWith('/api/auth/')||url==='/api/account'))notifyAuthChanged();return j;}
   async function load(){try{setData(await call('/api/account'));}catch(e){setError((e as Error).message);}}
-  useEffect(()=>{void load();},[]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(()=>{
+    const refresh=()=>{void load();},storage=(e:StorageEvent)=>{if(e.key===AUTH_STORAGE_KEY)refresh();};
+    refresh();window.addEventListener('focus',refresh);window.addEventListener('storage',storage);
+    return ()=>{window.removeEventListener('focus',refresh);window.removeEventListener('storage',storage);};
+  },[]); // eslint-disable-line react-hooks/exhaustive-deps
   async function action(fn:()=>Promise<void>){setBusy(true);setError('');setMessage('');try{await fn();}catch(e){setError((e as Error).message);}finally{setBusy(false);}}
   async function save(input:BirthInput){await call('/api/account/profiles','POST',{input});setShowForm(false);setMessage('Đã lưu lá số.');await load();}
   if(!data)return <main className="mx-auto max-w-4xl p-8"><p>{error||'Đang mở tài khoản…'}</p></main>;
   return <main className="mx-auto max-w-5xl space-y-6 px-4 py-8"><header className="flex flex-wrap items-center justify-between gap-3"><div><h1 className="font-serif text-3xl font-bold text-son">Tài khoản của tôi</h1><p className="mt-2 break-all">{data.customer.email}</p></div><button className="btn-outline" disabled={busy} onClick={()=>void action(async()=>{await call('/api/auth/logout','POST',{});try{localStorage.removeItem('tuvi-order');}catch{}setData(undefined);router.replace('/dang-nhap');router.refresh();})}>Đăng xuất</button></header>
     <section className="rounded-xl border border-[#d9c7a3] bg-[#fff6e5] p-5"><h2 className="text-xl font-bold">Còn {data.credits} lượt{data.paymentsEnabled?'':' trải nghiệm'}</h2><p className="mt-2 text-sm">{data.paymentsEnabled?<>Lập lá số rồi chọn gói để mua thêm lượt. </>:'Website đang mở trải nghiệm, chưa thu tiền. '}Bài đã lưu được xem lại không mất thêm lượt. Kho lời luận hỗ trợ ngày sinh dương lịch 1950–2026.</p>
-      {!data.customer.verified&&<div className="mt-3 space-y-2 text-sm"><p>Email chưa xác minh. {data.welcomeCredits>0?`Xác minh email để nhận ${data.welcomeCredits} lượt trải nghiệm miễn phí, chỉ cấp một lần cho mỗi tài khoản. `:''}Bạn vẫn có thể lưu lá số; đơn cũ theo email chỉ được nhận lại sau xác minh.</p><button className="btn-outline" disabled={busy} onClick={()=>void action(async()=>{const r=await call('/api/auth/resend','POST',{});setDemoUrl(r.demoUrl||'');setMessage(r.status==='sent'?'Đã gửi thư xác minh.':r.status==='demo'?'Đã tạo thư xác minh trong môi trường thử.':'Chưa gửi được thư xác minh. Hãy giữ mật khẩu và liên hệ hỗ trợ nếu cần.');})}>Gửi thư xác minh</button>{demoUrl&&<a className="block underline" href={demoUrl}>Mở thư xác minh thử (chỉ có ở môi trường demo)</a>}</div>}
+      {!data.customer.verified&&<EmailVerification email={data.customer.email} welcomeCredits={data.welcomeCredits} delivery={data.verificationDelivery} onVerified={load}/>}
     </section>
     {error&&<p role="alert" className="rounded border border-son p-3 text-son">{error}</p>}{message&&<p role="status">{message}</p>}
     <section><div className="mb-4 flex flex-wrap items-center justify-between gap-3"><h2 className="font-serif text-2xl font-bold text-son">Lá số đã lưu</h2><button className="btn" onClick={()=>setShowForm(v=>!v)}>{showForm?'Đóng form':'Thêm lá số'}</button></div>

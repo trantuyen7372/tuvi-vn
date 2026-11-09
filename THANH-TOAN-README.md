@@ -1,5 +1,9 @@
 # Thanh toán và quản trị Tử Vi
 
+## Cập nhật email — 09/11/2026
+
+Mặc định cấu hình mới dùng Gmail `xemtuvionlinevn@gmail.com` để gửi xác minh, khôi phục và bài luận; Reply-To về cùng địa chỉ hỗ trợ. Dùng Mật khẩu ứng dụng Google trong `SMTP_PASSWORD`, không dùng mật khẩu đăng nhập Gmail. Xem [cấu hình email](deploy/EMAIL.md). Resend bên dưới là tuỳ chọn tương thích khi chọn `MAIL_PROVIDER=resend`; không cần Resend khi dùng Gmail. Chưa cấu hình mật khẩu ứng dụng hoặc thử email thật trong đợt cập nhật này.
+
 ## Đã triển khai
 
 - Gói 1 lượt 99.000đ (niêm yết 129.000đ) và 5 lượt 299.000đ (niêm yết 449.000đ); sửa giá/tên tại `lib/commerce/config.ts`. Hết đợt khuyến mại thì đặt `price` bằng `listPrice`.

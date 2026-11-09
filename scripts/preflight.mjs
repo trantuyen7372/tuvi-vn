@@ -25,10 +25,12 @@ if(months===924)try{
   const text=zlib.zstdDecompressSync(compressed).toString(),row=JSON.parse(text.split('\n')[0]);if(!row.c.overview||/[一-鿿]/.test(row.c.overview))throw Error();
 }catch{issues.push('Không đọc được mẫu dữ liệu tiếng Việt');}
 const paid=env.PAYMENTS_ENABLED==='1',engine=env.READING_ENGINE||'dataset';
-const required=['SITE_URL','ADMIN_PASSWORD','RESEND_API_KEY','MAIL_FROM','OPERATOR_NAME','OPERATOR_ADDRESS','SUPPORT_EMAIL',...(paid?['PAYOS_CLIENT_ID','PAYOS_API_KEY','PAYOS_CHECKSUM_KEY']:[]),...(engine==='anthropic'?['ANTHROPIC_API_KEY']:[])];
+const mailProvider=env.MAIL_PROVIDER||(env.RESEND_API_KEY?'resend':'gmail');
+const required=['SITE_URL','ADMIN_PASSWORD','MAIL_FROM',...(mailProvider==='gmail'?['SMTP_USER','SMTP_PASSWORD']:['RESEND_API_KEY']),'OPERATOR_NAME','OPERATOR_ADDRESS','SUPPORT_EMAIL',...(paid?['PAYOS_CLIENT_ID','PAYOS_API_KEY','PAYOS_CHECKSUM_KEY']:[]),...(engine==='anthropic'?['ANTHROPIC_API_KEY']:[])];
 const missing=required.filter(k=>!env[k]);
 if(live){
   issues.push(...missing.map(k=>`Thiếu ${k}`));
+  if(!['gmail','resend'].includes(mailProvider))issues.push('MAIL_PROVIDER cần là gmail hoặc resend');
   if(env.ADMIN_PASSWORD&&env.ADMIN_PASSWORD.length<12)issues.push('Mật khẩu quản trị dưới 12 ký tự');
   try{const u=new URL(env.SITE_URL);if(u.protocol!=='https:'||['localhost','127.0.0.1'].includes(u.hostname))throw Error();}catch{issues.push('SITE_URL cần tên miền HTTPS thực tế');}
   if(paid&&env.PAYMENT_PROVIDER!=='payos')issues.push('Chưa chọn PayOS để nhận tiền');

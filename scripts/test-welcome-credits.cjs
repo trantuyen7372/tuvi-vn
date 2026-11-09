@@ -5,7 +5,7 @@ const assert=require('node:assert/strict'),ts=require('typescript'),Module=requi
 Module._load=function(name,...args){return load.call(this,name.startsWith('@/')?path.join(process.cwd(),name.slice(2)):name,...args);};
 require.extensions['.ts']=(m,f)=>m._compile(ts.transpileModule(fs.readFileSync(f,'utf8'),{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.CommonJS,esModuleInterop:true}}).outputText,f);
 const directory=fs.mkdtempSync(path.join(os.tmpdir(),'tuvi-welcome-'));
-Object.assign(process.env,{TUVI_DB_PATH:path.join(directory,'test.sqlite'),SITE_URL:'http://localhost:3100',PAYMENTS_ENABLED:'0',PAYMENT_PROVIDER:'mock',TUVI_ALLOW_TEST_PAYMENTS:'1',ANTHROPIC_API_KEY:'',RESEND_API_KEY:'',MAIL_FROM:'',FREE_READING_CREDITS:''});
+Object.assign(process.env,{TUVI_DB_PATH:path.join(directory,'test.sqlite'),SITE_URL:'http://localhost:3100',PAYMENTS_ENABLED:'0',PAYMENT_PROVIDER:'mock',TUVI_ALLOW_TEST_PAYMENTS:'1',ANTHROPIC_API_KEY:'',RESEND_API_KEY:'',SMTP_PASSWORD:'',MAIL_FROM:'',FREE_READING_CREDITS:''});
 const {get,run}=require('../lib/commerce/db.ts');
 const {freeReadingCredits,welcomeAccess,customerDashboard,reserveAccountReading}=require('../lib/customers/access.ts');
 const {issueAuthToken}=require('../lib/customers/auth.ts');
