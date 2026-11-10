@@ -6,7 +6,7 @@ Mặc định cấu hình mới dùng Gmail `xemtuvionlinevn@gmail.com` để g�
 
 ## Đã triển khai
 
-- Gói 1 lượt 99.000đ (niêm yết 129.000đ) và 5 lượt 299.000đ (niêm yết 449.000đ); sửa giá/tên tại `lib/commerce/config.ts`. Hết đợt khuyến mại thì đặt `price` bằng `listPrice`.
+- Gói 1 lượt 49.000đ (niêm yết 129.000đ) và 5 lượt 299.000đ (niêm yết 449.000đ); sửa giá/tên tại `lib/commerce/config.ts`. Hết đợt khuyến mại thì đặt `price` bằng `listPrice`.
 - SQLite: đơn hàng, số lượt theo email và đơn, bài luận, giao dịch, mã giảm giá, phiên quản trị, chi phí token và nhật ký thao tác.
 - Link riêng 256 bit cho đơn và bài luận. Email đơn thuần không cấp quyền sử dụng lượt của người khác.
 - PayOS: tạo link và QR theo đơn, kiểm tra chữ ký qua SDK chính thức, khớp mã đơn/link/số tiền/VND, chống xử lý trùng, thời hạn 30 phút. Giao dịch bất thường được lưu để đối soát. Trang quay về không tự mở lượt.

@@ -42,7 +42,7 @@ Không có thư mục này web vẫn chạy, AI chỉ luận từ dữ liệu l�
 ## Nguồn và giấy phép
 - An sao: iztro (MIT).
 - Nhận diện cách cục (lib/patterns/engine.ts), dữ liệu sao, trích cổ thư: chuyển từ ziwei-doushu (MIT), đã Việt hoá, bỏ phần Nghê Hải Hạ.
-- Dữ liệu tham khảo: Ziwei Doushu Open Interpretation Dataset v4.0 (674,976 charts × 13 dimensions), CC BY 4.0 – phải giữ dòng ghi nguồn ở chân trang.
+- Dữ liệu tham khảo: Ziwei Doushu Open Interpretation Dataset v4.0 (674,976 charts × 13 dimensions), CC BY 4.0.
 
 ## Kho indexed và bundle nhẹ
 

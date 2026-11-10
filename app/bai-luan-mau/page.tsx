@@ -1,21 +1,26 @@
-import sample from '@/lib/sample-reading.json';
-import {buildChart} from '@/lib/tuvi';
-import {personalReading} from '@/lib/personal-reading';
+import sample from '@/lib/sample-reading-full';
+import {inputToQuery} from '@/lib/birth-input';
 import Markdown from '@/components/Markdown';
 import ReadingContents from '@/components/ReadingContents';
 import {publicMetadata} from '@/lib/seo';
-export const metadata=publicMetadata('/bai-luan-mau','Đọc thử bài luận Tử Vi theo sao, cung và vận hạn','Bài luận minh họa giải thích sao, cung, đại hạn và từng năm. Xem cách trình bày, căn cứ và giới hạn của lời luận trước khi lập bài của bạn.');
+export const metadata=publicMetadata('/bai-luan-mau','Bài luận minh họa — đọc trọn bài mẫu Tử Vi','Đọc miễn phí bài luận mẫu đầy đủ 12 cung, đại hạn và vận năm 2026–2030. Xem cách trình bày trước khi lập bài luận theo lá số của bạn.');
 export default function Page(){
-  // Hồ sơ minh họa công khai từ trước, không lấy bài hoặc dữ liệu của khách hàng.
-  const chart=buildChart({name:'',gender:'nam',calendar:'duong',date:'2000-01-01',hour:0,leap:false,year:2026});
-  const text=personalReading(chart,Object.fromEntries(sample.sections.map(s=>[s.key,s.text])));
+  // Bản mẫu cố định theo hồ sơ minh họa công khai, không đọc bài riêng của khách.
+  const {text}=sample;
+  const chartUrl='/la-so?'+inputToQuery(sample.input);
   return <main className="mx-auto max-w-3xl space-y-6 px-4 py-10">
-    <header><p className="text-sm text-[#6b5b45]">Đọc thử cách luận</p><h1 className="mt-2 font-serif text-3xl font-bold text-son">Một bài luận nên giúp bạn hiểu điều gì?</h1>
-      <p className="mt-4 leading-relaxed">Dưới đây là bài minh họa cho nam sinh ngày 01/01/2000 dương lịch, giờ Tý sớm (0h–1h), xem năm 2026. Đây là hồ sơ minh họa, không phải thông tin của khách hàng.</p>
-      <p className="mt-3 rounded-lg border border-[#d9c7a3] bg-[#fff6e5] p-4 text-sm">Bạn có thể đọc căn cứ sao–cung, cách phối hợp các sao và sự thay đổi giữa từng giai đoạn. Bài của bạn được lập theo ngày giờ sinh và năm xem bạn nhập.</p>
-      <div className="mt-4 flex flex-wrap gap-3"><a className="btn" href="/#lap-la-so">Lập lá số của bạn miễn phí</a><a className="btn-outline" href="/la-so?ten=Mau%20minh%20hoa&gt=nam&lich=duong&ngay=2000-01-01&gio=0&nhuan=0&nam=2026">Mở lá số minh họa</a></div>
+    <header><p className="text-sm font-semibold text-[#6b5b45]">ĐỌC THỬ MIỄN PHÍ · KHÔNG CẦN ĐĂNG NHẬP</p><h1 className="mt-2 font-serif text-3xl font-bold text-son sm:text-4xl">Bài luận minh họa</h1>
+      <p className="mt-4 leading-relaxed">Đọc trọn bài mẫu về tính cách, sự nghiệp, tài lộc, tình duyên, 12 cung và các giai đoạn vận hạn. Bài luận của bạn được lập theo ngày giờ sinh và năm xem bạn chọn.</p>
+      <dl className="mt-5 grid grid-cols-2 gap-4 rounded-xl border border-[#d9c7a3] bg-[#fffaf0] p-4 text-sm sm:grid-cols-4">
+        <div><dt className="text-[#8a7a62]">Giới tính</dt><dd className="mt-1 font-semibold">Nam</dd></div>
+        <div><dt className="text-[#8a7a62]">Ngày sinh dương lịch</dt><dd className="mt-1 font-semibold">01/01/2000</dd></div>
+        <div><dt className="text-[#8a7a62]">Giờ sinh</dt><dd className="mt-1 font-semibold">Tý sớm · 0h–1h</dd></div>
+        <div><dt className="text-[#8a7a62]">Năm xem</dt><dd className="mt-1 font-semibold">2026</dd></div>
+      </dl>
+      <p className="mt-3 text-xs text-[#6b5b45]">Hồ sơ minh họa dùng để đọc thử cách trình bày. Nội dung mang tính tham khảo.</p>
+      <div className="mt-4 flex flex-wrap gap-3"><a className="btn" href="#bai-mau">Đọc bài mẫu ↓</a><a className="btn-outline" href={chartUrl}>Mở lá số minh họa</a></div>
     </header>
-    <article className="rounded-xl border border-[#d9c7a3] bg-white p-5 sm:p-6"><ReadingContents text={text}/><Markdown text={text}/></article>
-    <a className="btn" href="/#lap-la-so">Lập lá số của bạn</a>
+    <article id="bai-mau" className="scroll-mt-5 rounded-xl border border-[#d9c7a3] bg-white p-5 sm:p-6"><ReadingContents text={text}/><Markdown text={text}/></article>
+    <section className="rounded-xl border border-[#d9c7a3] bg-[#fffaf0] p-5"><h2 className="font-serif text-xl font-bold text-son">Đọc bài luận theo lá số của bạn</h2><p className="mt-2 text-sm leading-relaxed">Nhập ngày giờ sinh để lập lá số miễn phí và xem phần tổng quan dành cho bạn.</p><a className="btn mt-4" href="/#lap-la-so">Lập lá số của bạn miễn phí</a></section>
   </main>;
 }
