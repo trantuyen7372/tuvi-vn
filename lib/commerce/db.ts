@@ -41,6 +41,7 @@ export function db(): DB {
     CREATE TABLE IF NOT EXISTS coupons (code TEXT PRIMARY KEY, percent INTEGER NOT NULL CHECK(percent BETWEEN 1 AND 100), max_uses INTEGER NOT NULL, expires INTEGER NOT NULL);
     CREATE TABLE IF NOT EXISTS ai_usage (id INTEGER PRIMARY KEY, reading_id TEXT NOT NULL, model TEXT NOT NULL, input_tokens INTEGER NOT NULL, output_tokens INTEGER NOT NULL, cost_vnd REAL, created INTEGER NOT NULL);
     CREATE TABLE IF NOT EXISTS admin_sessions (hash TEXT PRIMARY KEY, expires INTEGER NOT NULL);
+    CREATE TABLE IF NOT EXISTS admin_totp_steps (fingerprint TEXT PRIMARY KEY, step INTEGER NOT NULL);
     CREATE TABLE IF NOT EXISTS rate_limits (key TEXT PRIMARY KEY, count INTEGER NOT NULL, reset INTEGER NOT NULL);
     CREATE TABLE IF NOT EXISTS audit_log (id INTEGER PRIMARY KEY, action TEXT NOT NULL, target TEXT NOT NULL, detail TEXT NOT NULL, created INTEGER NOT NULL);
     CREATE INDEX IF NOT EXISTS orders_email ON orders(email);

@@ -12,6 +12,7 @@ export default function SavedReading({ token }: { token: string }) {
   async function load() {
     const sequence=++latestLoad.current;
     const response = await fetch(`/api/readings/${token}`, { cache: 'no-store' }), data = await response.json();
+    if(!response.ok){if(sequence===latestLoad.current)setResult(undefined);if(response.status===401)location.replace('/dang-nhap?next='+encodeURIComponent('/luan-giai/'+token));}
     if (!response.ok) throw new Error(data.error);
     if(sequence===latestLoad.current)setResult(data);
     return data as Result;
@@ -46,7 +47,7 @@ export default function SavedReading({ token }: { token: string }) {
     {result?.status === 'running' && !busy && <button className="btn-outline mt-4" onClick={() => void generate()}>Kiểm tra tiến độ biên soạn</button>}
     {error && <p role="alert" className="mt-4 text-son">{error}</p>}
     {result?.status === 'error' && result.attempts >= 3 && <p className="mt-4 text-son">Đã hết số lần thử, lượt đã được trả lại. Vui lòng liên hệ hỗ trợ để xử lý tiếp.</p>}
-    <p className="mt-6 text-xs text-[#6b5b45]">Giữ kín link xem lại. Nội dung mang tính tham khảo, giải trí; không thay thế tư vấn y tế, pháp lý hoặc tài chính.</p>
+    <p className="mt-6 text-xs text-[#6b5b45]">Đăng nhập đúng tài khoản sở hữu để xem lại bài luận. Nội dung mang tính tham khảo, giải trí; không thay thế tư vấn y tế, pháp lý hoặc tài chính.</p>
     <a href="/" className="no-print mt-4 inline-block underline">Lập lá số khác</a>
     <a href="/tai-khoan" className="no-print ml-4 inline-block underline">Bài luận trong tài khoản</a>
   </article></main>;

@@ -6,7 +6,7 @@ interface Payment { id: string; order_code: number; amount: number; reason: stri
 interface PaymentConfiguration {provider:string;enabled:boolean;configurationComplete:boolean;checks:{field:string;label:string;configured:boolean}[];webhookUrl:string|null;confirmedAt:number|null;canConfirmWebhook:boolean}
 interface Dashboard { orders: AdminOrder[]; revenue: {day:string;revenue:number;orders:number}[]; monthly:{month:string;revenue:number}[]; usage:{known_cost:number;calls:number;unknown_cost_calls:number}; payments:Payment[]; coupons:{code:string;percent:number;max_uses:number}[]; emailFailures:{id:string;email_status:string}[];paymentConfiguration?:PaymentConfiguration }
 export default function AdminPanel() {
-  const [data, setData] = useState<Dashboard>(), [password,setPassword]=useState(''), [error,setError]=useState(''), [notice,setNotice]=useState('');
+  const [data, setData] = useState<Dashboard>(), [password,setPassword]=useState(''), [code2fa,setCode2fa]=useState(''), [error,setError]=useState(''), [notice,setNotice]=useState('');
   const [status,setStatus]=useState(''), [from,setFrom]=useState(''), [to,setTo]=useState('');
   const [code,setCode]=useState(''), [percent,setPercent]=useState(100), [maxUses,setMaxUses]=useState(1), [days,setDays]=useState(7), [busy,setBusy]=useState(false), [recoveredLink,setRecoveredLink]=useState('');
   const query = new URLSearchParams({status,from,to}).toString();
@@ -18,7 +18,7 @@ export default function AdminPanel() {
   }
   async function login() {
     setError('');setBusy(true);
-    try {const response=await fetch('/api/admin/session',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password})});const result=await response.json();if(!response.ok)throw Error(result.error);setPassword('');await load();}
+    try {const response=await fetch('/api/admin/session',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password,code:code2fa})});const result=await response.json();if(!response.ok)throw Error(result.error);setPassword('');setCode2fa('');await load();}
     catch(e){setError((e as Error).message);}finally{setBusy(false);}
   }
   async function action(payload: Record<string,unknown>) {
@@ -27,7 +27,7 @@ export default function AdminPanel() {
     catch(e){setError((e as Error).message);}finally{setBusy(false);}
   }
   return <main className="mx-auto max-w-6xl space-y-6 px-4 py-10"><h1 className="font-serif text-3xl font-bold text-son">Quản trị thanh toán</h1>
-    {!data ? <form className="max-w-md space-y-3" onSubmit={e=>{e.preventDefault();void login();}}><label>Mật khẩu quản trị<input type="password" className="input mt-1" required value={password} onChange={e=>setPassword(e.target.value)} autoComplete="current-password" /></label><button disabled={busy} className="btn">Đăng nhập</button><button type="button" className="btn-outline ml-2" onClick={()=>void load()}>Dùng phiên đang có</button></form> : <>
+    {!data ? <form className="max-w-md space-y-3" onSubmit={e=>{e.preventDefault();void login();}}><label>Mật khẩu quản trị<input type="password" className="input mt-1" required value={password} onChange={e=>setPassword(e.target.value)} autoComplete="current-password" /></label><label className="block">Mã xác thực từ ứng dụng<input className="input mt-1" inputMode="numeric" autoComplete="one-time-code" pattern="[0-9]{6}" maxLength={6} value={code2fa} onChange={e=>setCode2fa(e.target.value.replace(/\D/g,''))}/></label><button disabled={busy} className="btn">Đăng nhập</button><button type="button" className="btn-outline ml-2" onClick={()=>void load()}>Dùng phiên đang có</button></form> : <>
       <div className="flex flex-wrap gap-3"><label>Trạng thái<select className="input" value={status} onChange={e=>setStatus(e.target.value)}><option value="">Tất cả</option>{['pending','paid','expired','failed','refunded','cancelled'].map(s=><option key={s}>{s}</option>)}</select></label><label>Từ ngày<input className="input" type="date" value={from} onChange={e=>setFrom(e.target.value)} /></label><label>Đến ngày<input className="input" type="date" value={to} onChange={e=>setTo(e.target.value)} /></label>
         <button className="btn self-end" onClick={()=>void load()}>Lọc</button><a className="btn-outline self-end" href={`/api/admin?${query}&format=csv`}>Xuất CSV</a>
         <button className="btn-outline self-end" onClick={async()=>{await fetch('/api/admin/session',{method:'DELETE'});setData(undefined);}}>Đăng xuất</button></div>

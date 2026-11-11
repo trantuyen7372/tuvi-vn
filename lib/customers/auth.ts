@@ -1,14 +1,10 @@
-import { scrypt as scryptCallback, timingSafeEqual, randomBytes } from 'node:crypto';
-import { promisify } from 'node:util';
 import { get,run,transaction } from '../commerce/db';
 import { hash,secret } from '../commerce/security';
 import { AUTH_TOKEN_MINUTES } from './email-template';
-const scrypt=promisify(scryptCallback);
+export {passwordHash,passwordMatches,passwordNeedsUpgrade} from './passwords';
 export interface Customer {id:string;email:string;password_hash:string;verified:number;status:string;created:number}
 export function normalizeEmail(raw:unknown){const email=String(raw||'').trim().toLowerCase();if(email.length>254||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))throw Error('Email không hợp lệ');return email;}
 export function checkPassword(raw:unknown){if(typeof raw!=='string'||raw.length<12||raw.length>128)throw Error('Mật khẩu cần từ 12 đến 128 ký tự');return raw;}
-export async function passwordHash(password:string){const salt=randomBytes(16).toString('hex');const key=await scrypt(password,salt,64) as Buffer;return `scrypt$${salt}$${key.toString('hex')}`;}
-export async function passwordMatches(password:string,stored:string){const [,salt,expected]=stored.split('$');const key=await scrypt(password.slice(0,129),salt||'dummy-customer-salt',64) as Buffer;const expectedKey=Buffer.from(expected||'00'.repeat(64),'hex');return expectedKey.length===key.length&&timingSafeEqual(key,expectedKey);}
 export function sessionCookie(token:string,maxAge=14*86400){const secure=process.env.SITE_URL?.startsWith('https://')?'; Secure':'';return `tuvi_customer=${token}; HttpOnly; SameSite=Lax; Path=/; Max-Age=${maxAge}${secure}`;}
 export function createSession(id:string){const token=secret();run('INSERT INTO customer_sessions VALUES (?,?,?)',hash(token),id,Date.now()+14*86400000);return token;}
 export function customer(req:Request):Customer|undefined{

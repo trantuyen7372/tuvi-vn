@@ -1,4 +1,5 @@
 import { privateHeaders } from './security';
+import {AccessError} from '../customers/order-access';
 export async function body(req: Request): Promise<Record<string, unknown>> {
   const reader = req.body?.getReader();
   if (!reader) throw new Error('Thiếu dữ liệu');
@@ -8,4 +9,4 @@ export async function body(req: Request): Promise<Record<string, unknown>> {
   return JSON.parse(Buffer.concat(chunks).toString());
 }
 export function json(value: unknown, status = 200) { return Response.json(value, { status, headers: privateHeaders }); }
-export function failure(e: unknown, status = 400) { return json({ error: e instanceof Error ? e.message : 'Có lỗi, vui lòng thử lại' }, status); }
+export function failure(e: unknown, status = 400) { return json({ error: e instanceof Error ? e.message : 'Có lỗi, vui lòng thử lại' }, e instanceof AccessError ? e.status : status); }

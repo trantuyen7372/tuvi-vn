@@ -6,13 +6,13 @@ const policies: Record<string,{title:string;paragraphs:string[]}> = {
     'Sau khi thanh toán được xác nhận, bạn có thể tạo bài luận và xem lại bản đã lưu mà không mất thêm lượt. Đơn chuyển khoản hết hạn sau 30 phút; giao dịch đến muộn hoặc không khớp cần được hỗ trợ đối soát.',
     'Tử Vi và nội dung luận giải chỉ mang tính tham khảo, giải trí, có thể sai hoặc không phù hợp hoàn cảnh thực tế. Không dùng để chẩn đoán bệnh, quyết định điều trị, đầu tư, pháp lý hoặc những quyết định quan trọng khác.',
     'Bạn cần nhập thông tin chính xác và chỉ cung cấp dữ liệu của người khác khi có sự đồng ý phù hợp. Không dùng dịch vụ để gây hại, quấy rối hoặc tiết lộ thông tin riêng tư.',
-    'Giữ kín đường link đơn hàng và kết quả. Người có link có thể truy cập thông tin tương ứng. Khi gặp lỗi hoặc nghi ngờ link bị lộ, hãy liên hệ đơn vị vận hành để xử lý.'
+    'Đơn hàng và kết quả cần đăng nhập đúng tài khoản sở hữu. Đơn cũ chưa gắn tài khoản chỉ được nhận lại khi email tài khoản đã xác minh trùng email đặt đơn. Không công khai đường link hoặc bản sao nội dung cá nhân.'
   ]},
   'bao-mat': {title:'Chính sách bảo mật',paragraphs:[
     'Để cung cấp dịch vụ, website lưu email nhận kết quả, tên nếu bạn nhập, ngày giờ sinh, giới tính, lịch âm/dương, năm xem hạn, đơn hàng, giao dịch thanh toán, số lượt và bài luận đã tạo. Nếu tự nguyện chọn chủ đề, hoàn cảnh hoặc ghi chú, thông tin này được lưu trong bài riêng; bạn có thể thay đổi hoặc xóa bằng lựa chọn đọc tổng thể mà không dùng thêm lượt.',
     'Thông tin lá số và dữ liệu liên quan có thể được xử lý qua hạ tầng kỹ thuật đối tác để lập bài luận, gửi bản sao qua email (nếu tính năng gửi thư được bật) và đối soát giao dịch qua cổng thanh toán. Website không yêu cầu lưu mật khẩu ngân hàng hay thông tin thẻ.',
     'Dữ liệu được dùng để lập lá số, tạo và gửi bài luận, đối soát thanh toán, hỗ trợ khách hàng và vận hành dịch vụ. Chúng tôi không công bố công khai thông tin ngày giờ sinh hoặc kết quả của bạn.',
-    'Website lưu link gói đã mua trong bộ nhớ trình duyệt để bạn dùng lại lượt và dùng cookie phiên cho quản trị. Bạn có thể xóa dữ liệu trình duyệt; hãy lưu link riêng trước khi xóa để không mất cách truy cập.',
+    'Website có thể lưu link gói đã mua trong bộ nhớ trình duyệt và dùng cookie phiên cho tài khoản, quản trị. Link không thay thế đăng nhập. Bạn có thể xóa dữ liệu trình duyệt rồi đăng nhập lại để xem nội dung thuộc tài khoản.',
     'Kết quả được giữ để phục vụ xem lại cho đến khi có yêu cầu xóa đã xác minh hoặc dịch vụ có thông báo thay đổi. Bạn có thể yêu cầu truy cập, sửa hoặc xóa dữ liệu qua kênh liên hệ bên dưới. Dữ liệu cần giữ để đối soát kế toán, xử lý tranh chấp hoặc thực hiện nghĩa vụ áp dụng có thể được lưu riêng; không dùng việc xóa dữ liệu cá nhân để xóa lịch sử thu chi.',
     'Khi yêu cầu xóa, đơn vị vận hành sẽ xác minh quyền sở hữu, xóa email, dữ liệu sinh và bài luận trong hệ thống hoạt động; các bản sao lưu được xử lý theo quy trình lưu trữ của đơn vị vận hành. Không gửi mật khẩu ngân hàng, mã OTP hoặc khóa bí mật cho bộ phận hỗ trợ.'
   ]},

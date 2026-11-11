@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { parseEnv } from 'node:util';
 import zlib from 'node:zlib';
+import {createPublicKey} from 'node:crypto';
 const env={...(fs.existsSync('.env.local')?parseEnv(fs.readFileSync('.env.local','utf8')):{}),...process.env};
 const live=process.argv.includes('--live');
 const issues=[],warnings=[];
@@ -26,12 +27,17 @@ if(months===924)try{
 }catch{issues.push('Không đọc được mẫu dữ liệu tiếng Việt');}
 const paid=env.PAYMENTS_ENABLED==='1',engine=env.READING_ENGINE||'dataset';
 const mailProvider=env.MAIL_PROVIDER||(env.RESEND_API_KEY?'resend':'gmail');
-const required=['SITE_URL','ADMIN_PASSWORD','MAIL_FROM',...(mailProvider==='gmail'?['SMTP_USER','SMTP_PASSWORD']:['RESEND_API_KEY']),'OPERATOR_NAME','OPERATOR_ADDRESS','SUPPORT_EMAIL',...(paid?['PAYOS_CLIENT_ID','PAYOS_API_KEY','PAYOS_CHECKSUM_KEY']:[]),...(engine==='anthropic'?['ANTHROPIC_API_KEY']:[])];
+const required=['SITE_URL','ADMIN_PASSWORD','ADMIN_TOTP_SECRET','TUVI_BACKUP_PUBLIC_KEY_FILE','MAIL_FROM',...(mailProvider==='gmail'?['SMTP_USER','SMTP_PASSWORD']:['RESEND_API_KEY']),'OPERATOR_NAME','OPERATOR_ADDRESS','SUPPORT_EMAIL',...(paid?['PAYOS_CLIENT_ID','PAYOS_API_KEY','PAYOS_CHECKSUM_KEY']:[]),...(engine==='anthropic'?['ANTHROPIC_API_KEY']:[])];
 const missing=required.filter(k=>!env[k]);
 if(live){
   issues.push(...missing.map(k=>`Thiếu ${k}`));
   if(!['gmail','resend'].includes(mailProvider))issues.push('MAIL_PROVIDER cần là gmail hoặc resend');
   if(env.ADMIN_PASSWORD&&env.ADMIN_PASSWORD.length<12)issues.push('Mật khẩu quản trị dưới 12 ký tự');
+  if(env.ADMIN_TOTP_SECRET&&!/^[A-Z2-7]{32,128}$/.test(env.ADMIN_TOTP_SECRET.replace(/\s/g,'').toUpperCase()))issues.push('ADMIN_TOTP_SECRET cần secret Base32 hợp lệ từ 32 ký tự');
+  if(env.TUVI_BACKUP_PUBLIC_KEY_FILE)try{
+    const key=createPublicKey(fs.readFileSync(env.TUVI_BACKUP_PUBLIC_KEY_FILE));
+    if(key.asymmetricKeyType!=='rsa'||key.asymmetricKeyDetails.modulusLength<3072)throw Error();
+  }catch{issues.push('Không đọc được public key RSA backup tối thiểu 3072 bit');}
   try{const u=new URL(env.SITE_URL);if(u.protocol!=='https:'||['localhost','127.0.0.1'].includes(u.hostname))throw Error();}catch{issues.push('SITE_URL cần tên miền HTTPS thực tế');}
   if(paid&&env.PAYMENT_PROVIDER!=='payos')issues.push('Chưa chọn PayOS để nhận tiền');
   if(env.TUVI_ALLOW_TEST_PAYMENTS==='1'||engine==='demo')issues.push('Không bật chế độ thử công khai');

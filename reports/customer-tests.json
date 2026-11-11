@@ -1,5 +1,5 @@
 {
-  "passed": 31,
+  "passed": 32,
   "checks": [
     "Chỉ chạy trong môi trường trải nghiệm, thu tiền tắt",
     "Chưa đăng nhập không xem được tài khoản",
@@ -21,6 +21,7 @@
     "Đọc lại không dùng thêm lượt",
     "Ngày ngoài kho không làm mất lượt",
     "Hết lượt không mở thêm bài mới",
+    "Chặn đọc và tạo bài của người khác dù biết token",
     "Đổi giờ/giới tính sinh bài khác theo đúng lá số",
     "Thu tiền và tạo link PayOS đang bị khóa",
     "Sai mật khẩu không mở phiên",
@@ -33,5 +34,5 @@
     "Xóa tài khoản thu hồi phiên và bài riêng",
     "Đăng xuất khóa truy cập tài khoản"
   ],
-  "finished": "2026-11-09T16:35:42.313Z"
+  "finished": "2026-11-11T02:33:16.674Z"
 }

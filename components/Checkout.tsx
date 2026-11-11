@@ -6,18 +6,18 @@ import {inputToQuery,type BirthInput} from '@/lib/birth-input';
 import {READING_FOCUS,READING_SITUATIONS,type ReadingFocus} from '@/lib/reading-preferences';
 export default function Checkout({ input }: { input: BirthInput }) {
   const router = useRouter(), id = useId();
-  const [product, setProduct] = useState<string>('single'), [email, setEmail] = useState(''), [coupon, setCoupon] = useState('');
+  const [product, setProduct] = useState<string>('single'), [coupon, setCoupon] = useState('');
   const [focus, setFocus] = useState<string>(input.reading?.focus || ''), [situation, setSituation] = useState<string>(input.reading?.situation || ''), [note, setNote] = useState<string>(input.reading?.note || '');
   const [busy, setBusy] = useState(false), [error, setError] = useState(''), [wallet, setWallet] = useState('');
   const [account,setAccount]=useState<{customer:{email:string;verified:boolean}|null;paymentsEnabled:boolean}|null>(null),[message,setMessage]=useState('');
   useEffect(() => { try { setWallet(localStorage.getItem('tuvi-order') || ''); } catch {} }, []);
-  useEffect(()=>{fetch('/api/auth/me',{cache:'no-store'}).then(r=>r.json()).then(data=>{setAccount(data);if(data.customer?.email)setEmail(current=>current||data.customer.email);}).catch(()=>setAccount({customer:null,paymentsEnabled:false}));},[]);
+  useEffect(()=>{fetch('/api/auth/me',{cache:'no-store'}).then(r=>r.json()).then(data=>{setAccount(data);}).catch(()=>setAccount({customer:null,paymentsEnabled:false}));},[]);
   const customInput: BirthInput = { ...input, ...(focus ? { reading: { focus: focus as ReadingFocus, ...(situation ? { situation } : {}), ...(note.trim() ? { note: note.trim() } : {}) } } : {}) };
   async function submit(existing = false) {
     setBusy(true); setError('');
     try {
       const res = await fetch(existing ? '/api/readings' : '/api/orders', { method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(existing ? { orderToken: wallet, input: customInput } : { input: customInput, product, email, coupon }) });
+        body: JSON.stringify(existing ? { orderToken: wallet, input: customInput } : { input: customInput, product, coupon }) });
       const data = await res.json(); if (!res.ok) throw new Error(data.error);
       router.push(data.url);
     } catch (e) { setError((e as Error).message || 'Không kết nối được máy chủ'); }
@@ -53,6 +53,11 @@ export default function Checkout({ input }: { input: BirthInput }) {
       {error&&<p role="alert" className="mt-3 text-son">{error}</p>}{message&&<p role="status" className="mt-3">{message}</p>}
     </section>;
   }
+  if(!account.customer||!account.customer.verified){
+    const next=encodeURIComponent('/la-so?'+inputToQuery(input));
+    return <section className="rounded-xl border border-[#d9c7a3] bg-white p-5"><h2 className="font-serif text-2xl font-bold text-son">Lưu bài luận trong tài khoản của bạn</h2><p className="mt-3">Đơn hàng và bài luận cần tài khoản có email đã xác minh để bảo vệ thông tin cá nhân.</p>{account.customer?<a href="/tai-khoan" className="btn mt-4">Xác minh email trong tài khoản</a>:<div className="mt-4 flex flex-wrap gap-3"><a href={`/dang-nhap?next=${next}`} className="btn">Đăng nhập để tiếp tục</a><a href={`/dang-ky?next=${next}`} className="btn-outline">Tạo tài khoản</a></div>}</section>;
+  }
+  const accountEmail=account.customer.email;
   return <section className="rounded-xl border border-[#d9c7a3] bg-white p-5">
     <h2 className="font-serif text-2xl font-bold text-son">Xem luận giải đầy đủ</h2>
     <p className="mt-3 text-sm">Lá số, cách cục và trích cổ thư ở trên được xem miễn phí. Mở bài luận giải gồm bản mệnh, sự nghiệp, tài lộc, tình duyên và vận năm {input.year}; kết quả được lưu để xem lại.</p>
@@ -66,7 +71,7 @@ export default function Checkout({ input }: { input: BirthInput }) {
       </label>)}</div>
       <ul className="grid gap-2 rounded-lg bg-[#fffaf0] p-3 text-sm sm:grid-cols-2"><li>✓ Luận đủ 12 cung</li><li>✓ Đại hạn và các chặng tiếp theo khi có dữ liệu</li><li>✓ Năm {input.year} đến {Math.min(input.year+4,2100)}</li><li>✓ Xem lại bài đã lưu · In / lưu PDF</li></ul>
       {preferenceFields}
-      <label className="block">Email nhận kết quả<input className="input mt-1" type="email" required maxLength={254} value={email} onChange={e => setEmail(e.target.value)} autoComplete="email" /></label>
+      <label className="block">Email nhận kết quả<input className="input mt-1" type="email" required maxLength={254} value={accountEmail} readOnly autoComplete="email" /></label>
       <details><summary className="cursor-pointer text-sm underline">Có mã ưu đãi? Nhập tại đây</summary><label className="mt-2 block">Mã giảm giá (nếu có)<input className="input mt-1" maxLength={32} value={coupon} onChange={e => setCoupon(e.target.value)} /></label></details>
       <p className="text-xs text-[#6b5b45]">Tiếp tục nghĩa là bạn đồng ý <a className="underline" href="/chinh-sach/dieu-khoan">Điều khoản</a> và <a className="underline" href="/chinh-sach/bao-mat">Chính sách bảo mật</a>. Nội dung mang tính tham khảo, giải trí.</p>
       <p className="rounded-lg bg-[#fff6e5] p-3 text-sm">Bạn sẽ thấy số tiền cuối cùng sau giảm giá trên đơn trước khi chuyển khoản. Gói gia đình có 5 lượt cho nhiều lá số, không gia hạn định kỳ.</p>

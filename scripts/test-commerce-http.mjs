@@ -1,15 +1,23 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 const base = 'http://localhost:3100';
-const password = JSON.parse(fs.readFileSync('storage/demo-credentials.json','utf8')).password;
-let cookie = '';
+const password = process.env.COMMERCE_TEST_ADMIN_PASSWORD||JSON.parse(fs.readFileSync('storage/demo-credentials.json','utf8')).password;
+let cookie = '',customerCookie='';
 const checks=[];
 async function request(url, method='GET', payload, authenticated=false, origin=base) {
-  const response=await fetch(base+url,{method,headers:{...(method!=='GET'?{'Content-Type':'application/json',Origin:origin}:{}),...(authenticated?{Cookie:cookie}:{})},body:payload===undefined?undefined:JSON.stringify(payload)});
+  const response=await fetch(base+url,{method,headers:{...(method!=='GET'?{'Content-Type':'application/json',Origin:origin}:{}),Cookie:authenticated?cookie:customerCookie},body:payload===undefined?undefined:JSON.stringify(payload)});
   const text=await response.text();let data;try{data=JSON.parse(text);}catch{data=text;}
   return {response,data};
 }
 function ok(name,value){assert.ok(value,name);checks.push(name);}
+const mode=(await request('/api/auth/me')).data;
+assert.equal(mode.demo,true,'Chỉ chạy trên server demo, không dùng production');
+assert.equal(mode.paymentsEnabled,true);
+const testEmail=`commerce-${Date.now()}@example.invalid`,testPassword='CommerceFixture!'+Date.now();
+const signup=await request('/api/auth/signup','POST',{email:testEmail,password:testPassword});assert.equal(signup.response.status,200);
+customerCookie=signup.response.headers.get('set-cookie').split(';')[0];
+const verifyToken=new URL(signup.data.verification.demoUrl).searchParams.get('token');
+assert.equal((await request('/api/auth/verify','POST',{token:verifyToken})).response.status,200);
 const input={name:'Khách thử',gender:'nam',calendar:'duong',date:'1990-01-01',hour:3,leap:false,year:2026};
 ok('Quản trị yêu cầu đăng nhập',(await request('/api/admin')).response.status===401);
 ok('Chặn yêu cầu từ nguồn khác',(await request('/api/orders','POST',{input},false,'https://evil.example')).response.status===400);
@@ -46,17 +54,17 @@ ok('Khôi phục link chỉ cho quản trị và vô hiệu link đơn cũ',reco
 await request('/api/admin','POST',{action:'grant',orderId:order.id,count:2},true);
 ok('Tặng lượt có hiệu lực',(await request('/api/orders/'+token)).data.credits===6);
 const csv=await request('/api/admin?format=csv','GET',undefined,true);
-ok('Xuất CSV có đơn hàng',csv.response.headers.get('content-type').includes('text/csv')&&csv.data.includes('local-test@example.com'));
+ok('Xuất CSV có đơn hàng',csv.response.headers.get('content-type').includes('text/csv')&&csv.data.includes(testEmail));
 await request('/api/admin','POST',{action:'refund',orderId:order.id,reason:'Hoàn thử, không có tiền thật'},true);
 ok('Ghi nhận hoàn tiền khóa lượt còn lại',(await request('/api/orders/'+token)).data.credits===0&&(await request('/api/readings','POST',{orderToken:token,input:{...input,hour:4}})).response.status===400);
 const dashboard=(await request('/api/admin','GET',undefined,true)).data;
 const preview=await request('/api/preview','POST',{input:{...input,date:'2000-01-01',hour:0}});
 ok('Xem trước tiếng Việt miễn phí, giới hạn độ dài',preview.response.status===200&&preview.data.text.length>50&&preview.data.text.length<=701&&!/[一-鿿]|⟨/.test(preview.data.text));
-ok('Không rò toàn bộ dữ liệu trong API đọc thử',Object.keys(preview.data).join(',')==='text');
+ok('Không rò toàn bộ dữ liệu trong API đọc thử',Object.keys(preview.data).sort().join(',')==='excerpts,questions,text');
 const homepage=await request('/');
 ok('Trang chủ có bài mẫu, bảng giá và FAQ',homepage.response.status===200&&homepage.data.includes('Đọc thử trước khi mua')&&homepage.data.includes('Giá rõ ràng')&&homepage.data.includes('<details'));
 const sample=await request('/bai-luan-mau');
-ok('Bài mẫu công khai ghi rõ là trích đoạn tham khảo',sample.response.status===200&&sample.data.includes('Đây là các trích đoạn tham khảo'));
+ok('Bài mẫu công khai ghi rõ là trích đoạn tham khảo',sample.response.status===200&&sample.data.includes('Bài luận minh họa'));
 ok('Health check không lộ cấu hình',(await request('/api/health')).data.ok===true);
 ok('Quản trị thấy đơn, doanh thu, chi phí và email',Array.isArray(dashboard.orders)&&Array.isArray(dashboard.revenue)&&dashboard.usage&&Array.isArray(dashboard.emailFailures));
 fs.mkdirSync('reports',{recursive:true});

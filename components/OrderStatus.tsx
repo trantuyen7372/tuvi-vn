@@ -12,6 +12,7 @@ export default function OrderStatus({ token }: { token: string }) {
     let stopped = false, timer: ReturnType<typeof setTimeout>;
     async function load() {
       try { const res = await fetch(`/api/orders/${token}`, { cache: 'no-store' }); const data = await res.json();
+        if(!res.ok&&[401,403,404].includes(res.status)){if(!stopped){setOrder(undefined);setError(data.error);if(res.status===401)location.replace('/dang-nhap?next='+encodeURIComponent('/don-hang/'+token));}return;}
         if (!res.ok) throw new Error(data.error); if (stopped) return;
         setOrder(data);setNow(Date.now()); setError(''); if (data.status === 'paid') try { localStorage.setItem('tuvi-order', token); } catch {}
         if (data.status === 'pending') timer = setTimeout(load, 3000);
@@ -41,7 +42,7 @@ export default function OrderStatus({ token }: { token: string }) {
       {order.status === 'expired' && <p>Đơn đã quá 30 phút. Nếu đã chuyển tiền, hãy liên hệ hỗ trợ kèm mã đơn để đối soát; không chuyển thêm.</p>}
       {order.status === 'paid' && <><p>Còn <b>{order.credits}</b> lượt. Email nhận kết quả: {order.email}.</p><button className="btn" disabled={busy} onClick={() => void open()}>{busy ? 'Đang mở…' : 'Mở luận giải lá số đã đặt'}</button>
         <a className="btn-outline ml-2" href="/">Lập lá số khác để dùng lượt</a></>}
-      <p className="text-sm">Hãy lưu đường link này để xem lại đơn và dùng các lượt còn lại. Giữ kín link vì có thông tin cá nhân.</p>
+      <p className="text-sm">Đơn hàng và bài luận được lưu trong tài khoản. Bạn cần đăng nhập đúng tài khoản sở hữu để xem lại và dùng lượt còn lại.</p>
       {order.readings.map(r => <a key={r.token} className="block underline" href={`/luan-giai/${r.token}`}>Xem bài luận đã tạo ({r.status})</a>)}
     </div>}{error && <p role="alert" className="mt-4 text-son">{error}</p>}
   </div></main>;

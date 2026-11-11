@@ -42,7 +42,9 @@ ok('Đọc lại không dùng thêm lượt',(await a.request('/api/account/read
 ok('Ngày ngoài kho không làm mất lượt',(await a.request('/api/account/readings','POST',{input:{...input,date:'1940-01-01'}})).r.status===400&&(await a.request('/api/account')).data.credits===0);
 const input2={...input,gender:'nu',hour:6};
 ok('Hết lượt không mở thêm bài mới',(await a.request('/api/account/readings','POST',{input:input2})).r.status===400&&(await a.request('/api/account')).data.credits===0);
-const other=await b.request('/api/account/readings','POST',{input:input2});assert.equal(other.r.status,200);const otherToken=other.data.url.split('/').pop();await a.request('/api/readings/'+otherToken,'POST');const otherReading=(await a.request('/api/readings/'+otherToken)).data;
+const other=await b.request('/api/account/readings','POST',{input:input2});assert.equal(other.r.status,200);const otherToken=other.data.url.split('/').pop();
+ok('Chặn đọc và tạo bài của người khác dù biết token',(await a.request('/api/readings/'+otherToken,'POST')).r.status===404&&(await a.request('/api/readings/'+otherToken)).r.status===404&&(await anonymous.request('/api/readings/'+otherToken)).r.status===401);
+await b.request('/api/readings/'+otherToken,'POST');const otherReading=(await b.request('/api/readings/'+otherToken)).data;
 const otherChart=astro.bySolar(input2.date,input2.hour,'女',true,'vi-VN'),otherNatal=otherChart.palaces.find(p=>p.name==='Mệnh');
 ok('Đổi giờ/giới tính sinh bài khác theo đúng lá số',otherReading.text!==reading.text&&otherReading.text.includes(`Căn cứ: Mệnh tại ${otherNatal.earthlyBranch}:`)&&otherNatal.majorStars.every(s=>otherReading.text.includes(s.name)));
 ok('Thu tiền và tạo link PayOS đang bị khóa',(await a.request('/api/orders','POST',{input,email,product:'single'})).r.status===503);
@@ -57,6 +59,6 @@ assert.equal((await reset.request('/api/auth/password','POST',{oldPassword:newPw
 ok('Đổi mật khẩu đúng thông tin hiện tại',(await anonymous.request('/api/auth/login','POST',{email,password:pw})).r.status===200);
 ok('Không xóa tài khoản nếu mật khẩu sai',(await reset.request('/api/account','DELETE',{password:'sai'})).r.status===400);
 assert.equal((await reset.request('/api/account','DELETE',{password:pw})).r.status,200);
-ok('Xóa tài khoản thu hồi phiên và bài riêng',(await anonymous.request('/api/account')).r.status===401&&(await anonymous.request('/api/readings/'+token)).r.status===404);
+ok('Xóa tài khoản thu hồi phiên và bài riêng',(await anonymous.request('/api/account')).r.status===401&&(await anonymous.request('/api/readings/'+token)).r.status===401&&(await b.request('/api/readings/'+token)).r.status===404);
 await b.request('/api/auth/logout','POST',{});ok('Đăng xuất khóa truy cập tài khoản',(await b.request('/api/account')).r.status===401);
 fs.mkdirSync('reports',{recursive:true});fs.writeFileSync('reports/customer-tests.json',JSON.stringify({passed:checks.length,checks,finished:new Date().toISOString()},null,2)+'\n');console.log(JSON.stringify({passed:checks.length}));

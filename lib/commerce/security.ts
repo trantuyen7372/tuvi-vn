@@ -1,6 +1,7 @@
 import { createHash, randomBytes, timingSafeEqual } from 'node:crypto';
 import { get, run, transaction } from './db';
 import { siteUrl } from './config';
+import {adminMfaRequired,adminSessionHash,adminTotpSecret} from './admin-auth';
 export const secret = () => randomBytes(32).toString('hex');
 export const hash = (s: string) => createHash('sha256').update(s).digest('hex');
 export function equal(a: string, b: string) { return timingSafeEqual(Buffer.from(hash(a)), Buffer.from(hash(b))); }
@@ -24,7 +25,8 @@ export function limit(key: string, max: number, windowMs: number) {
   });
 }
 export function admin(req: Request) {
+  if(!process.env.ADMIN_PASSWORD||process.env.ADMIN_PASSWORD.length<12||(adminMfaRequired()&&!adminTotpSecret()))throw new Error('Cần cấu hình xác thực hai lớp quản trị');
   const token = req.headers.get('cookie')?.split(';').map(v => v.trim()).find(v => v.startsWith('tuvi_admin='))?.slice(11);
-  if (!token || !get('SELECT hash FROM admin_sessions WHERE hash=? AND expires>?', hash(token), Date.now())) throw new Error('Cần đăng nhập quản trị');
+  if (!token || !get('SELECT hash FROM admin_sessions WHERE hash=? AND expires>?', adminSessionHash(token), Date.now())) throw new Error('Cần đăng nhập quản trị');
 }
 export const privateHeaders = { 'Cache-Control': 'no-store', 'Referrer-Policy': 'no-referrer', 'X-Robots-Tag': 'noindex, nofollow' };

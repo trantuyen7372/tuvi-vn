@@ -1,14 +1,14 @@
 'use client';
 import {Suspense,useState} from 'react';
 import {useRouter,useSearchParams} from 'next/navigation';
-import {notifyAuthChanged} from '@/lib/customers/client';
+import {notifyAuthChanged,safeCustomerDestination} from '@/lib/customers/client';
 type Mode='login'|'signup'|'forgot'|'reset'|'verify';
 const titles:Record<Mode,string>={login:'Đăng nhập',signup:'Tạo tài khoản',forgot:'Quên mật khẩu',reset:'Đặt lại mật khẩu',verify:'Xác minh email'};
 function AuthForm({mode}:{mode:Mode}){
   const router=useRouter(),q=useSearchParams();
   const[email,setEmail]=useState(''),[password,setPassword]=useState(''),[confirm,setConfirm]=useState(''),[busy,setBusy]=useState(false),[error,setError]=useState(''),[message,setMessage]=useState(''),[demoUrl,setDemoUrl]=useState('');
   const [verified,setVerified]=useState(false);
-  const next=q.get('next')||'/tai-khoan',destination=next.startsWith('/la-so?')?next:'/tai-khoan';
+  const next=q.get('next')||'/tai-khoan',destination=safeCustomerDestination(next);
   async function submit(e:React.FormEvent){e.preventDefault();setBusy(true);setError('');setMessage('');
     try{
       if(['signup','reset'].includes(mode)&&password!==confirm)throw Error('Hai mật khẩu chưa trùng nhau');

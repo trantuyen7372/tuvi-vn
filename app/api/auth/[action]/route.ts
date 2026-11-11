@@ -5,6 +5,7 @@ import {normalizeEmail,checkPassword,passwordHash,passwordMatches,createSession,
 import {welcomeAccess,freeReadingCredits} from '@/lib/customers/access';
 import {authMail} from '@/lib/customers/mail';
 import {mailConfigured} from '@/lib/email';
+import {passwordNeedsUpgrade} from '@/lib/customers/passwords';
 export const runtime='nodejs';
 export const dynamic='force-dynamic';
 function signed(value:unknown,token:string){return Response.json(value,{headers:{...privateHeaders,'Set-Cookie':sessionCookie(token,token?14*86400:0)}});}
@@ -38,7 +39,14 @@ export async function POST(req:Request,ctx:{params:Promise<{action:string}>}){
       const c=get<Customer>("SELECT * FROM customers WHERE email=? AND status='active'",email);
       const valid=await passwordMatches(String(b.password||''),c?.password_hash||'');
       if(!c||!valid)return json({error:'Email hoặc mật khẩu không đúng'},401);
-      welcomeAccess(c);claimGuestOrders(c);return signed({ok:true},createSession(c.id));
+      const encoded=passwordNeedsUpgrade(c.password_hash)?await passwordHash(String(b.password)):c.password_hash;
+      const token=transaction(()=>{
+        const current=get<Customer>("SELECT * FROM customers WHERE id=? AND status='active' AND password_hash=?",c.id,c.password_hash);
+        if(!current)throw Error('Thông tin đăng nhập vừa thay đổi. Vui lòng đăng nhập lại.');
+        if(encoded!==c.password_hash)run('UPDATE customers SET password_hash=? WHERE id=?',encoded,c.id);
+        return createSession(c.id);
+      });
+      welcomeAccess(c);claimGuestOrders(c);return signed({ok:true},token);
     }
     if(action==='forgot'){
       limit(`customer-reset-ip:${clientKey(req)}`,30,3600000);const email=normalizeEmail(b.email);limit(`customer-reset:${hash(email)}`,3,3600000);
@@ -69,8 +77,15 @@ export async function POST(req:Request,ctx:{params:Promise<{action:string}>}){
     if(action==='password'){
       const c=requireCustomer(req);limit(`password:${c.id}`,5,3600000);
       if(!await passwordMatches(String(b.oldPassword||''),c.password_hash))throw Error('Mật khẩu hiện tại không đúng');
-      const encoded=await passwordHash(checkPassword(b.password));transaction(()=>{run('UPDATE customers SET password_hash=? WHERE id=?',encoded,c.id);run('DELETE FROM customer_sessions WHERE customer_id=?',c.id);});
-      return signed({ok:true},createSession(c.id));
+      const encoded=await passwordHash(checkPassword(b.password));
+      const token=transaction(()=>{
+        const changed=run("UPDATE customers SET password_hash=? WHERE id=? AND password_hash=? AND status='active'",encoded,c.id,c.password_hash);
+        if(!Number(changed.changes))throw Error('Mật khẩu vừa thay đổi. Vui lòng đăng nhập lại.');
+        run('DELETE FROM customer_sessions WHERE customer_id=?',c.id);
+        run("UPDATE customer_auth_tokens SET used=? WHERE customer_id=? AND purpose='reset' AND used IS NULL",Date.now(),c.id);
+        return createSession(c.id);
+      });
+      return signed({ok:true},token);
     }
     return json({error:'Không tìm thấy chức năng'},404);
   }catch(e){return failure(e);}
