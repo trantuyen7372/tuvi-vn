@@ -5,7 +5,7 @@
 - 1 lá số: 49.000đ, 1 lượt từ kho nội dung.
 - Gia đình: 199.000đ, 5 lượt từ kho nội dung; 39.800đ/lượt, tiết kiệm 46.000đ
   so với mua lẻ 5 lượt ở giá hiện tại.
-- Chuyên sâu: 199.000đ, 1 bài được AI biên soạn theo vấn đề và hoàn cảnh.
+- Chuyên sâu: 99.000đ, 1 bài được AI biên soạn theo vấn đề và hoàn cảnh.
   Chỉ hiển thị và nhận đơn mới khi có `ANTHROPIC_API_KEY` và không chạy engine demo.
 
 Không dùng giá gạch ngang hoặc phần trăm giảm giá khi chưa có chương trình riêng.
