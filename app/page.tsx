@@ -39,8 +39,25 @@ export default function Home() {
       ['03','Đọc và xem lại',paid?'Sau khi giao dịch được xác nhận, bài luận được tạo và lưu bằng link riêng. Giữ link để xem lại.':'Dùng lượt trải nghiệm để mở bài theo đúng lá số. Bài đã lưu xuất hiện trong tài khoản để đọc lại.'],
     ].map(([n,title,text])=><li key={n} className="rounded-xl border border-[#d9c7a3] bg-white p-5"><span className="text-sm font-bold text-son">{n}</span><h3 className="mt-2 font-bold">{title}</h3><p className="mt-2 text-sm leading-relaxed text-[#6b5b45]">{text}</p></li>)}</ol></section>
     {paid?<section id="bang-gia" aria-labelledby="prices-title"><h2 id="prices-title" className="font-serif text-2xl font-bold text-son">Giá rõ ràng, mua theo lượt</h2><p className="mt-2 text-sm">Không thu phí lập lá số. Không đăng ký gia hạn định kỳ.</p><div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-      <article className="rounded-xl border border-[#d9c7a3] bg-white p-5"><h3 className="font-bold">Xem miễn phí</h3><p className="my-3 text-3xl font-bold">0đ</p><p className="text-sm leading-relaxed">Lá số 12 cung, sao cơ bản, cách cục, trích cổ thư và tổng quan tham khảo khi kho có dữ liệu.</p><a className="btn-outline mt-4" href="#lap-la-so">Bắt đầu miễn phí</a></article>
-      {PRODUCTS.map(p=><article className="rounded-xl border border-[#d9c7a3] bg-white p-5" key={p.id}><h3 className="font-bold">{p.name}</h3><p className="my-3"><span className="text-3xl font-bold text-son">{money(p.price)}</span>{discountPercent(p)>0&&<><s className="ml-2 text-sm text-[#8a7a62]">{money(p.listPrice)}</s><span className="ml-2 rounded bg-son px-1.5 py-0.5 text-xs font-bold text-white">-{discountPercent(p)}%</span></>}</p><p className="text-sm leading-relaxed">{p.summary}</p>{p.credits>1&&<p className="mt-2 text-sm">Khoảng {money(p.price/p.credits)}/lượt; dùng cho nhiều lá số.</p>}<a className="btn-outline mt-4" href="#lap-la-so">Lập lá số để chọn gói</a></article>)}
+      <article className="flex min-w-0 flex-col rounded-xl border border-[#d9c7a3] bg-white p-5">
+        <h3 className="font-bold leading-6 lg:min-h-12">Xem miễn phí</h3>
+        <p className="my-3 min-h-[68px] text-3xl font-bold leading-9">0đ</p>
+        <p className="text-sm leading-relaxed">Lá số 12 cung, sao cơ bản, cách cục, trích cổ thư và tổng quan tham khảo khi kho có dữ liệu.</p>
+        <div className="mt-auto pt-4"><a className="btn-outline" href="#lap-la-so">Bắt đầu miễn phí</a></div>
+      </article>
+      {PRODUCTS.map(p=><article className="flex min-w-0 flex-col rounded-xl border border-[#d9c7a3] bg-white p-5" key={p.id}>
+        <h3 className="font-bold leading-6 lg:min-h-12">{p.name}</h3>
+        <div className="my-3 flex min-h-[68px] flex-col gap-2">
+          <p className="whitespace-nowrap text-3xl font-bold leading-9 text-son">{money(p.price)}</p>
+          {discountPercent(p)>0&&<p className="flex min-h-6 items-center gap-2 whitespace-nowrap">
+            <s className="text-sm leading-5 text-[#8a7a62]">{money(p.listPrice)}</s>
+            <span className="inline-flex shrink-0 items-center rounded bg-son px-2 py-1 text-xs font-bold leading-none text-white">-{discountPercent(p)}%</span>
+          </p>}
+        </div>
+        <p className="text-sm leading-relaxed">{p.summary}</p>
+        {p.credits>1&&<p className="mt-2 text-sm">Khoảng {money(p.price/p.credits)}/lượt; dùng cho nhiều lá số.</p>}
+        <div className="mt-auto pt-4"><a className="btn-outline" href="#lap-la-so">Lập lá số để chọn gói</a></div>
+      </article>)}
     </div></section>:<section id="bang-gia" className="rounded-xl border border-[#d9c7a3] bg-white p-6"><h2 className="font-serif text-2xl font-bold text-son">Đang mở trải nghiệm miễn phí</h2><p className="mt-3">Lưu lá số và dùng lượt trải nghiệm luận giải theo đúng ngày giờ sinh trong tài khoản của bạn. Chưa có thu tiền hoặc yêu cầu chuyển khoản.</p><div className="mt-4 flex flex-wrap gap-3"><CustomerNavigation variant="home"/></div></section>}
     <section aria-labelledby="faq-title"><h2 id="faq-title" className="font-serif text-2xl font-bold text-son">Trước khi xem, bạn có thể muốn biết</h2><div className="mt-4 divide-y divide-[#d9c7a3] rounded-xl border border-[#d9c7a3] bg-white px-5">{[
       ['Chưa biết chính xác giờ sinh thì làm sao?','Hãy hỏi lại gia đình hoặc đối chiếu giấy tờ trước khi mua. Các canh giờ có thể cho lá số khác nhau; website không tự xác định được giờ sinh của bạn.'],
