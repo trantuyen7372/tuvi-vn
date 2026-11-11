@@ -93,6 +93,7 @@ export default function BirthForm({onCreated,submitLabel='Lập lá số'}:{onCr
       </div>
 
       <p className="text-xs leading-relaxed text-[#6b5b45]">Chỉ đánh dấu tháng nhuận khi đã xác nhận ngày âm lịch. Nếu chưa biết giờ sinh, nên kiểm tra lại trước khi mua; đổi giờ có thể đổi lá số.</p>
+      <p className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-son"><a href="/huong-dan/nhap-ngay-am-hay-duong" className="underline">Nhập ngày âm hay dương?</a><a href="/huong-dan/khong-biet-gio-sinh" className="underline">Chưa biết giờ sinh?</a></p>
       {err && <p role="alert" className="text-sm text-son">{err}</p>}
       <button className="btn w-full" type="submit" disabled={busy}>{busy?'Đang xử lý…':submitLabel}</button>
     </form>

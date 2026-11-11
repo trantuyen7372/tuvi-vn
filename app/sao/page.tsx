@@ -8,7 +8,8 @@ export default function SaoIndex() {
   return (
     <main className="mx-auto max-w-5xl px-4 py-10">
       <h1 className="font-serif text-3xl font-bold text-son">14 chính tinh trong Tử Vi</h1>
-      <p className="mt-2 text-[#5a4a36]">Bấm vào từng sao để xem tính chất, cung hợp, sự nghiệp, tình duyên, tài lộc và sức khoẻ.</p>
+      <p className="mt-2 leading-relaxed text-[#5a4a36]">Bấm vào từng sao để xem ý nghĩa truyền thống, ví dụ cách đọc và bản trích yếu cổ thư liên quan. Một sao cần được đọc cùng cung và toàn bộ bố cục, không quyết định tính cách hay sự kiện của một người.</p>
+      <p className="mt-3 leading-relaxed text-[#5a4a36]">Nếu mới bắt đầu, hãy đọc <a href="/huong-dan/chinh-tinh-va-phu-tinh" className="text-son underline">chính tinh và phụ tinh là gì</a> và <a href="/huong-dan/y-nghia-12-cung" className="text-son underline">ý nghĩa 12 cung</a> trước khi tra từng sao.</p>
       <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {STARS.map((s) => (
           <a key={s.slug} href={`/sao/${s.slug}`} className="rounded-xl border border-[#d9c7a3] bg-white p-4 hover:border-son">

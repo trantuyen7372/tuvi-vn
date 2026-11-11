@@ -3,6 +3,8 @@ import { PRODUCTS, money, discountPercent } from '@/lib/commerce/config';
 import CustomerNavigation from '@/components/CustomerNavigation';
 import StructuredData from '@/components/StructuredData';
 import {publicMetadata,SITE_NAME,SITE_ORIGIN} from '@/lib/seo';
+import GuideCards from '@/components/GuideCards';
+import {GUIDES} from '@/lib/guides';
 export const dynamic='force-dynamic';
 export const metadata=publicMetadata('/','Lập lá số Tử Vi miễn phí và luận giải','Lập lá số theo ngày giờ sinh, xem 12 cung, sao, đại hạn và lưu niên. Đọc bài luận giải có căn cứ sao–cung, lưu lá số và xem lại trong tài khoản.');
 
@@ -66,6 +68,7 @@ export default function Home() {
       [paid?'Đã chuyển khoản nhưng chưa mở bài?':'Website hiện có thu tiền không?',paid?'Không chuyển thêm. Giữ mã đơn và mã giao dịch, liên hệ hỗ trợ để đối soát.':'Chưa. Website đang mở trải nghiệm, không yêu cầu chuyển khoản. Tài khoản mới được cấp lượt trải nghiệm theo chính sách đang áp dụng.'],
       ['Mất link hoặc đổi thiết bị thì sao?','Đăng nhập bằng email và mật khẩu để xem lịch sử lá số và bài luận. Chức năng quên mật khẩu dùng email đã đăng ký; cần xác minh địa chỉ email để nhận lại các đơn cũ theo email.'],
     ].map(([question,answer])=><details className="py-4" key={question}><summary className="cursor-pointer font-semibold">{question}</summary><p className="mt-3 text-sm leading-relaxed text-[#6b5b45]">{answer}</p></details>)}</div></section>
+    <section aria-labelledby="guides-title"><h2 id="guides-title" className="font-serif text-2xl font-bold text-son">Mới xem Tử Vi? Bắt đầu từ đây</h2><p className="mt-3 leading-relaxed text-[#6b5b45]">Kiểm tra ngày giờ sinh, tìm hiểu các cung rồi tra ý nghĩa từng sao. Những hướng dẫn này giúp bạn phân biệt dữ liệu trên lá số với phần diễn giải tham khảo.</p><GuideCards guides={GUIDES.filter(guide => ['cach-doc-la-so-tu-vi','nhap-ngay-am-hay-duong','khong-biet-gio-sinh','y-nghia-12-cung'].includes(guide.slug))}/><div className="mt-5 flex flex-wrap gap-5 text-sm text-son"><a href="/huong-dan" className="underline">Tất cả hướng dẫn →</a><a href="/sao" className="underline">Tra cứu 14 chính tinh</a><a href="/co-thu" className="underline">Đọc trích yếu cổ thư</a><a href="/phuong-phap" className="underline">Phương pháp và nguồn nội dung</a></div></section>
     </main>
   );
 }
