@@ -8,8 +8,6 @@ if(!fs.existsSync(source))throw Error('Chưa có DB cần sao lưu');
 const folder=path.resolve(process.env.TUVI_BACKUP_DIR||'storage/backups');
 fs.mkdirSync(folder,{recursive:true,mode:0o700});
 const publicKeyFile=process.env.TUVI_BACKUP_PUBLIC_KEY_FILE;
-const site=new URL(process.env.SITE_URL||'http://localhost');
-if(!publicKeyFile&&!['localhost','127.0.0.1','[::1]'].includes(site.hostname))throw Error('Cần TUVI_BACKUP_PUBLIC_KEY_FILE để mã hóa backup trên máy chủ công khai');
 const temporary=fs.mkdtempSync(path.join(folder,'.tuvi-snapshot-'));
 const snapshot=path.join(temporary,'snapshot.sqlite');
 const target=path.join(folder,`tuvi-${new Date().toISOString().replace(/[:.]/g,'-')}-${randomUUID()}.sqlite${publicKeyFile?'.enc':''}`);

@@ -27,7 +27,7 @@ if(months===924)try{
 }catch{issues.push('Không đọc được mẫu dữ liệu tiếng Việt');}
 const paid=env.PAYMENTS_ENABLED==='1',engine=env.READING_ENGINE||'dataset';
 const mailProvider=env.MAIL_PROVIDER||(env.RESEND_API_KEY?'resend':'gmail');
-const required=['SITE_URL','ADMIN_PASSWORD','ADMIN_TOTP_SECRET','TUVI_BACKUP_PUBLIC_KEY_FILE','MAIL_FROM',...(mailProvider==='gmail'?['SMTP_USER','SMTP_PASSWORD']:['RESEND_API_KEY']),'OPERATOR_NAME','OPERATOR_ADDRESS','SUPPORT_EMAIL',...(paid?['PAYOS_CLIENT_ID','PAYOS_API_KEY','PAYOS_CHECKSUM_KEY']:[]),...(engine==='anthropic'?['ANTHROPIC_API_KEY']:[])];
+const required=['SITE_URL','ADMIN_PASSWORD','MAIL_FROM',...(mailProvider==='gmail'?['SMTP_USER','SMTP_PASSWORD']:['RESEND_API_KEY']),'OPERATOR_NAME','OPERATOR_ADDRESS','SUPPORT_EMAIL',...(paid?['PAYOS_CLIENT_ID','PAYOS_API_KEY','PAYOS_CHECKSUM_KEY']:[]),...(engine==='anthropic'?['ANTHROPIC_API_KEY']:[])];
 const missing=required.filter(k=>!env[k]);
 if(live){
   issues.push(...missing.map(k=>`Thiếu ${k}`));

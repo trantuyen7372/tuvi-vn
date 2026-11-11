@@ -1,5 +1,9 @@
 # Triển khai bản gia cố bảo mật
 
+Xác thực hai lớp và khóa backup hiện là tùy chọn, tạm ẩn khi chưa cấu hình.
+Quản trị dùng mật khẩu; backup chưa có khóa vẫn tạo bản SQLite quyền 600.
+Khi đã cấu hình secret hoặc public key, cơ chế bảo vệ tương ứng vẫn hoạt động.
+
 ## Thay đổi hành vi
 
 - Đổi mật khẩu thu hồi mọi phiên cũ và mọi link reset chưa dùng. Reset vẫn chỉ dùng một lần.
@@ -12,17 +16,17 @@
   trùng email đặt đơn. Đơn đã thuộc tài khoản khác không được chuyển chủ bằng link.
 - `POST /api/orders` khi bật thanh toán yêu cầu tài khoản đã xác minh; email nhận đơn
   lấy từ tài khoản, bỏ qua email phía client. Không mở link PayOS cho khách ẩn danh.
-- Đăng nhập quản trị trên hostname công khai yêu cầu mật khẩu và TOTP 6 số. Thiếu cấu hình
-  MFA trả 503, không tự bỏ qua bước này. Localhost vẫn dùng được bản demo không có MFA;
-  nếu đã đặt secret trên localhost thì vẫn phải nhập mã.
+- Đăng nhập quản trị dùng mật khẩu khi `ADMIN_TOTP_SECRET` để trống; ô mã xác thực
+  được ẩn. Khi có secret hợp lệ, website hiển thị ô mã và vẫn bắt buộc TOTP 6 số.
+  Secret đã cấu hình nhưng sai định dạng không bị tự động bỏ qua.
 - Phiên quản trị cũ bị vô hiệu khi nâng cấp, đổi mật khẩu hoặc đổi secret TOTP.
 
 Các trang xem lại hướng dẫn đăng nhập và quay về đúng URL sau đăng nhập. Bộ kiểm tra
 commerce HTTP đã chuyển sang tài khoản thử có xác minh, không dùng link khách để đọc riêng tư.
 
-## Chuẩn bị MFA trước khi cập nhật production
+## Bật MFA khi cần
 
-Trên máy riêng được tin cậy, chạy:
+Nếu muốn bật lại xác thực hai lớp, trên máy riêng được tin cậy chạy:
 
 ```sh
 node scripts/setup-admin-mfa.mjs
@@ -60,7 +64,9 @@ rồi mã hóa bằng AES-256-GCM với khóa ngẫu nhiên; khóa AES được 
 Header được xác thực cùng nội dung. Tệp hoàn chỉnh có đuôi `.sqlite.enc`, quyền 600.
 Snapshot tạm nằm trong thư mục quyền 700 và được dọn sau khi chạy xong; nếu tiến trình bị
 dừng đột ngột cần kiểm tra, dọn các thư mục `.tuvi-snapshot-*` còn lại theo quy trình vận hành.
-Trên hostname công khai, thiếu public key làm backup thất bại thay vì lưu plaintext.
+Nếu chưa đặt public key, script tạo bản `.sqlite` quyền 600 trong thư mục sao lưu
+đã cấu hình. Nếu đã đặt public key nhưng không đọc được hoặc khóa không hợp lệ, backup
+vẫn báo lỗi; không tự chuyển sang lưu plaintext.
 
 Khôi phục vào **tệp mới trên máy riêng**:
 
@@ -86,8 +92,9 @@ cần xử lý riêng, giữ nguyên bản cần thiết để khôi phục và 
   ở trang công khai; đây không phải strict CSP cho toàn bộ site.
 - CSS/font Google đang dùng được cho phép. CSP không thay thế kiểm tra quyền API.
 
-Chuẩn bị cả hai biến mới trước khi chạy updater. Chạy `node scripts/preflight.mjs --live`
-với môi trường production để phát hiện thiếu secret hoặc public key. Không bật thanh toán
+Hai biến `ADMIN_TOTP_SECRET` và `TUVI_BACKUP_PUBLIC_KEY_FILE` không còn bắt buộc khi
+chạy updater hoặc `node scripts/preflight.mjs --live`. Nếu có giá trị, preflight vẫn
+kiểm tra secret và public key đã cấu hình. Không bật thanh toán
 chỉ để kiểm thử bảo mật. Nếu đóng gói nguồn thủ công, nhớ thêm `proxy.ts` và các module mới.
 
 Các kiểm tra:

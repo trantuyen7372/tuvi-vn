@@ -5,8 +5,8 @@ Next.js 16. Cần **Node >= 22.15** (dùng zstd có sẵn trong Node).
 SEO: xem [hướng dẫn triển khai, xác minh Search Console và gửi sitemap](deploy/SEO.md).
 Kiểm tra metadata, sitemap, liên kết nội dung và noindex bằng `npm run test:seo` khi server đang chạy.
 
-Bảo mật: đọc [cấu hình MFA quản trị, backup mã hóa và thay đổi quyền xem bài](deploy/SECURITY.md)
-trước khi cập nhật production. Chạy `npm run test:security` để kiểm tra hồi quy trong DB thử.
+Bảo mật: xem [quyền xem bài và cấu hình bảo mật nâng cao](deploy/SECURITY.md).
+MFA và khóa backup hiện là tùy chọn, ẩn khi chưa cấu hình. Chạy `npm run test:security` để kiểm tra hồi quy trong DB thử.
 
 Doanh thu: xem [bảng giá, thống kê hành trình và cách phân biệt nguồn truy cập](deploy/REVENUE.md).
 Chạy `npm run test:funnel` để kiểm tra số liệu thanh toán và quyền riêng tư của sự kiện.

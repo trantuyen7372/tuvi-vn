@@ -1,8 +1,8 @@
 import { body, json, failure } from '@/lib/commerce/http';
-import { equal, secret, hash, limit, sameOrigin, privateHeaders } from '@/lib/commerce/security';
+import { equal, secret, limit, sameOrigin, privateHeaders } from '@/lib/commerce/security';
 import { clientKey } from '@/lib/customers/auth';
 import { run } from '@/lib/commerce/db';
-import {adminMfaRequired,adminTotpSecret,consumeAdminTotp,adminSessionHash} from '@/lib/commerce/admin-auth';
+import {adminMfaRequired,consumeAdminTotp,adminSessionHash} from '@/lib/commerce/admin-auth';
 export const runtime = 'nodejs';
 export async function POST(req: Request) {
   try {
@@ -10,9 +10,8 @@ export async function POST(req: Request) {
     const configured = process.env.ADMIN_PASSWORD;
     if (!configured || configured.length < 12) return json({ error: 'Quản trị chưa được cấu hình mật khẩu tối thiểu 12 ký tự' }, 503);
     const required=adminMfaRequired();
-    if(required&&!adminTotpSecret())return json({error:'Chưa cấu hình xác thực hai lớp quản trị. Vui lòng cấu hình trên máy chủ.'},503);
     const credentials=await body(req);
-    if (!equal(String(credentials.password || ''), configured)) return json({ error: 'Mật khẩu hoặc mã xác thực không đúng' }, 401);
+    if (!equal(String(credentials.password || ''), configured)) return json({ error: required?'Mật khẩu hoặc mã xác thực không đúng':'Mật khẩu không đúng' }, 401);
     if(required&&!consumeAdminTotp(String(credentials.code||'')))return json({error:'Mật khẩu hoặc mã xác thực không đúng'},401);
     const token = secret();
     run('DELETE FROM admin_sessions WHERE expires<?', Date.now());

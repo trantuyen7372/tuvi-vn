@@ -37,8 +37,13 @@ try {
   const recovered=path.join(directory,'recovered.sqlite');await decryptBackup(path.join(folder,files[0]),recovered,privateKey);
   const copy=new DatabaseSync(recovered,{readOnly:true});assert.equal(copy.prepare('PRAGMA quick_check').get().quick_check,'ok');assert.equal(copy.prepare('SELECT value FROM fixture').get().value,'Synthetic backup fixture');copy.close();
   pass('The real backup command creates an encrypted, consistent SQLite snapshot that can be restored');
-  const denied=spawnSync(process.execPath,['scripts/backup-db.mjs'],{env:{...env,TUVI_BACKUP_PUBLIC_KEY_FILE:''},encoding:'utf8'});
-  assert.notEqual(denied.status,0);assert.equal(fs.readdirSync(folder).length,1);
-  pass('Public deployments refuse a plaintext backup when the encryption key is missing');
+  const local=spawnSync(process.execPath,['scripts/backup-db.mjs'],{env:{...env,TUVI_BACKUP_PUBLIC_KEY_FILE:''},encoding:'utf8'});
+  assert.equal(local.status,0,local.stderr);
+  const plain=fs.readdirSync(folder).filter(name=>name.endsWith('.sqlite'));assert.equal(plain.length,1);
+  const plainPath=path.join(folder,plain[0]);assert.equal(fs.statSync(plainPath).mode&0o777,0o600);
+  const plainDB=new DatabaseSync(plainPath,{readOnly:true});assert.equal(plainDB.prepare('PRAGMA quick_check').get().quick_check,'ok');plainDB.close();
+  const badKey=spawnSync(process.execPath,['scripts/backup-db.mjs'],{env:{...env,TUVI_BACKUP_PUBLIC_KEY_FILE:path.join(directory,'missing-public.pem')},encoding:'utf8'});
+  assert.notEqual(badKey.status,0);assert.equal(fs.readdirSync(folder).length,2);
+  pass('Missing key permits a protected local SQLite backup; a broken configured key never falls back to plaintext');
   console.log(JSON.stringify({passed:checks.length,checks}));
 }finally{fs.rmSync(directory,{recursive:true,force:true});}

@@ -1,6 +1,5 @@
 import {createHmac} from 'node:crypto';
 import {get,run,transaction} from './db';
-import {siteUrl} from './config';
 
 export function adminTotpSecret() {
   const secret=(process.env.ADMIN_TOTP_SECRET||'').replace(/\s/g,'').toUpperCase();
@@ -9,8 +8,7 @@ export function adminTotpSecret() {
 }
 
 export function adminMfaRequired() {
-  const host=new URL(siteUrl()).hostname;
-  return !['localhost','127.0.0.1','[::1]'].includes(host) || !!adminTotpSecret();
+  return !!adminTotpSecret();
 }
 
 export function adminAuthFingerprint() {

@@ -68,8 +68,8 @@ xác thực. Lỗi thu thập sự kiện không chặn tạo đơn hoặc trả
 
 ## Phát hành và kiểm tra
 
-Đọc [hướng dẫn bảo mật](SECURITY.md) trước khi cập nhật vì bản này dựa trên MFA,
-backup mã hóa và quyền xem theo tài khoản. Bật biến đo lường trong `.env.example`
+Đọc [hướng dẫn bảo mật](SECURITY.md) về quyền xem theo tài khoản và cấu hình nâng cao.
+MFA và khóa backup hiện là tùy chọn, không chặn triển khai khi chưa cấu hình. Bật biến đo lường trong `.env.example`
 hoặc để mặc định; không cần tạo tài khoản Analytics. DB tự thêm hai bảng thống kê
 và cột `orders.funnel_visit`, không xóa bảng/cột hiện có.
 

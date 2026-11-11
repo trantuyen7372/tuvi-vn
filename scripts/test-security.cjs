@@ -93,8 +93,13 @@ async function main(){
 
   const seed='GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ';
   for(const [time,expected] of [[59,'94287082'],[1111111109,'07081804'],[1111111111,'14050471'],[1234567890,'89005924'],[2000000000,'69279037'],[20000000000,'65353130']])assert.equal(mfa.totpAt(seed,Math.floor(time/30),8),expected);
-  assert.equal((await adminRoute.POST(request('/api/admin/session',{password:process.env.ADMIN_PASSWORD}))).status,503);
+  assert.equal(mfa.adminMfaRequired(),false);
+  const passwordOnly=await adminRoute.POST(request('/api/admin/session',{password:process.env.ADMIN_PASSWORD}));
+  assert.equal(passwordOnly.status,200);
+  const passwordCookie=cookie(passwordOnly);assert.doesNotThrow(()=>admin(request('/api/admin',undefined,passwordCookie)));
   process.env.ADMIN_TOTP_SECRET=seed;
+  assert.equal(mfa.adminMfaRequired(),true);
+  assert.throws(()=>admin(request('/api/admin',undefined,passwordCookie)));
   const code=mfa.totpAt(seed,Math.floor(Date.now()/30000));
   assert.equal((await adminRoute.POST(request('/api/admin/session',{password:'wrong',code}))).status,401);
   assert.equal((await adminRoute.POST(request('/api/admin/session',{password:process.env.ADMIN_PASSWORD,code:code==='000000'?'111111':'000000'}))).status,401);
@@ -102,7 +107,7 @@ async function main(){
   const adminCookie=cookie(adminLogin);assert.doesNotThrow(()=>admin(request('/api/admin',undefined,adminCookie)));
   assert.equal((await adminRoute.POST(request('/api/admin/session',{password:process.env.ADMIN_PASSWORD,code}))).status,401);
   process.env.ADMIN_PASSWORD='RotatedAdminPassword!456';assert.throws(()=>admin(request('/api/admin',undefined,adminCookie)));
-  pass('Admin TOTP matches RFC 6238; missing/wrong/replayed factors fail and credential rotation revokes sessions');
+  pass('Unconfigured MFA permits password login; configured MFA still validates RFC TOTP, rejects replay and invalidates older sessions');
 
   for(const value of ['https://evil.example','//evil.example','/\\evil.example','/api/admin','/luan-giai/not-a-token'])assert.equal(safeCustomerDestination(value),'/tai-khoan');
   for(const value of ['/la-so?ngay=2000-01-01','/luan-giai/'+'a'.repeat(64),'/don-hang/'+'b'.repeat(64)])assert.equal(safeCustomerDestination(value),value);
