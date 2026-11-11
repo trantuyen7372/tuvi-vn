@@ -1,5 +1,6 @@
 'use client';
 import {Suspense,useState} from 'react';
+import CelestialMark from './CelestialMark';
 import {useRouter,useSearchParams} from 'next/navigation';
 import {notifyAuthChanged,safeCustomerDestination} from '@/lib/customers/client';
 type Mode='login'|'signup'|'forgot'|'reset'|'verify';
@@ -21,7 +22,7 @@ function AuthForm({mode}:{mode:Mode}){
       router.replace(destination);router.refresh();
     }catch(e){setError((e as Error).message);}finally{setBusy(false);}
   }
-  return <main className="mx-auto max-w-lg px-4 py-10"><section className="rounded-xl border border-[#d9c7a3] bg-white p-6"><h1 className="font-serif text-3xl font-bold text-son">{titles[mode]}</h1>
+  return <main className="auth-page"><aside className="auth-intro"><CelestialMark/><p className="site-eyebrow">GÓC RIÊNG CỦA BẠN</p><h2>Lưu một lá số.<br/>Đọc lại nhiều lần.</h2><p>Giữ lá số và bài luận trong một nơi, để tiếp tục tìm hiểu khi bạn muốn.</p><a href="/bai-luan-mau" className="text-link">Khám phá bài luận mẫu ↗</a></aside><section className="auth-card"><h1 className="font-serif text-3xl font-bold text-son">{titles[mode]}</h1>
     <p className="mt-3 text-sm">{mode==='signup'?'Lưu lá số, xem lại bài luận trên nhiều thiết bị. Lượt trải nghiệm miễn phí được cấp sau khi xác minh email.':mode==='login'?'Dùng email và mật khẩu của bạn để mở lịch sử lá số, bài luận.':mode==='verify'?'Bấm xác nhận để hoàn tất xác minh địa chỉ email.':'Link khôi phục chỉ dùng một lần và có thời hạn.'}</p>
     <form className="mt-5 space-y-4" onSubmit={submit}>
       {['login','signup','forgot'].includes(mode)&&<label className="block">Email<input className="input mt-1" type="email" required maxLength={254} autoComplete="email" value={email} onChange={e=>setEmail(e.target.value)}/></label>}

@@ -49,22 +49,22 @@ export default function Checkout({ input }: { input: BirthInput }) {
       </>}
     </div>
   </details>;
-  if(!account)return <section className="rounded-xl border border-[#d9c7a3] bg-white p-5"><p>Đang mở quyền xem luận giải…</p></section>;
+  if(!account)return <section className="checkout-panel"><p>Đang mở quyền xem luận giải…</p></section>;
   if(!account.paymentsEnabled){
     const next=encodeURIComponent('/la-so?'+inputToQuery(input));
-    return <section className="rounded-xl border border-[#d9c7a3] bg-white p-5"><h2 className="font-serif text-2xl font-bold text-son">Xem luận giải của tôi</h2><p className="mt-3">Website đang mở trải nghiệm, chưa thu tiền. Bản luận giải thích sao và các tổ hợp tại từng cung, nối với đại hạn và từng năm; được lưu để đọc lại trong tài khoản.</p><p className="mt-2 text-sm">Hiện hỗ trợ ngày sinh dương lịch từ 1950 đến 2026. Bài luận có năm đã chọn và tối đa bốn năm tiếp theo, mang tính tham khảo.</p>
+    return <section className="checkout-panel"><h2 className="font-serif text-2xl font-bold text-son">Xem luận giải của tôi</h2><p className="mt-3">Website đang mở trải nghiệm, chưa thu tiền. Bản luận giải thích sao và các tổ hợp tại từng cung, nối với đại hạn và từng năm; được lưu để đọc lại trong tài khoản.</p><p className="mt-2 text-sm">Hiện hỗ trợ ngày sinh dương lịch từ 1950 đến 2026. Bài luận có năm đã chọn và tối đa bốn năm tiếp theo, mang tính tham khảo.</p>
       {account.customer?<div className="mt-4 space-y-4">{!account.customer.verified&&<p className="text-sm">Bạn cần <a className="underline" href="/tai-khoan">xác minh email trong tài khoản</a> để nhận lượt trải nghiệm miễn phí.</p>}{preferenceFields}<div className="flex flex-wrap gap-3"><button className="btn" disabled={busy} onClick={async()=>{setBusy(true);setError('');try{const r=await fetch('/api/account/readings',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({input:customInput})});const j=await r.json();if(!r.ok)throw Error(j.error);router.push(j.url);}catch(e){setError((e as Error).message);}finally{setBusy(false);}}}>{busy?'Đang mở…':'Mở bài luận của lá số này'}</button><button className="btn-outline" disabled={busy} onClick={async()=>{setBusy(true);setError('');try{const r=await fetch('/api/account/profiles',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({input:customInput})});const j=await r.json();if(!r.ok)throw Error(j.error);setMessage('Đã lưu lá số trong tài khoản.');}catch(e){setError((e as Error).message);}finally{setBusy(false);}}}>Lưu lá số vào tài khoản</button><a className="btn-outline" href="/tai-khoan">Tài khoản của tôi</a></div></div>:<div className="mt-4 flex flex-wrap gap-3"><a className="btn" href={`/dang-nhap?next=${next}`}>Đăng nhập để xem bài của tôi</a><a className="btn-outline" href={`/dang-ky?next=${next}`}>Tạo tài khoản trải nghiệm</a></div>}
       {error&&<p role="alert" className="mt-3 text-son">{error}</p>}{message&&<p role="status" className="mt-3">{message}</p>}
     </section>;
   }
   const products=PRODUCTS.filter(p=>p.id!=='deep'||account.deepAvailable);
   const selected=products.find(p=>p.id===product)||products[0];
-  return <FunnelSection event="pricing_view" className="rounded-xl border border-[#d9c7a3] bg-white p-5">
+  return <FunnelSection event="pricing_view" className="checkout-panel">
     <h2 className="font-serif text-2xl font-bold text-son">Xem luận giải đầy đủ</h2>
     <p className="mt-3 text-sm">Lá số, cách cục và trích cổ thư ở trên được xem miễn phí. Mở bài luận giải gồm bản mệnh, sự nghiệp, tài lộc, tình duyên và vận năm {input.year}; kết quả được lưu để xem lại.</p>
     <p className="mt-2 text-sm"><a className="underline" href="/bai-luan-mau">Xem cách trình bày trước khi mua</a> · Mua một lần, xem lại bài đã lưu không mất thêm lượt.</p>
     <form className="no-print mt-4 space-y-4" onSubmit={e => { e.preventDefault(); void submit(); }}>
-      <div className={`grid gap-3 ${products.length===3?'sm:grid-cols-3':'sm:grid-cols-2'}`}>{products.map(p => <label key={p.id} className={`cursor-pointer rounded-lg border p-4 ${product === p.id ? 'border-son bg-[#fff6e5]' : 'border-[#d9c7a3]'}`}>
+      <div className={`grid gap-3 ${products.length===3?'sm:grid-cols-3':'sm:grid-cols-2'}`}>{products.map(p => <label key={p.id} className={`checkout-option cursor-pointer rounded-lg border p-4 ${product === p.id ? 'border-son bg-[#fff6e5]' : 'border-[#d9c7a3]'}`}>
         <input type="radio" name="product" value={p.id} checked={product === p.id} onChange={() => setProduct(p.id)} /> <b>{p.name}</b>
         {p.id==='deep'&&<span className="mt-2 block text-xs font-bold text-son">Đi sâu theo vấn đề bạn chọn</span>}{p.id==='family'&&<span className="mt-2 block text-xs font-bold text-son">Dành cho nhiều lá số</span>}
         {p.id==='single'&&<span className="mt-2 block text-xs font-semibold text-son">Phù hợp khi xem lần đầu</span>}

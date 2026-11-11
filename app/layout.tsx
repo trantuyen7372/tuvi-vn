@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import CustomerNavigation from '@/components/CustomerNavigation';
+import './site.css';
+import SiteHeader from '@/components/SiteHeader';
 import BrandLogo from '@/components/BrandLogo';
 import {SITE_ORIGIN,SITE_NAME} from '@/lib/seo';
 import FunnelTracker from '@/components/FunnelTracker';
@@ -27,18 +28,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
+        <a href="#noi-dung" className="skip-link">Đến nội dung chính</a>
         <FunnelTracker/>
-        <header className="no-print border-b border-[#d9c7a3] bg-white/60">
-          <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-            <BrandLogo />
-            <nav aria-label="Điều hướng chính" className="flex flex-wrap justify-end gap-x-4 gap-y-2 text-sm text-[#6b5b45]"><a href="/#lap-la-so" className="hover:text-son">Lập lá số</a><a href="/bai-luan-mau" className="hover:text-son">Bài luận mẫu</a><CustomerNavigation/><a href="/huong-dan" className="hover:text-son">Hướng dẫn</a><a href="/sao" className="hover:text-son">14 chính tinh</a></nav>
+        <SiteHeader/>
+        <div id="noi-dung" className="site-content" tabIndex={-1}>{children}</div>
+        <footer className="site-footer no-print">
+          <div className="site-footer-grid">
+            <div className="site-footer-brand"><BrandLogo/><p>Một nơi để lập lá số, tìm hiểu Tử Vi và lưu lại những góc nhìn dành cho bạn.</p><span>TỬ VI ĐẨU SỐ · TRI THỨC TRUYỀN THỐNG</span></div>
+            <nav aria-label="Kiến thức Tử Vi"><h2>Khám phá</h2><a href="/huong-dan">Hướng dẫn đọc lá số</a><a href="/sao">14 chính tinh</a><a href="/co-thu">Cổ thư</a><a href="/phuong-phap">Phương pháp và nguồn</a></nav>
+            <nav aria-label="Thông tin website"><h2>Thông tin & hỗ trợ</h2><a href="/chinh-sach/gioi-thieu">Giới thiệu / liên hệ</a><a href="/chinh-sach/dieu-khoan">Điều khoản</a><a href="/chinh-sach/bao-mat">Bảo mật</a><a href="/chinh-sach/hoan-tien">Hoàn tiền</a></nav>
           </div>
-        </header>
-        {children}
-        <footer className="no-print mt-12 border-t border-[#d9c7a3] py-6 text-center text-xs text-[#8a7a62]">
-          <nav aria-label="Kiến thức Tử Vi" className="mb-4 flex flex-wrap justify-center gap-4"><a href="/huong-dan">Hướng dẫn đọc lá số</a><a href="/sao">14 chính tinh</a><a href="/co-thu">Cổ thư</a><a href="/phuong-phap">Phương pháp và nguồn</a></nav>
-          <nav className="mb-3 flex flex-wrap justify-center gap-4"><a href="/chinh-sach/dieu-khoan">Điều khoản</a><a href="/chinh-sach/bao-mat">Bảo mật</a><a href="/chinh-sach/hoan-tien">Hoàn tiền</a><a href="/chinh-sach/gioi-thieu">Giới thiệu / liên hệ</a></nav>
-          Nội dung mang tính tham khảo.
+          <div className="site-footer-bottom"><p>Nội dung mang tính tham khảo, giải trí; không thay thế tư vấn chuyên môn.</p><a href="/#lap-la-so">Lập lá số của bạn <span aria-hidden="true">↗</span></a></div>
         </footer>
       </body>
     </html>

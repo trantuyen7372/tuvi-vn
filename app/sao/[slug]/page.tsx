@@ -34,7 +34,7 @@ export default async function SaoPage({ params }: { params: Promise<{ slug: stri
     ['Giới hạn khi đọc về sức khỏe', 'Biểu tượng sao và ngũ hành không xác định bệnh, tai nạn hoặc tuổi thọ. Không dùng nội dung này để chẩn đoán hay quyết định điều trị.'],
   ];
   return (
-    <main className="mx-auto max-w-3xl px-4 py-10">
+    <main className="editorial-page mx-auto max-w-3xl px-4 py-10">
       <Breadcrumbs items={[{name:'Trang chủ',path:'/'},{name:'14 chính tinh',path:'/sao'},{name:`Sao ${s.name}`,path:`/sao/${s.slug}`}]}/>
       <h1 className="mt-3 font-serif text-4xl font-bold text-son">Sao {s.name}</h1>
       <p className="mt-1 text-[#6b5b45]">Hành {s.element} · {s.nature} · {s.keywords.join(' · ')}</p>

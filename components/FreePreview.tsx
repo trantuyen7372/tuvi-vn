@@ -14,7 +14,7 @@ export default function FreePreview({ input }: { input: BirthInput }) {
       .finally(()=>{if(!controller.signal.aborted)setLoading(false);});
     return()=>controller.abort();
   },[input]);
-  return <FunnelSection event="preview_view" className="rounded-xl border border-[#d9c7a3] bg-[#fffaf0] p-5">
+  return <FunnelSection event="preview_view" className="reading-panel">
     <div aria-busy={loading}>
     <div className="flex flex-wrap items-center gap-2"><h2 className="font-serif text-2xl font-bold text-son">Đọc thử theo lá số của bạn</h2><span className="rounded-full bg-white px-3 py-1 text-xs">Miễn phí · không dùng lượt</span></div>
     <p className="mt-3 text-sm leading-relaxed text-[#6b5b45]">Các đoạn dưới đây được chọn theo bố cục sao và cung vừa lập, giúp bạn xem cách website diễn giải trước khi chọn bài đầy đủ.</p>

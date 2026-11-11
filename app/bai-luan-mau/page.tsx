@@ -8,7 +8,7 @@ export default function Page(){
   // Bản mẫu cố định theo hồ sơ minh họa công khai, không đọc bài riêng của khách.
   const {text}=sample;
   const chartUrl='/la-so?'+inputToQuery(sample.input);
-  return <main className="mx-auto max-w-3xl space-y-6 px-4 py-10">
+  return <main className="editorial-page mx-auto max-w-3xl space-y-6 px-4 py-10">
     <header><p className="text-sm font-semibold text-[#6b5b45]">ĐỌC THỬ MIỄN PHÍ · KHÔNG CẦN ĐĂNG NHẬP</p><h1 className="mt-2 font-serif text-3xl font-bold text-son sm:text-4xl">Bài luận minh họa</h1>
       <p className="mt-4 leading-relaxed">Đọc trọn bài mẫu về tính cách, sự nghiệp, tài lộc, tình duyên, 12 cung và các giai đoạn vận hạn. Bài luận của bạn được lập theo ngày giờ sinh và năm xem bạn chọn.</p>
       <dl className="mt-5 grid grid-cols-2 gap-4 rounded-xl border border-[#d9c7a3] bg-[#fffaf0] p-4 text-sm sm:grid-cols-4">

@@ -6,7 +6,7 @@ import {publicMetadata} from '@/lib/seo';
 export const metadata = publicMetadata('/huong-dan', 'Hướng dẫn lập và đọc lá số Tử Vi cho người mới', 'Bắt đầu với ngày giờ sinh, cách đọc 12 cung, chính tinh, phụ tinh, đại hạn và lưu niên. Hướng dẫn sử dụng lá số kèm ví dụ và nguồn tham khảo.');
 
 export default function GuideIndex() {
-  return <main className="mx-auto max-w-5xl px-4 py-10">
+  return <main className="editorial-page mx-auto max-w-5xl px-4 py-10">
     <Breadcrumbs items={[{name: 'Trang chủ', path: '/'}, {name: 'Hướng dẫn', path: '/huong-dan'}]}/>
     <p className="text-sm font-semibold text-son">BẮT ĐẦU TỪ DỮ LIỆU ĐÚNG</p>
     <h1 className="mt-3 font-serif text-3xl font-bold text-son md:text-4xl">Hướng dẫn lập và đọc lá số Tử Vi</h1>

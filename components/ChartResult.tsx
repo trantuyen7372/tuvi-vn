@@ -31,8 +31,8 @@ export default function ChartResult({chart}:{chart:ChartView}){
 
 
   return (
-    <main className="mx-auto max-w-6xl px-4 py-6">
-      <TrackChartCreated/>
+    <main className="chart-page mx-auto max-w-6xl px-4 py-6">
+      <TrackChartCreated/><div className="chart-page-heading no-print"><div><p className="site-eyebrow">LÁ SỐ CỦA BẠN</p><h1>Khám phá lá số Tử Vi</h1></div><p>Chọn một cung để xem các sao và lớp vận hạn.</p></div>
       <div className="no-print mb-4 flex flex-wrap items-center justify-between gap-2">
         <a href="/" className="btn-outline">← Lập lá số khác</a><a href="#mo-bai-luan" className="btn-outline">Xem cách mở bài luận →</a>
         <div className="text-xs text-[#8a7a62]">
@@ -42,7 +42,7 @@ export default function ChartResult({chart}:{chart:ChartView}){
       <p className="no-print mb-2 text-sm text-[#6b5b45] lg:hidden">Vuốt ngang để xem đủ 12 cung. Bấm một cung để đọc chi tiết bên dưới.</p>
       <div className="grid min-w-0 gap-5 lg:grid-cols-[minmax(0,1fr)_320px]">
         <ChartBoard chart={chart} selected={selected} onSelect={setSelected} />
-        <aside className="no-print rounded-xl border border-[#d9c7a3] bg-white p-4">
+        <aside className="chart-detail no-print">
           <PalaceDetail chart={chart} name={selected} />
         </aside>
       </div>

@@ -31,7 +31,7 @@ const policies: Record<string,{title:string;paragraphs:string[]}> = {
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}) { const {slug}=await params,p=policies[slug];return p?publicMetadata(`/chinh-sach/${slug}`,p.title,`${p.title} của Xem Tử Vi Online: thông tin sử dụng dịch vụ, quyền của khách hàng và cách liên hệ hỗ trợ.`):{}; }
 export default async function Page({params}:{params:Promise<{slug:string}>}) {
   const p=policies[(await params).slug];if(!p)notFound();
-  return <main className="mx-auto max-w-3xl px-4 py-10"><article className="space-y-4 rounded-xl border border-[#d9c7a3] bg-white p-6"><h1 className="font-serif text-3xl font-bold text-son">{p.title}</h1>
+  return <main className="editorial-page mx-auto max-w-3xl px-4 py-10"><article className="space-y-4 rounded-xl border border-[#d9c7a3] bg-white p-6"><h1 className="font-serif text-3xl font-bold text-son">{p.title}</h1>
     {p.paragraphs.map((text,i)=><p key={i} className="leading-relaxed">{text}</p>)}
     <section className="border-t pt-4"><h2 className="font-bold">Đơn vị vận hành và hỗ trợ</h2>
       <p>{process.env.OPERATOR_NAME||'Thông tin đơn vị vận hành chưa được cấu hình; chưa mở nhận thanh toán thật.'}</p>

@@ -1,6 +1,6 @@
 export default function BrandLogo() {
   return (
-    <a href="/" className="group mr-4 flex shrink-0 items-center gap-2.5 text-son">
+    <a href="/" className="brand-logo group flex shrink-0 items-center gap-2.5 text-son" aria-label="Tử Vi Đẩu Số — Trang chủ">
       <svg
         aria-hidden="true"
         viewBox="0 0 64 64"

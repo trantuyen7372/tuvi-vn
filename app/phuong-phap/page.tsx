@@ -4,7 +4,7 @@ import {publicMetadata} from '@/lib/seo';
 export const metadata = publicMetadata('/phuong-phap', 'Phương pháp lập lá số, nguồn nội dung và cách dùng AI', 'Tìm hiểu quy ước ngày giờ sinh, cách tính lá số bằng iztro, nguồn trích yếu cổ thư và vai trò AI trong nội dung Xem Tử Vi Online.');
 
 export default function MethodPage() {
-  return <main className="mx-auto max-w-3xl px-4 py-10">
+  return <main className="editorial-page mx-auto max-w-3xl px-4 py-10">
     <Breadcrumbs items={[{name: 'Trang chủ', path: '/'}, {name: 'Phương pháp và nguồn', path: '/phuong-phap'}]}/>
     <h1 className="font-serif text-3xl font-bold text-son">Phương pháp lập lá số và nguồn nội dung</h1>
     <p className="mt-5 text-lg leading-relaxed text-[#5a4a36]">Xem Tử Vi Online là công cụ lập lá số và tìm hiểu cách diễn giải Tử Vi Đẩu Số. Trang này giải thích dữ liệu được tính như thế nào, nội dung đến từ đâu và những giới hạn cần biết khi đọc.</p>

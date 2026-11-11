@@ -36,7 +36,8 @@ export default function BirthForm({onCreated,submitLabel='Lập lá số'}:{onCr
   const nums = (from: number, to: number) => Array.from({ length: to - from + 1 }, (_, i) => from + i);
 
   return (
-    <form onSubmit={submit} className="space-y-4 rounded-xl border border-[#d9c7a3] bg-white p-5 shadow-sm">
+    <form onSubmit={submit} className="birth-form space-y-4">
+      <div className="birth-form-heading"><div><p className="site-eyebrow">BẮT ĐẦU TỪ ĐÂY</p><h2>Thông tin lập lá số</h2></div><span className="birth-form-badge">Miễn phí</span></div>
       <div>
         <label htmlFor="birth-name" className="mb-1 block text-sm font-semibold">Họ và tên (không bắt buộc)</label>
         <input id="birth-name" className="input" maxLength={60} autoComplete="name" value={f.name} onChange={(e) => set('name', e.target.value)} placeholder="Nguyễn Văn A" />
@@ -92,7 +93,7 @@ export default function BirthForm({onCreated,submitLabel='Lập lá số'}:{onCr
         </div>
       </div>
 
-      <p className="text-xs leading-relaxed text-[#6b5b45]">Chỉ đánh dấu tháng nhuận khi đã xác nhận ngày âm lịch. Nếu chưa biết giờ sinh, nên kiểm tra lại trước khi mua; đổi giờ có thể đổi lá số.</p>
+      <p className="birth-form-hint">Nhập ngày giờ sinh đã xác nhận để lập đúng lá số. Chỉ đánh dấu tháng nhuận khi dùng ngày âm lịch có tháng nhuận.</p>
       <p className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-son"><a href="/huong-dan/nhap-ngay-am-hay-duong" className="underline">Nhập ngày âm hay dương?</a><a href="/huong-dan/khong-biet-gio-sinh" className="underline">Chưa biết giờ sinh?</a></p>
       {err && <p role="alert" className="text-sm text-son">{err}</p>}
       <button className="btn w-full" type="submit" disabled={busy}>{busy?'Đang xử lý…':submitLabel}</button>

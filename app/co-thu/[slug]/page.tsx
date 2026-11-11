@@ -19,7 +19,7 @@ export default async function Book({ params }: { params: Promise<{ slug: string 
   const b = BOOKS.find((x) => x.slug === slug);
   if (!b) notFound();
   return (
-    <main className="mx-auto max-w-3xl px-4 py-10">
+    <main className="editorial-page mx-auto max-w-3xl px-4 py-10">
       <Breadcrumbs items={[{name:'Trang chủ',path:'/'},{name:'Cổ thư',path:'/co-thu'},{name:b.title,path:`/co-thu/${b.slug}`}]}/>
       <h1 className="mt-3 font-serif text-4xl font-bold text-son">{b.title}</h1>
       <p className="mt-1 text-[#6b5b45]">{b.hanTitle} · {b.era} · {b.author}</p>

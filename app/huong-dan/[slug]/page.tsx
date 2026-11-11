@@ -20,7 +20,7 @@ export default async function GuidePage({params}: {params: Promise<{slug: string
   const guide = findGuide((await params).slug);
   if (!guide) notFound();
   const path = `/huong-dan/${guide.slug}`;
-  return <main className="mx-auto max-w-3xl px-4 py-10">
+  return <main className="editorial-page mx-auto max-w-3xl px-4 py-10">
     <Breadcrumbs items={[{name: 'Trang chủ', path: '/'}, {name: 'Hướng dẫn', path: '/huong-dan'}, {name: guide.title, path}]}/>
     <StructuredData data={{'@context': 'https://schema.org', '@type': 'Article', headline: guide.title, description: guide.description, inLanguage: 'vi-VN', mainEntityOfPage: new URL(path, SITE_ORIGIN).href, author: {'@type': 'Organization', name: SITE_NAME, url: `${SITE_ORIGIN}/phuong-phap`}, publisher: {'@type': 'Organization', name: SITE_NAME, url: SITE_ORIGIN}}}/>
     <article>
