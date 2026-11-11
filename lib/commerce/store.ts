@@ -3,11 +3,13 @@ import {readingIdentity,type BirthInput} from '../birth-input';
 import { all, get, run, transaction } from './db';
 import { hash, secret } from './security';
 import { ORDER_TTL, PRODUCTS } from './config';
+import {milestone,safelyMeasure} from '../funnel';
 
 export interface Order {
   id: string; code: number; token_hash: string; email: string; product: string; amount: number; quantity: number;
   status: string; input: string; coupon: string | null; provider: string; link_id: string | null; checkout_url: string | null;
   qr: string | null; created: number; expires: number; paid_at: number | null;
+  funnel_visit?:string|null;
 }
 export interface ReadingRow { id: string; token: string; order_id: string; fingerprint: string; input: string; status: string; text: string; attempts: number; lease: number | null; created: number; email_status: string }
 export function orderByToken(token: string) {
@@ -20,7 +22,7 @@ export function orderByToken(token: string) {
   return order;
 }
 export function credits(id: string) { return get<{ remaining: number }>('SELECT remaining FROM credits WHERE order_id=?', id)?.remaining || 0; }
-export function createOrder(email: string, productId: string, input: BirthInput, couponInput: string, provider: string) {
+export function createOrder(email: string, productId: string, input: BirthInput, couponInput: string, provider: string,visit?:string) {
   const product = PRODUCTS.find(p => p.id === productId);
   if (!product) throw new Error('Gói không hợp lệ');
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 254) throw new Error('Email không hợp lệ');
@@ -37,6 +39,7 @@ export function createOrder(email: string, productId: string, input: BirthInput,
     const code = now * 1000 + randomInt(1000);
     run('INSERT INTO orders (id,code,token_hash,email,product,amount,quantity,input,coupon,provider,created,expires) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)',
       id, code, hash(token), email.toLowerCase(), product.id, amount, product.credits, JSON.stringify(input), coupon || null, provider, now, now + ORDER_TTL);
+    if(visit)safelyMeasure(()=>{run('UPDATE orders SET funnel_visit=? WHERE id=?',visit,id);milestone(visit,'order_created');});
     if (amount === 0) grantOrder(id);
     return { token, order: get<Order>('SELECT * FROM orders WHERE id=?', id)! };
   });
@@ -46,6 +49,7 @@ function grantOrder(id: string) {
   if (order.status === 'paid') return;
   run("UPDATE orders SET status='paid',paid_at=? WHERE id=?", Date.now(), id);
   run('INSERT INTO credits VALUES (?,?,?)', id, order.email, order.quantity);
+  if(order.provider==='payos'&&order.amount>0)safelyMeasure(()=>milestone(order.funnel_visit,'purchase'));
 }
 export function receivePayment(p: { reference: string; orderCode: number; amount: number; paymentLinkId: string; code: string; currency: string }) {
   if (!p.reference || !Number.isSafeInteger(p.orderCode) || !Number.isInteger(p.amount) || p.amount < 0) throw new Error('Giao dịch không hợp lệ');

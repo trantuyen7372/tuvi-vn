@@ -3,6 +3,7 @@ import './globals.css';
 import CustomerNavigation from '@/components/CustomerNavigation';
 import BrandLogo from '@/components/BrandLogo';
 import {SITE_ORIGIN,SITE_NAME} from '@/lib/seo';
+import FunnelTracker from '@/components/FunnelTracker';
 
 export const metadata: Metadata = {
   metadataBase:new URL(SITE_ORIGIN),
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
+        <FunnelTracker/>
         <header className="no-print border-b border-[#d9c7a3] bg-white/60">
           <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
             <BrandLogo />

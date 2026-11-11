@@ -9,6 +9,7 @@
     "typecheck": "tsc --noEmit",
     "test:seo": "node scripts/test-seo.mjs",
     "test:security": "node scripts/test-security.cjs && node scripts/test-backup-crypto.mjs",
+    "test:funnel": "node scripts/test-funnel.cjs",
     "test:commerce": "node scripts/test-commerce.cjs",
     "test:reading": "node scripts/test-reading.cjs",
     "demo:payments": "node scripts/start-payment-demo.cjs",

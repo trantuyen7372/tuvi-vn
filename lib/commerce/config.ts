@@ -1,5 +1,4 @@
-// price = số tiền thu thật; listPrice = giá niêm yết hiển thị gạch ngang khi đang khuyến mại.
-// Hết đợt khuyến mại thì đặt price bằng listPrice (giảm giá cần thông báo Sở Công Thương, tối đa 50%, có thời hạn).
+// Giá đang bán; không hiển thị giá gạch ngang khi chưa có chương trình riêng.
 export interface Product {
   id: 'single' | 'deep' | 'family';
   name: string;
@@ -9,10 +8,11 @@ export interface Product {
   summary: string;
 }
 export const PRODUCTS: readonly Product[] = [
-  { id: 'single', name: 'Luận giải 1 lá số', credits: 1, price: 49000, listPrice: 129000, summary: '1 lượt luận giải đầy đủ 12 cung, đại hạn và vận năm đã chọn. Xem lại bài đã lưu không mất thêm lượt.' },
-  { id: 'deep', name: 'Luận giải chuyên sâu', credits: 1, price: 199000, listPrice: 279000, summary: '1 lượt biên soạn chuyên sâu, đi kỹ vào vấn đề và hoàn cảnh bạn đang quan tâm trên chính lá số.' },
-  { id: 'family', name: 'Gói gia đình', credits: 5, price: 299000, listPrice: 449000, summary: '5 lượt luận giải theo lá số và năm xem hạn, dùng cho nhiều người thân trong gia đình.' },
+  { id: 'single', name: 'Luận giải 1 lá số', credits: 1, price: 49000, listPrice: 49000, summary: 'Bắt đầu với 1 lá số: đầy đủ 12 cung, đại hạn và vận năm. Được cá nhân hóa theo bố cục sao–cung từ kho nội dung của website.' },
+  { id: 'deep', name: 'Luận giải chuyên sâu', credits: 1, price: 199000, listPrice: 199000, summary: '1 bài được AI biên soạn theo lá số, chủ đề và hoàn cảnh bạn cung cấp. Phù hợp khi cần phân tích tập trung vào một vấn đề.' },
+  { id: 'family', name: 'Gói gia đình', credits: 5, price: 199000, listPrice: 199000, summary: '5 lượt luận giải từ kho nội dung, cùng phạm vi như gói 1 lá số. Dùng cho nhiều người hoặc nhiều năm xem hạn.' },
 ] as const;
+export const familySaving = () => PRODUCTS.find(p=>p.id==='single')!.price*PRODUCTS.find(p=>p.id==='family')!.credits-PRODUCTS.find(p=>p.id==='family')!.price;
 export const discountPercent = (p: { price: number; listPrice: number }) =>
   p.listPrice > p.price ? Math.round((1 - p.price / p.listPrice) * 100) : 0;
 export const ORDER_TTL = 30 * 60 * 1000;

@@ -6,6 +6,7 @@ import {welcomeAccess,freeReadingCredits} from '@/lib/customers/access';
 import {authMail} from '@/lib/customers/mail';
 import {mailConfigured} from '@/lib/email';
 import {passwordNeedsUpgrade} from '@/lib/customers/passwords';
+import {deepReadingAvailable} from '@/lib/commerce/offers';
 export const runtime='nodejs';
 export const dynamic='force-dynamic';
 function signed(value:unknown,token:string){return Response.json(value,{headers:{...privateHeaders,'Set-Cookie':sessionCookie(token,token?14*86400:0)}});}
@@ -17,7 +18,7 @@ async function sendAuthMail(c:Customer,purpose:'verify'|'reset'){
 export async function GET(req:Request,ctx:{params:Promise<{action:string}>}){
   if((await ctx.params).action!=='me')return json({error:'Không tìm thấy'},404);
   const c=customer(req);
-  return json({customer:c?{email:c.email,verified:!!c.verified}:null,paymentsEnabled:paymentsEnabled(),emailEnabled:mailConfigured(),demo:demoMode()});
+  return json({customer:c?{email:c.email,verified:!!c.verified}:null,paymentsEnabled:paymentsEnabled(),deepAvailable:deepReadingAvailable(),emailEnabled:mailConfigured(),demo:demoMode()});
 }
 export async function POST(req:Request,ctx:{params:Promise<{action:string}>}){
   try{

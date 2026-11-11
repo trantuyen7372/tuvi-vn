@@ -44,6 +44,9 @@ export function db(): DB {
     CREATE TABLE IF NOT EXISTS admin_totp_steps (fingerprint TEXT PRIMARY KEY, step INTEGER NOT NULL);
     CREATE TABLE IF NOT EXISTS rate_limits (key TEXT PRIMARY KEY, count INTEGER NOT NULL, reset INTEGER NOT NULL);
     CREATE TABLE IF NOT EXISTS audit_log (id INTEGER PRIMARY KEY, action TEXT NOT NULL, target TEXT NOT NULL, detail TEXT NOT NULL, created INTEGER NOT NULL);
+    CREATE TABLE IF NOT EXISTS funnel_visits (id TEXT PRIMARY KEY,source TEXT NOT NULL,created INTEGER NOT NULL,last_seen INTEGER NOT NULL);
+    CREATE TABLE IF NOT EXISTS funnel_events (visit_id TEXT NOT NULL REFERENCES funnel_visits(id) ON DELETE CASCADE,event TEXT NOT NULL,created INTEGER NOT NULL,PRIMARY KEY(visit_id,event));
+    CREATE INDEX IF NOT EXISTS funnel_visits_created ON funnel_visits(created);
     CREATE INDEX IF NOT EXISTS orders_email ON orders(email);
     CREATE INDEX IF NOT EXISTS orders_coupon ON orders(coupon);
     CREATE INDEX IF NOT EXISTS readings_order ON readings(order_id);
@@ -52,6 +55,8 @@ export function db(): DB {
   `);
   const columns=connection.prepare('PRAGMA table_info(orders)').all() as {name:string}[];
   if(!columns.some(c=>c.name==='customer_id')) connection.exec('ALTER TABLE orders ADD COLUMN customer_id TEXT REFERENCES customers(id)');
+  if(!columns.some(c=>c.name==='funnel_visit')) connection.exec('ALTER TABLE orders ADD COLUMN funnel_visit TEXT');
+  connection.exec('CREATE INDEX IF NOT EXISTS orders_funnel_visit ON orders(funnel_visit)');
   connection.exec('CREATE INDEX IF NOT EXISTS orders_customer ON orders(customer_id); CREATE INDEX IF NOT EXISTS sessions_customer ON customer_sessions(customer_id)');
   return connection;
 }

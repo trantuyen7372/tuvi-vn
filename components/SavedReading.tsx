@@ -4,6 +4,7 @@ import Markdown from './Markdown';
 import ReadingContents from './ReadingContents';
 import ReadingPreferences from './ReadingPreferences';
 import type {ReadingPreferences as Preferences} from '@/lib/reading-preferences';
+import {startMeasurement} from '@/lib/funnel-client';
 interface Result { status: string; text: string; attempts: number; input: { name: string;reading?:Preferences }; emailStatus: string;canPersonalize?:boolean }
 export default function SavedReading({ token }: { token: string }) {
   const [result, setResult] = useState<Result>(), [error, setError] = useState(''), [busy, setBusy] = useState(false);
@@ -11,6 +12,7 @@ export default function SavedReading({ token }: { token: string }) {
   const latestLoad = useRef(0);
   async function load() {
     const sequence=++latestLoad.current;
+    await startMeasurement();
     const response = await fetch(`/api/readings/${token}`, { cache: 'no-store' }), data = await response.json();
     if(!response.ok){if(sequence===latestLoad.current)setResult(undefined);if(response.status===401)location.replace('/dang-nhap?next='+encodeURIComponent('/luan-giai/'+token));}
     if (!response.ok) throw new Error(data.error);

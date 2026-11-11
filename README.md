@@ -8,6 +8,9 @@ Kiểm tra metadata, sitemap, liên kết nội dung và noindex bằng `npm run
 Bảo mật: đọc [cấu hình MFA quản trị, backup mã hóa và thay đổi quyền xem bài](deploy/SECURITY.md)
 trước khi cập nhật production. Chạy `npm run test:security` để kiểm tra hồi quy trong DB thử.
 
+Doanh thu: xem [bảng giá, thống kê hành trình và cách phân biệt nguồn truy cập](deploy/REVENUE.md).
+Chạy `npm run test:funnel` để kiểm tra số liệu thanh toán và quyền riêng tư của sự kiện.
+
 ## Chạy local
 ```bash
 npm install

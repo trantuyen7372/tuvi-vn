@@ -6,6 +6,8 @@ import { run } from '@/lib/commerce/db';
 import { body, failure, json } from '@/lib/commerce/http';
 import {paymentsEnabled,clientKey} from '@/lib/customers/auth';
 import {privateCustomer,AccessError} from '@/lib/customers/order-access';
+import {deepReadingAvailable} from '@/lib/commerce/offers';
+import {safeVisitForRequest} from '@/lib/funnel';
 export const runtime = 'nodejs';
 export async function POST(req: Request) {
   try {
@@ -14,9 +16,10 @@ export async function POST(req: Request) {
     const c=privateCustomer(req);
     if(!c.verified)throw new AccessError('Vui lòng xác minh email trong tài khoản trước khi đặt đơn.',403);
     const b = await body(req), input = validateInput(b.input);
+    if(b.product==='deep'&&!deepReadingAvailable())return json({error:'Gói chuyên sâu hiện chưa sẵn sàng. Bạn có thể chọn gói 1 lá số hoặc gia đình.'},503);
     buildChart(input);
     const provider = process.env.PAYMENT_PROVIDER === 'mock' ? 'mock' : 'payos';
-    const { order, token } = createOrder(c.email, String(b.product || ''), input, String(b.coupon || ''), provider);
+    const { order, token } = createOrder(c.email, String(b.product || ''), input, String(b.coupon || ''), provider,safeVisitForRequest(req));
     run('UPDATE orders SET customer_id=? WHERE id=?',c.id,order.id);
     if (order.amount > 0) {
       try {

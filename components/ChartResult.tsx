@@ -6,6 +6,7 @@ import PatternsCard from './PatternsCard';
 import StarNotes from './StarNotes';
 import FreePreview from './FreePreview';
 import type {ChartView} from '@/lib/tuvi';
+import {TrackChartCreated} from './FunnelTracker';
 
 function PalaceDetail({ chart, name }: { chart: ChartView; name: string | null }) {
   const p = chart.palaces.find((x) => x.name === name);
@@ -31,6 +32,7 @@ export default function ChartResult({chart}:{chart:ChartView}){
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-6">
+      <TrackChartCreated/>
       <div className="no-print mb-4 flex flex-wrap items-center justify-between gap-2">
         <a href="/" className="btn-outline">← Lập lá số khác</a><a href="#mo-bai-luan" className="btn-outline">Xem cách mở bài luận →</a>
         <div className="text-xs text-[#8a7a62]">
