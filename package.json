@@ -16,6 +16,7 @@
     "preflight": "node scripts/preflight.mjs",
     "test:commerce:http": "node scripts/test-commerce-http.mjs",
     "test:ui": "node scripts/test-ui.mjs",
+    "test:mobile": "node scripts/test-mobile-usability.mjs",
     "preview:customers": "node scripts/start-payment-demo.cjs --customers"
   },
   "dependencies": {

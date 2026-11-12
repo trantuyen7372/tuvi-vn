@@ -40,7 +40,7 @@ function Cell({ p, selected, onClick }: { p: PalaceView; selected: boolean; onCl
       aria-pressed={selected}
       onClick={onClick}
       style={{ gridRow: row, gridColumn: col }}
-      className={`flex min-w-0 min-h-[210px] flex-col border border-[#d9c7a3] p-2 text-left text-[11px] font-normal leading-snug transition ${
+      className={`chart-palace flex min-w-0 min-h-[210px] flex-col border border-[#d9c7a3] p-2 text-left text-[11px] font-normal leading-snug transition ${
         selected ? 'bg-[#fff1d6] ring-2 ring-son' : 'bg-white hover:bg-[#fffaf0]'
       } ${p.isYearlyNow ? 'outline outline-2 -outline-offset-4 outline-vang' : ''}`}
     >
@@ -51,10 +51,10 @@ function Cell({ p, selected, onClick }: { p: PalaceView; selected: boolean; onCl
           {p.isBody && <span className="ml-1 rounded bg-son px-1 text-[10px] text-white">Thân</span>}
         </span>
       </div>
-      <div className="my-2 flex min-h-[44px] flex-col justify-center gap-0.5 text-[14px] leading-5">
+      <div className="chart-major my-2 flex min-h-[44px] flex-col justify-center gap-0.5 text-[14px] leading-5">
         {p.major.length ? p.major.map((s) => <Star key={s.name} s={s} />) : <span className="text-center text-[11px] font-normal italic text-[#8a7a62]">Vô chính diệu</span>}
       </div>
-      <div className="grid grid-cols-2 items-start gap-x-2 text-[10px] leading-4">
+      <div className="chart-minor grid grid-cols-2 items-start gap-x-2 text-[10px] leading-4">
         <div className="min-w-0 space-y-1">{p.minor.map((s) => <Star key={s.name} s={s} />)}</div>
         <div className="min-w-0 space-y-1">{p.adjective.map((s) => <Star key={s.name} s={s} />)}</div>
       </div>

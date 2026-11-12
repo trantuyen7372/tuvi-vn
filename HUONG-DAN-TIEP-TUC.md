@@ -1,5 +1,11 @@
 # Hướng dẫn cho AI khác: tiếp tục dự án website Tử Vi (tiếng Việt)
 
+## Giao diện mobile — 12/11/2026
+
+Hoàn tất phần chỉnh giao diện đang dở: rút gọn giới thiệu, đưa form sinh lên cao, tăng cỡ chữ và vùng bấm; menu mobile giữ Lập lá số và Khám phá cùng hàng. Trang kết quả có tổng quan Mệnh/Thân/đại hạn, CTA đọc luận và cửa sổ phóng to 12 cung; chọn cung đồng bộ với trang chính. Nút đóng luôn nhìn thấy khi cuộn cửa sổ, Escape trả focus về nút mở. Giữ màu kem/đỏ trầm và bố cục desktop.
+
+Build, typecheck và 15 nhóm Chromium đạt ở 320/390/768/1440px; đã xem ảnh trang chủ, menu và cửa sổ phóng to sau sửa. Chạy lại bằng `npm run preview:customers`, rồi `npm run test:mobile`; kết quả và ảnh ở `outputs/mobile-usability/`. Đọc `reports/MOBILE-USABILITY.md`. Chỉ kiểm tra local với DB preview, chưa triển khai VM hoặc thử Safari/thiết bị thật.
+
 ## Email xác minh qua Gmail — 09/11/2026
 
 Chủ website xác nhận địa chỉ gửi và nhận hỗ trợ `xemtuvionlinevn@gmail.com`. Đọc `deploy/EMAIL.md`. Gửi qua Gmail SMTP TLS 465 bằng Nodemailer; `MAIL_PROVIDER=gmail`, `SMTP_USER`, `SMTP_PASSWORD` (Mật khẩu ứng dụng Google), `MAIL_FROM`, `SUPPORT_EMAIL`. Email xác minh/khôi phục/bài luận gửi tới từng khách; Reply-To về Gmail hỗ trợ, không tự BCC dữ liệu khách. Giữ tương thích Resend khi chọn rõ provider. Đã cấu hình địa chỉ ở `.env.example` và local riêng; mật khẩu để trống, chưa gửi thư thật hoặc triển khai server.

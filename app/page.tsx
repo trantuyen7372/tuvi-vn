@@ -27,7 +27,7 @@ export default function Home(){
       <div className="hero-copy">
         <p className="site-eyebrow"><span className="eyebrow-line"/> TRI THỨC XƯA, GÓC NHÌN MỚI</p>
         <h1 id="hero-title">Lập lá số <span>Tử Vi</span></h1>
-        <p className="hero-lead">Hiểu lá số.<br/>Mở thêm góc nhìn về chính mình.</p>
+        <p className="hero-lead">Hiểu lá số.<br/>{' '}Mở thêm góc nhìn về chính mình.</p>
         <p className="hero-description">Khám phá 12 cung, hệ thống sao và những chặng vận hạn từ ngày giờ sinh của bạn. Bắt đầu bằng lá số miễn phí, rồi đọc sâu hơn khi bạn sẵn sàng.</p>
         <div className="hero-actions"><a className="btn" href="#lap-la-so">Lập lá số miễn phí ngay <span aria-hidden="true">↗</span></a><a className="hero-sample-link" href="/bai-luan-mau">{paid?'Đọc thử trước khi mua →':'Xem bài luận minh họa →'}</a></div>
         <p className="hero-reassurance"><span aria-hidden="true">✓</span> Miễn phí lập lá số <span aria-hidden="true">·</span> Không cần đăng nhập</p>
