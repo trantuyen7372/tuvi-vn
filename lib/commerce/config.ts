@@ -9,7 +9,7 @@ export interface Product {
 }
 export const PRODUCTS: readonly Product[] = [
   { id: 'single', name: 'Luận giải 1 lá số', credits: 1, price: 49000, listPrice: 49000, summary: 'Bắt đầu với 1 lá số: đầy đủ 12 cung, đại hạn và vận năm. Được cá nhân hóa theo bố cục sao–cung từ kho nội dung của website.' },
-  { id: 'deep', name: 'Luận giải chuyên sâu', credits: 1, price: 99000, listPrice: 99000, summary: '1 bài được AI biên soạn theo lá số, chủ đề và hoàn cảnh bạn cung cấp. Phù hợp khi cần phân tích tập trung vào một vấn đề.' },
+  { id: 'deep', name: 'Luận giải chuyên sâu', credits: 1, price: 99000, listPrice: 99000, summary: '1 bài được chúng tôi biên soạn theo lá số, chủ đề và hoàn cảnh bạn cung cấp. Phù hợp khi cần phân tích tập trung vào một vấn đề.' },
   { id: 'family', name: 'Gói gia đình', credits: 5, price: 199000, listPrice: 199000, summary: '5 lượt luận giải từ kho nội dung, cùng phạm vi như gói 1 lá số. Dùng cho nhiều người hoặc nhiều năm xem hạn.' },
 ] as const;
 export const familySaving = () => PRODUCTS.find(p=>p.id==='single')!.price*PRODUCTS.find(p=>p.id==='family')!.credits-PRODUCTS.find(p=>p.id==='family')!.price;

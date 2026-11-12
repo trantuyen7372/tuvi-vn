@@ -15,7 +15,7 @@ export default function GuideIndex() {
     <aside className="mt-8 rounded-xl border border-[#d9c7a3] bg-white p-5 leading-relaxed">
       <h2 className="font-serif text-xl font-bold text-son">Tra cứu trong lúc đọc</h2>
       <p className="mt-3">Bạn có thể mở <a href="/sao" className="text-son underline">14 chính tinh</a>, đối chiếu <a href="/co-thu" className="text-son underline">bản trích yếu cổ thư</a> hoặc xem <a href="/bai-luan-mau" className="text-son underline">bài luận minh họa</a>.</p>
-      <p className="mt-3 text-sm text-[#6b5b45]">Nội dung có AI hỗ trợ biên soạn. Đọc <a href="/phuong-phap" className="underline">phương pháp, nguồn và quy ước của website</a> trước khi diễn giải kết quả cá nhân.</p>
+      <p className="mt-3 text-sm text-[#6b5b45]">Nội dung do chúng tôi biên soạn. Đọc <a href="/phuong-phap" className="underline">phương pháp, nguồn và quy ước của website</a> trước khi diễn giải kết quả cá nhân.</p>
       <a href="/#lap-la-so" className="btn mt-4">Lập lá số miễn phí</a>
     </aside>
   </main>;

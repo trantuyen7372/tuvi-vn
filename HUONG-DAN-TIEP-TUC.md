@@ -1,5 +1,9 @@
 # Hướng dẫn cho AI khác: tiếp tục dự án website Tử Vi (tiếng Việt)
 
+## Cách gọi trên giao diện — 12/11/2026
+
+Theo yêu cầu chủ website, dùng “chúng tôi” khi nói về bên biên soạn, bỏ từ ngữ liên quan đến AI trong nội dung hiển thị và metadata. Đã cập nhật trang chủ, gói chuyên sâu, checkout, hướng dẫn, trang sao, phương pháp và nhãn quản trị. Giữ tên biến cấu hình, thư viện và tích hợp kỹ thuật để dịch vụ hoạt động. Build và 8 nhóm SEO đạt; quét 33 trang công khai không còn từ ngữ này trong nội dung/metadata, kiểm tra 4 trang đã đổi trên Chromium đạt. Chưa triển khai máy chủ.
+
 ## Giao diện mobile — 12/11/2026
 
 Hoàn tất phần chỉnh giao diện đang dở: rút gọn giới thiệu, đưa form sinh lên cao, tăng cỡ chữ và vùng bấm; menu mobile giữ Lập lá số và Khám phá cùng hàng. Trang kết quả có tổng quan Mệnh/Thân/đại hạn, CTA đọc luận và cửa sổ phóng to 12 cung; chọn cung đồng bộ với trang chính. Nút đóng luôn nhìn thấy khi cuộn cửa sổ, Escape trả focus về nút mở. Giữ màu kem/đỏ trầm và bố cục desktop.

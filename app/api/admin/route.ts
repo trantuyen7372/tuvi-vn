@@ -86,7 +86,7 @@ export async function POST(req: Request) {
         } else if (action === 'confirm-test' || action === 'reconcile') {
           if (o.status === 'paid' || o.status === 'refunded') throw new Error('Đơn đã được xử lý');
           if (action === 'confirm-test') {
-            if (o.provider !== 'mock' || process.env.TUVI_ALLOW_TEST_PAYMENTS !== '1' || process.env.ANTHROPIC_API_KEY) throw new Error('Chỉ xác nhận đơn thử, không dùng khóa AI thật');
+            if (o.provider !== 'mock' || process.env.TUVI_ALLOW_TEST_PAYMENTS !== '1' || process.env.ANTHROPIC_API_KEY) throw new Error('Chỉ xác nhận đơn thử, không dùng khóa dịch vụ luận giải thật');
           } else {
             const p = get<{ amount: number; order_code: number; status: string; reason: string; link_id: string }>('SELECT * FROM payments WHERE id=?', String(b.paymentId || ''));
             if (!p || p.status !== 'review' || p.amount !== o.amount || p.order_code !== o.code || p.link_id !== o.link_id || o.provider !== 'payos' || !['expired','order_not_pending'].includes(p.reason) || !String(b.reason || '').trim()) throw new Error('Cần giao dịch thành công đúng mã đơn, link và số tiền; chỉ chấp nhận giao dịch đến muộn hoặc đơn đã đổi trạng thái');

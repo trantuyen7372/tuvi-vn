@@ -19,7 +19,7 @@ export function paymentConfiguration(){
     {field:'PAYOS_API_KEY',label:'API Key PayOS',configured:!!process.env.PAYOS_API_KEY?.trim()},
     {field:'PAYOS_CHECKSUM_KEY',label:'Checksum Key PayOS',configured:!!process.env.PAYOS_CHECKSUM_KEY?.trim()},
     {field:'SITE_URL',label:'Tên miền HTTPS công khai',configured:!!webhookUrl},
-    {field:'ANTHROPIC_API_KEY',label:'Khóa AI để tạo bài sau thanh toán',configured:!!process.env.ANTHROPIC_API_KEY?.trim()},
+    {field:'ANTHROPIC_API_KEY',label:'Khóa dịch vụ luận giải để tạo bài sau thanh toán',configured:!!process.env.ANTHROPIC_API_KEY?.trim()},
     {field:'OPERATOR_NAME',label:'Tên đơn vị vận hành',configured:!!process.env.OPERATOR_NAME?.trim()},
     {field:'SUPPORT_EMAIL',label:'Email hỗ trợ',configured:/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(process.env.SUPPORT_EMAIL||'')},
   ];

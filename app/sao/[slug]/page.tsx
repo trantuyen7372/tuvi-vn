@@ -38,7 +38,7 @@ export default async function SaoPage({ params }: { params: Promise<{ slug: stri
       <Breadcrumbs items={[{name:'Trang chủ',path:'/'},{name:'14 chính tinh',path:'/sao'},{name:`Sao ${s.name}`,path:`/sao/${s.slug}`}]}/>
       <h1 className="mt-3 font-serif text-4xl font-bold text-son">Sao {s.name}</h1>
       <p className="mt-1 text-[#6b5b45]">Hành {s.element} · {s.nature} · {s.keywords.join(' · ')}</p>
-      <p className="mt-4 text-sm leading-relaxed text-[#6b5b45]">Biên soạn: Xem Tử Vi Online · Có AI hỗ trợ. <a href="/phuong-phap" className="underline">Nguồn và phương pháp</a></p>
+      <p className="mt-4 text-sm leading-relaxed text-[#6b5b45]">Nội dung do chúng tôi biên soạn. <a href="/phuong-phap" className="underline">Nguồn và phương pháp</a></p>
       <section className="mt-6"><h2 className="font-serif text-2xl font-bold text-son">Sao {s.name} có ý nghĩa gì?</h2><p className="mt-3 leading-relaxed">{guide.overview}</p></section>
       <div className="mt-6 border-l-4 border-son bg-white p-4"><p className="text-xs text-[#6b5b45]">Diễn ý theo cách luận truyền thống</p><p className="mt-2 font-serif italic leading-relaxed">{s.coQuyet}</p></div>
       <h2 className="mt-8 font-serif text-2xl font-bold text-son">Tóm tắt theo các chủ đề</h2>

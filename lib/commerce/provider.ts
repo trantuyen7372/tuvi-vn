@@ -16,7 +16,7 @@ function client() {
 }
 export function gateway(): Gateway {
   if (process.env.PAYMENT_PROVIDER === 'mock') {
-    if (process.env.TUVI_ALLOW_TEST_PAYMENTS !== '1' || process.env.ANTHROPIC_API_KEY) throw new Error('Chế độ thử chỉ dùng khi bật rõ ràng và không có khóa AI thật');
+    if (process.env.TUVI_ALLOW_TEST_PAYMENTS !== '1' || process.env.ANTHROPIC_API_KEY) throw new Error('Chế độ thử chỉ dùng khi bật rõ ràng và không có khóa dịch vụ luận giải thật');
     return {
       name: 'mock',
       async create(o) { return { id: `test-${o.code}`, checkoutUrl: '', qrCode: '' }; },

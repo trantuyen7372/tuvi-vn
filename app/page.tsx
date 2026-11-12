@@ -56,7 +56,7 @@ export default function Home(){
         {products.map(p=><article className={`price-card ${p.id==='single'?'price-featured':''}`} key={p.id}>
           <p className="price-tag">{p.id==='single'?'Bắt đầu tại đây':p.id==='deep'?'ĐI SÂU THEO CHỦ ĐỀ':'DÀNH CHO NHIỀU LÁ SỐ'}</p><h3>{p.name}</h3>
           <div className="price-amount">{money(p.price).replace('đ','')}<span>đ</span></div><p className="price-description">{p.summary}</p>
-          <ul><li>{p.id==='deep'?'AI biên soạn theo vấn đề bạn chọn':'Diễn giải từ kho nội dung sao–cung'}</li><li>{p.credits>1?`${p.credits} lượt cho nhiều lá số`:'1 bài theo lá số và năm xem'}</li><li>Lưu bài, xem lại và in / lưu PDF</li></ul>
+          <ul><li>{p.id==='deep'?'Chúng tôi biên soạn theo vấn đề bạn chọn':'Diễn giải từ kho nội dung sao–cung'}</li><li>{p.credits>1?`${p.credits} lượt cho nhiều lá số`:'1 bài theo lá số và năm xem'}</li><li>Lưu bài, xem lại và in / lưu PDF</li></ul>
           {p.id==='family'&&<p className="price-saving">{money(p.price/p.credits)}/lượt · Tiết kiệm {money(familySaving())} so với mua lẻ 5 lượt.</p>}
           <a className={p.id==='single'?'btn':'btn-outline'} href="#lap-la-so">Lập lá số và đọc thử <span aria-hidden="true">↗</span></a>
         </article>)}

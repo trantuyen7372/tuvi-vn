@@ -25,7 +25,7 @@ export default async function GuidePage({params}: {params: Promise<{slug: string
     <StructuredData data={{'@context': 'https://schema.org', '@type': 'Article', headline: guide.title, description: guide.description, inLanguage: 'vi-VN', mainEntityOfPage: new URL(path, SITE_ORIGIN).href, author: {'@type': 'Organization', name: SITE_NAME, url: `${SITE_ORIGIN}/phuong-phap`}, publisher: {'@type': 'Organization', name: SITE_NAME, url: SITE_ORIGIN}}}/>
     <article>
       <h1 className="font-serif text-3xl font-bold leading-tight text-son md:text-4xl">{guide.title}</h1>
-      <p className="mt-3 text-sm leading-relaxed text-[#6b5b45]">Biên soạn: {SITE_NAME} · Có AI hỗ trợ. <a href="/phuong-phap" className="underline">Nguồn và phương pháp</a></p>
+      <p className="mt-3 text-sm leading-relaxed text-[#6b5b45]">Nội dung do chúng tôi biên soạn. <a href="/phuong-phap" className="underline">Nguồn và phương pháp</a></p>
       <p className="mt-6 text-lg leading-relaxed text-[#5a4a36]">{guide.intro}</p>
       <nav aria-label="Mục lục bài viết" className="mt-6 rounded-xl border border-[#d9c7a3] bg-white p-5">
         <h2 className="font-bold">Trong bài này</h2>
