@@ -8,14 +8,14 @@ body { background: var(--giay); color: var(--muc); font-family: "Be Vietnam Pro"
 .input { @apply w-full rounded-md border border-[#d9c7a3] bg-white px-3 py-2 text-base outline-none focus:border-son focus:ring-1 focus:ring-son; }
 .btn { @apply inline-flex items-center justify-center rounded-md bg-son px-5 py-2.5 font-semibold text-white hover:bg-son-light disabled:opacity-60; }
 .btn-outline { @apply inline-flex items-center justify-center rounded-md border border-son px-4 py-2 font-semibold text-son hover:bg-son hover:text-white; }
-.prose-tuvi h2 { @apply relative font-serif text-xl sm:text-2xl font-bold text-son mt-9 mb-3 pb-2.5 border-b border-[#eadbc4] scroll-mt-24; }
-.prose-tuvi h2::before { content: "✦"; @apply mr-2 text-sm text-[#c89d54] align-middle; }
-.prose-tuvi p { @apply mb-3.5 leading-[1.85] text-[#2f2419]; }
-.prose-tuvi ul { @apply list-disc pl-5 mb-4 space-y-1.5; }
-.prose-tuvi ol { @apply list-decimal pl-5 mb-4 space-y-1.5; }
-.prose-tuvi h3 { @apply font-serif text-lg font-bold text-[#4a251d] mt-6 mb-2; }
-.prose-tuvi blockquote { @apply rounded-r-lg border-l-4 border-[#c89d54] bg-[#fbf5e8] py-2.5 px-4 text-[#5d4c38] my-4; }
-.prose-tuvi strong { @apply font-semibold text-[#231911]; }
+.prose-tuvi h2 { @apply relative font-serif text-2xl sm:text-3xl font-bold text-son mt-11 mb-4 pb-3 border-b border-[#ebdcc7] scroll-mt-24 flex items-center gap-2.5; }
+.prose-tuvi h2::before { content: "✦"; @apply text-base text-[#c58b18] shrink-0; }
+.prose-tuvi p { @apply mb-4 text-[15px] sm:text-base leading-[1.9] text-[#2f2419]; }
+.prose-tuvi ul { @apply list-disc pl-5 mb-4 space-y-2; }
+.prose-tuvi ol { @apply list-decimal pl-5 mb-4 space-y-2; }
+.prose-tuvi h3 { @apply font-serif text-lg sm:text-xl font-bold text-[#4a251d] mt-8 mb-2.5; }
+.prose-tuvi blockquote { @apply rounded-r-xl border-l-4 border-[#c58b18] bg-gradient-to-r from-[#fbf5e7] to-[#fffdf9] py-3 px-4 text-[#544432] my-5 text-sm sm:text-base shadow-sm; }
+.prose-tuvi strong { @apply font-bold text-[#1e150d]; }
 .prose-tuvi a { @apply text-son underline underline-offset-4; }
 @media print { .prose-tuvi h2,.prose-tuvi h3 { break-after: avoid; } .prose-tuvi p { orphans: 3; widows: 3; } }
 button:focus-visible, a:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--son); outline-offset: 3px; }

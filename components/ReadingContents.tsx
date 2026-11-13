@@ -32,7 +32,19 @@ export default function ReadingContents({text,readingKey}:{text:string;readingKe
   if(titles.length<3)return null;
   return <>
     {resume&&<div className="no-print mt-4 rounded-lg border border-[#d9c7a3] bg-[#fffaf0] p-3 text-sm"><p>Lần trước bạn đang đọc: <strong>{titles.find(t=>headingAnchor(t)===resume)}</strong>.</p><button className="btn-outline mt-2" onClick={()=>jump(resume)}>Đọc tiếp vị trí đã lưu</button><button className="ml-3 underline" onClick={()=>setResume('')}>Bỏ qua</button></div>}
-    <details ref={contents} className="no-print my-5 rounded-lg border border-[#d9c7a3] bg-[#fffaf0] p-4"><summary className="cursor-pointer font-bold">Mục lục bài luận</summary><nav aria-label="Mục lục bài luận" className="mt-3 grid gap-x-5 gap-y-2 text-sm sm:grid-cols-2">{links}</nav></details>
+    <details ref={contents} className="reading-toc group no-print my-6 rounded-2xl border border-[#d8c5a6] bg-gradient-to-br from-[#fffefc] to-[#fbf5e7] p-5 shadow-sm transition-all duration-200 open:shadow-md">
+      <summary className="cursor-pointer font-serif text-base font-bold text-[#2d2014] flex items-center justify-between select-none">
+        <span className="flex items-center gap-2.5">
+          <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#f0e4d0] text-sm text-[#8c6729]">📜</span>
+          <span>Mục lục bài luận</span>
+          <span className="rounded-full bg-[#f3ebd9] border border-[#e2d5c0] px-2.5 py-0.5 text-xs font-sans font-medium text-[#7c6952]">{titles.length} phần</span>
+        </span>
+        <span className="text-[#8c6729] text-sm transition-transform duration-200 group-open:rotate-180" aria-hidden="true">⌄</span>
+      </summary>
+      <nav aria-label="Mục lục bài luận" className="mt-4 pt-4 border-t border-[#ebdcc7] grid gap-x-6 gap-y-2.5 text-sm sm:grid-cols-2">
+        {links}
+      </nav>
+    </details>
     <button hidden={!floating} ref={trigger} className="no-print fixed bottom-4 right-4 z-30 max-w-[calc(100vw-2rem)] rounded-xl border border-[#d9c7a3] bg-[#fffaf0] px-4 py-3 text-sm font-bold text-son shadow-lg" aria-haspopup="dialog" onClick={()=>setOpen(true)}>Mục lục · {Math.max(1,titles.findIndex(t=>headingAnchor(t)===active)+1)}/{titles.length}</button>
     <dialog ref={dialog} onCancel={()=>setOpen(false)} onClose={()=>{setOpen(false);trigger.current?.focus({preventScroll:true});}} aria-labelledby="reading-navigation-title" className="no-print max-h-[80dvh] w-[calc(100%-2rem)] max-w-xl rounded-xl border border-[#d9c7a3] bg-[#fffaf0] p-5 text-[#2b2118] backdrop:bg-black/40">
       <div className="mb-4 flex items-center justify-between gap-3"><h2 id="reading-navigation-title" className="font-bold">Chọn phần muốn đọc</h2><button className="btn-outline" onClick={()=>setOpen(false)}>Đóng</button></div>
