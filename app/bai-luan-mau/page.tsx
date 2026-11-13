@@ -20,7 +20,7 @@ export default function Page(){
       <p className="mt-3 text-xs text-[#6b5b45]">Hồ sơ minh họa dùng để đọc thử cách trình bày. Nội dung mang tính tham khảo.</p>
       <div className="mt-4 flex flex-wrap gap-3"><a className="btn" href="#bai-mau">Đọc bài mẫu ↓</a><a className="btn-outline" href={chartUrl}>Mở lá số minh họa</a></div>
     </header>
-    <article id="bai-mau" className="scroll-mt-5 rounded-xl border border-[#d9c7a3] bg-white p-5 sm:p-6"><ReadingContents text={text}/><Markdown text={text}/></article>
+    <article id="bai-mau" className="reading-manuscript scroll-mt-5 rounded-2xl border border-[#dac6a3] bg-[#fffdf8] p-6 sm:p-9 shadow-[0_18px_50px_rgba(62,40,18,0.08)]"><ReadingContents text={text}/><Markdown text={text}/></article>
     <section className="rounded-xl border border-[#d9c7a3] bg-[#fffaf0] p-5"><h2 className="font-serif text-xl font-bold text-son">Đọc bài luận theo lá số của bạn</h2><p className="mt-2 text-sm leading-relaxed">Nhập ngày giờ sinh để lập lá số miễn phí và xem phần tổng quan dành cho bạn.</p><a className="btn mt-4" href="/#lap-la-so">Lập lá số của bạn miễn phí</a></section>
   </main>;
 }

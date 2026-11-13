@@ -47,7 +47,7 @@ export default function Home(){
       ].map(([n,title,text])=><li key={n}><span className="step-number">{n}</span><h3>{title}</h3><p>{text}</p></li>)}</ol>
     </section>
 
-    <section className="sample-band site-container" aria-labelledby="sample-title"><div className="sample-band-art" aria-hidden="true"><span>文</span><span>星</span></div><div><p className="site-eyebrow">ĐỌC THỬ TRƯỚC KHI CHỌN</p><h2 id="sample-title">Một bài luận được trình bày thế nào?</h2><p>Đọc trọn bài minh họa về 12 cung, đại hạn và vận năm. Xem cách diễn giải, đối chiếu căn cứ và lưu lại điều bạn muốn tìm hiểu.</p></div><a className="btn-outline" href="/bai-luan-mau">Khám phá bài mẫu <span aria-hidden="true">↗</span></a></section>
+    <section className="sample-band site-container" aria-labelledby="sample-title"><div className="sample-band-art" aria-hidden="true"><span>✦</span><span>XII</span></div><div><p className="site-eyebrow">ĐỌC THỬ TRƯỚC KHI CHỌN</p><h2 id="sample-title">Một bài luận được trình bày thế nào?</h2><p>Đọc trọn bài minh họa về 12 cung, đại hạn và vận năm. Xem cách diễn giải, đối chiếu căn cứ và lưu lại điều bạn muốn tìm hiểu.</p></div><a className="btn-outline" href="/bai-luan-mau">Khám phá bài mẫu <span aria-hidden="true">↗</span></a></section>
 
     {paid?<FunnelSection event="pricing_view" id="bang-gia" labelledBy="prices-title" className="home-section site-container">
       <div className="section-heading"><div><p className="site-eyebrow">02 / CHỌN CÁCH KHÁM PHÁ</p><h2 id="prices-title">Giá rõ ràng,<br/>mua theo lượt.</h2></div><p>Đọc thử miễn phí trước khi chọn.<br/>Không đăng ký gia hạn định kỳ.</p></div>

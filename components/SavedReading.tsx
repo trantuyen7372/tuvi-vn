@@ -35,8 +35,11 @@ export default function SavedReading({ token }: { token: string }) {
     const timer = setInterval(() => { void load().catch(() => {}); }, 2000);
     return () => clearInterval(timer);
   }, [token, result?.status]); // eslint-disable-line react-hooks/exhaustive-deps
-  return <main className="mx-auto max-w-3xl px-4 py-10"><article className="rounded-xl border border-[#d9c7a3] bg-white p-6">
-    <h1 className="font-serif text-2xl font-bold text-son">Luận giải {result?.input.name ? `của ${result.input.name}` : 'Tử Vi'}</h1>
+  return <main className="mx-auto max-w-3xl px-4 py-10"><article className="reading-manuscript relative rounded-2xl border border-[#dac6a3] bg-[#fffdf8] p-6 sm:p-9 shadow-[0_18px_50px_rgba(62,40,18,0.08)]">
+    <div className="mb-4 border-b border-[#eadbc4] pb-5">
+      <p className="site-eyebrow mb-2"><span className="eyebrow-line"/> BẢN LUẬN GIẢI CÁ NHÂN</p>
+      <h1 className="font-serif text-2xl sm:text-3xl font-bold text-son">Luận giải {result?.input.name ? `của ${result.input.name}` : 'Tử Vi'}</h1>
+    </div>
     {result?.canPersonalize&&<ReadingPreferences key={token} token={token} value={result.input.reading} onSaved={load}/>}
     {(busy || result?.status === 'running') && result?.status!=='done' && <p role="status" className="mt-4 animate-pulse">{result?.text?'Bài luận đang hiện dần bên dưới. Bạn có thể đọc trong khi các phần tiếp theo được biên soạn.':'Đang biên soạn phần mở đầu cho lá số của bạn. Nội dung sẽ hiện dần khi sẵn sàng.'} Bạn có thể giữ link này để quay lại.</p>}
     {!!result?.text && result.status!=='done' && <section aria-label="Nội dung đang biên soạn" className="mt-5">

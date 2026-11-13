@@ -8,14 +8,15 @@ body { background: var(--giay); color: var(--muc); font-family: "Be Vietnam Pro"
 .input { @apply w-full rounded-md border border-[#d9c7a3] bg-white px-3 py-2 text-base outline-none focus:border-son focus:ring-1 focus:ring-son; }
 .btn { @apply inline-flex items-center justify-center rounded-md bg-son px-5 py-2.5 font-semibold text-white hover:bg-son-light disabled:opacity-60; }
 .btn-outline { @apply inline-flex items-center justify-center rounded-md border border-son px-4 py-2 font-semibold text-son hover:bg-son hover:text-white; }
-.prose-tuvi h2 { @apply font-serif text-xl font-bold text-son mt-6 mb-2; }
-.prose-tuvi p { @apply mb-3 leading-relaxed; }
-.prose-tuvi ul { @apply list-disc pl-5 mb-3; }
-.prose-tuvi ol { @apply list-decimal pl-5 mb-3; }
-.prose-tuvi h3 { @apply font-serif text-lg font-bold mt-5 mb-2; }
-.prose-tuvi blockquote { @apply border-l-2 border-[#d9c7a3] pl-4 text-[#6b5b45] my-4; }
-.prose-tuvi a { text-decoration: underline; }
-.prose-tuvi h2 { scroll-margin-top: 20px; }
+.prose-tuvi h2 { @apply relative font-serif text-xl sm:text-2xl font-bold text-son mt-9 mb-3 pb-2.5 border-b border-[#eadbc4] scroll-mt-24; }
+.prose-tuvi h2::before { content: "✦"; @apply mr-2 text-sm text-[#c89d54] align-middle; }
+.prose-tuvi p { @apply mb-3.5 leading-[1.85] text-[#2f2419]; }
+.prose-tuvi ul { @apply list-disc pl-5 mb-4 space-y-1.5; }
+.prose-tuvi ol { @apply list-decimal pl-5 mb-4 space-y-1.5; }
+.prose-tuvi h3 { @apply font-serif text-lg font-bold text-[#4a251d] mt-6 mb-2; }
+.prose-tuvi blockquote { @apply rounded-r-lg border-l-4 border-[#c89d54] bg-[#fbf5e8] py-2.5 px-4 text-[#5d4c38] my-4; }
+.prose-tuvi strong { @apply font-semibold text-[#231911]; }
+.prose-tuvi a { @apply text-son underline underline-offset-4; }
 @media print { .prose-tuvi h2,.prose-tuvi h3 { break-after: avoid; } .prose-tuvi p { orphans: 3; widows: 3; } }
 button:focus-visible, a:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--son); outline-offset: 3px; }
 .prose-tuvi { overflow-wrap: anywhere; }
