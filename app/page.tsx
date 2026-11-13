@@ -24,36 +24,142 @@ export default function Home(){
   return <main className="home-page">
     <StructuredData data={{'@context':'https://schema.org','@type':'WebSite',name:SITE_NAME,url:SITE_ORIGIN,inLanguage:'vi-VN'}}/>
     <section className="home-hero site-container" aria-labelledby="hero-title">
+      <div className="hero-backdrop" aria-hidden="true">
+        <svg viewBox="0 0 800 800" fill="none" className="hero-astrolabe-svg">
+          <circle cx="400" cy="400" r="390" stroke="#b5894c" strokeWidth="1" strokeDasharray="4 6" opacity="0.35" />
+          <circle cx="400" cy="400" r="340" stroke="#b5894c" strokeWidth="1.2" opacity="0.45" />
+          <circle cx="400" cy="400" r="280" stroke="#9b1c1c" strokeWidth="1" strokeDasharray="2 4" opacity="0.3" />
+          <circle cx="400" cy="400" r="220" stroke="#b5894c" strokeWidth="1.2" opacity="0.35" />
+          <circle cx="400" cy="400" r="140" stroke="#9b1c1c" strokeWidth="1.5" strokeDasharray="3 3" opacity="0.25" />
+          <line x1="400" y1="10" x2="400" y2="790" stroke="#b5894c" strokeWidth="0.8" opacity="0.3" />
+          <line x1="10" y1="400" x2="790" y2="400" stroke="#b5894c" strokeWidth="0.8" opacity="0.3" />
+          <line x1="124" y1="124" x2="676" y2="676" stroke="#b5894c" strokeWidth="0.8" opacity="0.25" />
+          <line x1="124" y1="676" x2="676" y2="124" stroke="#b5894c" strokeWidth="0.8" opacity="0.25" />
+          <line x1="62" y1="263" x2="738" y2="537" stroke="#b5894c" strokeWidth="0.8" opacity="0.2" />
+          <line x1="62" y1="537" x2="738" y2="263" stroke="#b5894c" strokeWidth="0.8" opacity="0.2" />
+          <line x1="263" y1="62" x2="537" y2="738" stroke="#b5894c" strokeWidth="0.8" opacity="0.2" />
+          <line x1="263" y1="738" x2="537" y2="62" stroke="#b5894c" strokeWidth="0.8" opacity="0.2" />
+          <polygon points="400,60 480,280 700,280 520,410 590,620 400,490 210,620 280,410 100,280 320,280" stroke="#b5894c" strokeWidth="1" strokeDasharray="6 6" opacity="0.18" fill="none" />
+          <circle cx="400" cy="400" r="16" fill="#9b1c1c" opacity="0.15" />
+          <circle cx="400" cy="400" r="6" fill="#b5894c" opacity="0.4" />
+        </svg>
+      </div>
       <div className="hero-copy">
         <p className="site-eyebrow"><span className="eyebrow-line"/> TRI THỨC XƯA, GÓC NHÌN MỚI</p>
         <h1 id="hero-title">Lập lá số <span>Tử Vi</span></h1>
         <p className="hero-lead">Hiểu lá số.<br/>{' '}Mở thêm góc nhìn về chính mình.</p>
         <p className="hero-description">Khám phá 12 cung, hệ thống sao và những chặng vận hạn từ ngày giờ sinh của bạn. Bắt đầu bằng lá số miễn phí, rồi đọc sâu hơn khi bạn sẵn sàng.</p>
+        <div className="hero-chips" aria-label="Đặc điểm lá số">
+          <span>✦ 12 Cung vị toàn diện</span>
+          <span>✦ 14 Chính tinh & phụ tinh</span>
+          <span>✦ Vận hạn & lưu niên</span>
+          <span>✦ Căn cứ sao–cung minh bạch</span>
+        </div>
         <div className="hero-actions"><a className="btn" href="#lap-la-so">Lập lá số miễn phí ngay <span aria-hidden="true">↗</span></a><a className="hero-sample-link" href="/bai-luan-mau">{paid?'Đọc thử trước khi mua →':'Xem bài luận minh họa →'}</a></div>
         <p className="hero-reassurance"><span aria-hidden="true">✓</span> Miễn phí lập lá số <span aria-hidden="true">·</span> Không cần đăng nhập</p>
-        <div className="hero-signature"><CelestialMark/><div><span>TỬ VI ĐẨU SỐ</span><p>Tìm hiểu để chiêm nghiệm.<br/>Tham khảo để hiểu mình hơn.</p><a href="/phuong-phap">Tìm hiểu phương pháp <span aria-hidden="true">↗</span></a></div></div>
+        <div className="hero-signature">
+          <CelestialMark/>
+          <div className="hero-signature-text">
+            <span>TỬ VI ĐẨU SỐ</span>
+            <p>Tìm hiểu để chiêm nghiệm.<br/>Tham khảo để hiểu mình hơn.</p>
+            <a href="/phuong-phap">Tìm hiểu phương pháp <span aria-hidden="true">↗</span></a>
+          </div>
+          <div className="hero-signature-stamp" aria-hidden="true">
+            <span>ẤN TRIỆN</span>
+            <span>CHÍNH TÔNG</span>
+          </div>
+        </div>
       </div>
       <div id="lap-la-so" className="hero-form-wrap"><BirthForm/><p className="hero-form-note">Lá số được lập theo ngày giờ sinh và năm xem bạn chọn.</p></div>
     </section>
 
-    <div className="home-highlights site-container"><div><span className="highlight-number">12</span><p>Cung trên lá số<span>Đọc trong mối liên hệ tổng thể</span></p></div><div><span className="highlight-number">14</span><p>Chính tinh để tra cứu<span>Ý nghĩa và nguồn tham khảo</span></p></div><div><span className="highlight-symbol" aria-hidden="true">↺</span><p>Lưu và đọc lại<span>Bài đã lưu không mất thêm lượt</span></p></div></div>
+    <div className="home-highlights site-container">
+      <div className="highlight-item">
+        <div className="highlight-icon-wrap" aria-hidden="true"><span>☸</span></div>
+        <div className="highlight-body">
+          <span className="highlight-number">12</span>
+          <p>Cung trên lá số<span>Đọc trong mối liên hệ tổng thể 12 cung vị</span></p>
+        </div>
+      </div>
+      <div className="highlight-item">
+        <div className="highlight-icon-wrap" aria-hidden="true"><span>★</span></div>
+        <div className="highlight-body">
+          <span className="highlight-number">14</span>
+          <p>Chính tinh để tra cứu<span>Ý nghĩa ngũ hành, đắc hãm và nguồn tham khảo</span></p>
+        </div>
+      </div>
+      <div className="highlight-item">
+        <div className="highlight-icon-wrap" aria-hidden="true"><span>📜</span></div>
+        <div className="highlight-body">
+          <span className="highlight-symbol" aria-hidden="true">↺</span>
+          <p>Lưu và đọc lại<span>Bài đã lưu không mất thêm lượt</span></p>
+        </div>
+      </div>
+    </div>
 
     <section className="home-section site-container" aria-labelledby="steps-title">
       <div className="section-heading"><div><p className="site-eyebrow">01 / HÀNH TRÌNH CỦA BẠN</p><h2 id="steps-title">Từ lá số đến bài luận,<br/>trong ba bước.</h2></div><p>Bắt đầu từ thông tin đúng.<br/>Đọc thử, rồi chọn phần bạn cần.</p></div>
       <ol className="home-steps">{[
-        ['01','Lập lá số miễn phí','Nhập ngày giờ sinh để xem 12 cung, sao, cách cục và đoạn tổng quan.'],
-        ['02',paid?'Chọn phần bạn cần':'Lưu vào tài khoản',paid?'Đọc thử trước; chọn bài từ kho nội dung hoặc bài chuyên sâu khi có sẵn. Xem rõ tổng tiền trước khi chuyển khoản.':'Tạo tài khoản và lưu thông tin ngày giờ sinh để dùng lại trên các thiết bị.'],
-        ['03','Đọc và xem lại',paid?'Sau khi giao dịch được xác nhận, bài luận được tạo và lưu trong tài khoản. Đọc lại hoặc in khi bạn cần.':'Dùng lượt trải nghiệm để mở bài theo đúng lá số. Bài đã lưu xuất hiện trong tài khoản để đọc lại.'],
-      ].map(([n,title,text])=><li key={n}><span className="step-number">{n}</span><h3>{title}</h3><p>{text}</p></li>)}</ol>
+        ['01','BƯỚC 1: KHỞI TẠO','Lập lá số miễn phí','Nhập ngày giờ sinh để xem 12 cung, sao, cách cục và đoạn tổng quan.','📜'],
+        ['02','BƯỚC 2: KHÁM PHÁ',paid?'Chọn phần bạn cần':'Lưu vào tài khoản',paid?'Đọc thử trước; chọn bài từ kho nội dung hoặc bài chuyên sâu khi có sẵn. Xem rõ tổng tiền trước khi chuyển khoản.':'Tạo tài khoản và lưu thông tin ngày giờ sinh để dùng lại trên các thiết bị.','🔍'],
+        ['03','BƯỚC 3: CHIÊM NGHIỆM','Đọc và xem lại',paid?'Sau khi giao dịch được xác nhận, bài luận được tạo và lưu trong tài khoản. Đọc lại hoặc in khi bạn cần.':'Dùng lượt trải nghiệm để mở bài theo đúng lá số. Bài đã lưu xuất hiện trong tài khoản để đọc lại.','📖'],
+      ].map(([n,stepTag,title,text,icon])=><li key={n}>
+        <div className="step-card-header">
+          <span className="step-number">{n}</span>
+          <span className="step-tag">{stepTag}</span>
+          <span className="step-icon" aria-hidden="true">{icon}</span>
+        </div>
+        <h3>{title}</h3>
+        <p>{text}</p>
+      </li>)}</ol>
     </section>
 
-    <section className="sample-band site-container" aria-labelledby="sample-title"><div className="sample-band-art" aria-hidden="true"><span>✦</span><span>XII</span></div><div><p className="site-eyebrow">ĐỌC THỬ TRƯỚC KHI CHỌN</p><h2 id="sample-title">Một bài luận được trình bày thế nào?</h2><p>Đọc trọn bài minh họa về 12 cung, đại hạn và vận năm. Xem cách diễn giải, đối chiếu căn cứ và lưu lại điều bạn muốn tìm hiểu.</p></div><a className="btn-outline" href="/bai-luan-mau">Khám phá bài mẫu <span aria-hidden="true">↗</span></a></section>
+    <section className="sample-band site-container" aria-labelledby="sample-title">
+      <div className="sample-band-copy">
+        <div className="sample-band-header">
+          <div className="sample-band-art" aria-hidden="true"><span>✦</span><span>XII</span></div>
+          <div>
+            <p className="site-eyebrow">ĐỌC THỬ TRƯỚC KHI CHỌN</p>
+            <h2 id="sample-title">Một bài luận được trình bày thế nào?</h2>
+          </div>
+        </div>
+        <p>Đọc trọn bài minh họa về 12 cung, đại hạn và vận năm. Xem cách diễn giải, đối chiếu căn cứ và lưu lại điều bạn muốn tìm hiểu.</p>
+        <ul className="sample-band-features">
+          <li><span aria-hidden="true">✓</span> Căn cứ sao & cung đối chiếu minh bạch</li>
+          <li><span aria-hidden="true">✓</span> 19 đề mục toàn diện từ tính cách đến vận hạn</li>
+          <li><span aria-hidden="true">✓</span> Trích yếu cổ thư tham chiếu kinh điển</li>
+        </ul>
+        <div className="sample-band-cta">
+          <a className="btn" href="/bai-luan-mau">Khám phá bài mẫu <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div className="sample-band-preview" aria-hidden="true">
+        <div className="sample-preview-card">
+          <div className="sample-preview-top">
+            <span className="sample-preview-badge">📜 BẢN THẢO MINH HỌA</span>
+            <span className="sample-preview-seal">ĐỐI CHIẾU</span>
+          </div>
+          <h4>✦ Cung Mệnh tại Tý · Thiên Cơ miếu</h4>
+          <div className="sample-preview-callout">
+            <b>Căn cứ sao & cung:</b>
+            <p>Mệnh tại Tý có Thiên Cơ miếu; hội Hữu Bật, Thiên Khôi, Hồng Loan, Hàm Trì. Thân cư Mệnh.</p>
+          </div>
+          <p className="sample-preview-quote">"Người túc trí đa mưu, tư duy mẫn tiệp, thích hợp nghiên cứu và hoạch định chiến lược..."</p>
+          <span className="sample-preview-link">Trích từ bài mẫu 19 đề mục →</span>
+        </div>
+      </div>
+    </section>
 
     {paid?<FunnelSection event="pricing_view" id="bang-gia" labelledBy="prices-title" className="home-section site-container">
       <div className="section-heading"><div><p className="site-eyebrow">02 / CHỌN CÁCH KHÁM PHÁ</p><h2 id="prices-title">Giá rõ ràng,<br/>mua theo lượt.</h2></div><p>Đọc thử miễn phí trước khi chọn.<br/>Không đăng ký gia hạn định kỳ.</p></div>
       <div className={`pricing-grid ${products.length===3?'has-deep':''}`}>
-        <article className="price-card price-free"><p className="price-tag">KHÁM PHÁ</p><h3>Xem miễn phí</h3><div className="price-amount">0<span>đ</span></div><p className="price-description">Lập lá số để bắt đầu tìm hiểu những nét chính của bạn.</p><ul><li>Lá số đủ 12 cung và hệ thống sao</li><li>Cách cục và trích cổ thư</li><li>Tổng quan khi kho có dữ liệu</li></ul><a className="btn-outline" href="#lap-la-so">Bắt đầu miễn phí</a></article>
-        {products.map(p=><article className={`price-card ${p.id==='single'?'price-featured':''}`} key={p.id}>
+        <article className="price-card price-free">
+          <div className="price-card-header"><span className="price-crown">✦ TRẢI NGHIỆM MIỄN PHÍ ✦</span></div>
+          <p className="price-tag">KHÁM PHÁ</p><h3>Xem miễn phí</h3><div className="price-amount">0<span>đ</span></div><p className="price-description">Lập lá số để bắt đầu tìm hiểu những nét chính của bạn.</p><ul><li>Lá số đủ 12 cung và hệ thống sao</li><li>Cách cục và trích cổ thư</li><li>Tổng quan khi kho có dữ liệu</li></ul><a className="btn-outline" href="#lap-la-so">Bắt đầu miễn phí</a>
+        </article>
+        {products.map(p=><article className={`price-card ${p.id==='single'?'price-featured':''} ${p.id==='family'?'price-family':''}`} key={p.id}>
+          {p.id==='single'&&<div className="price-card-header"><span className="price-crown price-crown-featured">★ ĐƯỢC CHỌN NHIỀU NHẤT ★</span></div>}
+          {p.id==='family'&&<div className="price-card-header"><span className="price-crown price-crown-family">✦ GÓI NHIỀU LÁ SỐ ✦</span></div>}
           <p className="price-tag">{p.id==='single'?'Bắt đầu tại đây':p.id==='deep'?'ĐI SÂU THEO CHỦ ĐỀ':'DÀNH CHO NHIỀU LÁ SỐ'}</p><h3>{p.name}</h3>
           <div className="price-amount">{money(p.price).replace('đ','')}<span>đ</span></div><p className="price-description">{p.summary}</p>
           <ul><li>{p.id==='deep'?'Chúng tôi biên soạn theo vấn đề bạn chọn':'Diễn giải từ kho nội dung sao–cung'}</li><li>{p.credits>1?`${p.credits} lượt cho nhiều lá số`:'1 bài theo lá số và năm xem'}</li><li>Lưu bài, xem lại và in / lưu PDF</li></ul>
@@ -65,7 +171,26 @@ export default function Home(){
 
     <section className="home-section knowledge-section site-container" aria-labelledby="guides-title"><div className="section-heading"><div><p className="site-eyebrow">03 / TỦ SÁCH TỬ VI</p><h2 id="guides-title">Hiểu từng phần.<br/>Đọc cả bức tranh.</h2></div><p>Từ cách chọn ngày giờ sinh đến ý nghĩa<br/>các cung và sao trên lá số.</p></div><GuideCards guides={GUIDES.filter(guide=>['cach-doc-la-so-tu-vi','nhap-ngay-am-hay-duong','khong-biet-gio-sinh','y-nghia-12-cung'].includes(guide.slug))}/><div className="knowledge-links"><a href="/huong-dan">Tất cả hướng dẫn <span aria-hidden="true">↗</span></a><a href="/sao">Tra cứu 14 chính tinh <span aria-hidden="true">↗</span></a><a href="/co-thu">Đọc trích yếu cổ thư <span aria-hidden="true">↗</span></a></div></section>
 
-    <section className="home-faq home-section site-container" aria-labelledby="faq-title"><div><p className="site-eyebrow">04 / GIẢI ĐÁP</p><h2 id="faq-title">Hiểu rõ trước<br/>khi bắt đầu.</h2><p>Những điều thường gặp khi lập lá số và mở bài luận.</p><a href="/chinh-sach/gioi-thieu" className="text-link">Cần thêm hỗ trợ? <span aria-hidden="true">↗</span></a></div><div className="faq-list">{questions.map(([question,answer])=><details key={question}><summary><span>{question}</span><span className="faq-toggle" aria-hidden="true">+</span></summary><p>{answer}</p></details>)}</div></section>
+    <section className="home-faq home-section site-container" aria-labelledby="faq-title">
+      <div>
+        <p className="site-eyebrow">04 / GIẢI ĐÁP</p>
+        <h2 id="faq-title">Hiểu rõ trước<br/>khi bắt đầu.</h2>
+        <p>Những điều thường gặp khi lập lá số và mở bài luận.</p>
+        <a href="/chinh-sach/gioi-thieu" className="text-link">Cần thêm hỗ trợ? <span aria-hidden="true">↗</span></a>
+      </div>
+      <div className="faq-list">
+        {questions.map(([question,answer],idx)=><details key={question}>
+          <summary>
+            <span className="faq-question-wrap">
+              <span className="faq-index" aria-hidden="true">{String(idx+1).padStart(2,'0')}</span>
+              <span>{question}</span>
+            </span>
+            <span className="faq-toggle" aria-hidden="true">+</span>
+          </summary>
+          <p>{answer}</p>
+        </details>)}
+      </div>
+    </section>
     <p className="home-disclaimer site-container">Tử Vi mang tính tham khảo, giải trí. Ngày giờ sinh đúng giúp tránh đọc nhầm lá số; không có bản luận nào bảo đảm các sự kiện sẽ xảy ra.</p>
   </main>;
 }

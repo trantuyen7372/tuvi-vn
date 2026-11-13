@@ -37,7 +37,11 @@ export default function BirthForm({onCreated,submitLabel='Lập lá số'}:{onCr
 
   return (
     <form onSubmit={submit} className="birth-form space-y-4">
-      <div className="birth-form-heading"><div><p className="site-eyebrow">BẮT ĐẦU TỪ ĐÂY</p><h2>Thông tin lập lá số</h2></div><span className="birth-form-badge">Miễn phí</span></div>
+      <span className="birth-corner birth-corner-tl" aria-hidden="true" />
+      <span className="birth-corner birth-corner-tr" aria-hidden="true" />
+      <span className="birth-corner birth-corner-bl" aria-hidden="true" />
+      <span className="birth-corner birth-corner-br" aria-hidden="true" />
+      <div className="birth-form-heading"><div><p className="site-eyebrow">✦ BẢNG KHỞI LẬP MỆNH BÀN ✦</p><h2>Thông tin lập lá số</h2></div><span className="birth-form-badge">✦ Miễn phí</span></div>
       <div>
         <label htmlFor="birth-name" className="mb-1 block text-sm font-semibold">Họ và tên (không bắt buộc)</label>
         <input id="birth-name" className="input" maxLength={60} autoComplete="name" value={f.name} onChange={(e) => set('name', e.target.value)} placeholder="Nguyễn Văn A" />
