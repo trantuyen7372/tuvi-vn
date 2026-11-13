@@ -69,7 +69,7 @@ export default function FreePreview({ input }: { input: BirthInput }) {
               excerpts.map((e) => (
                 <div
                   key={e.title}
-                  className="rounded-xl border border-[#e8dcc4] border-l-4 border-l-[#b8860b] bg-[#fffdf9] p-4.5 sm:p-5 shadow-xs"
+                  className="rounded-xl border border-[#e8dcc4] border-l-4 border-l-[#b8860b] bg-[#fffdf9] p-5 shadow-sm"
                 >
                   <h3 className="font-serif text-lg font-bold text-[#2d2218]">{e.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-[#3d3124]">{e.text}</p>
@@ -82,7 +82,7 @@ export default function FreePreview({ input }: { input: BirthInput }) {
             )}
 
             {questions.length > 0 && (
-              <div className="rounded-xl border border-[#d9c7a3] bg-gradient-to-br from-[#fffefc] to-[#fbf5e8] p-4.5 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-[#d9c7a3] bg-gradient-to-br from-[#fffefc] to-[#fbf5e8] p-5 shadow-sm">
                 <div className="flex items-center gap-2">
                   <span className="text-[#b8860b] text-base" aria-hidden="true">✦</span>
                   <h3 className="font-serif text-base font-bold text-[#352516]">

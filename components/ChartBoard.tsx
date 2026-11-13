@@ -100,12 +100,19 @@ export default function ChartBoard({
         {chart.palaces.map((p) => (
           <Cell key={p.branch} p={p} selected={selected === p.name} onClick={() => onSelect(p.name)} />
         ))}
-        <div style={{ gridRow: '2 / span 2', gridColumn: '2 / span 2' }} className="relative flex flex-col items-center justify-center border border-[#d6c29f] bg-gradient-to-b from-[#fffdf8] via-[#fbf4e6] to-[#f6ead4] p-5 text-center shadow-inner">
-          <div className="pointer-events-none absolute inset-2.5 rounded-lg border border-[#decba8]/70" aria-hidden="true" />
-          <span className="mb-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#947651]">Thiên Bàn Mệnh Số</span>
-          <div className="max-w-full break-words font-serif text-2xl font-bold text-son [overflow-wrap:anywhere]">{chart.input.name || 'Lá số Tử Vi'}</div>
-          <div className="mt-1 inline-flex items-center gap-1.5 rounded-full border border-[#e2d1b3] bg-white/80 px-3 py-0.5 text-xs font-medium text-[#544331]">{chart.input.gender === 'nu' ? 'Nữ mệnh' : 'Nam mệnh'} · tuổi {chart.zodiac}</div>
-          <dl className="mt-3.5 grid grid-cols-[auto_1fr] gap-x-3.5 gap-y-1.5 rounded-xl border border-[#e6d7bc] bg-white/75 px-4 py-3 text-left text-[12.5px] shadow-sm">
+        <div style={{ gridRow: '2 / span 2', gridColumn: '2 / span 2' }} className="relative flex flex-col items-center justify-center overflow-hidden border border-[#d6c29f] bg-gradient-to-b from-[#fffef9] via-[#fbf3e5] to-[#f4e7cd] p-5 text-center shadow-inner">
+          <div className="pointer-events-none absolute inset-2 rounded-xl border border-[#d8c39e] outline outline-1 outline-dashed outline-[#d8c39e]/60" aria-hidden="true" />
+          <svg viewBox="0 0 200 200" fill="none" className="pointer-events-none absolute inset-0 m-auto h-44 w-44 opacity-[0.06]" aria-hidden="true">
+            <circle cx="100" cy="100" r="90" stroke="#b5894c" strokeWidth="1.5" strokeDasharray="3 3" />
+            <circle cx="100" cy="100" r="70" stroke="#9b1c1c" strokeWidth="1" />
+            <circle cx="100" cy="100" r="45" stroke="#b5894c" strokeWidth="1" strokeDasharray="2 2" />
+            <path d="M100 10v180M10 100h180M36 36l128 128M36 164l128-128" stroke="#b5894c" strokeWidth="0.8" />
+            <polygon points="100,25 120,80 175,80 130,115 148,170 100,135 52,170 70,115 25,80 80,80" stroke="#b5894c" strokeWidth="1" fill="none" />
+          </svg>
+          <span className="relative mb-1 text-[10px] font-bold uppercase tracking-[0.2em] text-[#8c6729]">✦ Thiên Bàn Mệnh Số ✦</span>
+          <div className="relative max-w-full break-words font-serif text-2xl font-bold text-son [overflow-wrap:anywhere]">{chart.input.name || 'Lá số Tử Vi'}</div>
+          <div className="relative mt-1 inline-flex items-center gap-1.5 rounded-full border border-[#dfceaf] bg-white/90 px-3 py-0.5 text-xs font-semibold text-[#544331] shadow-sm">{chart.input.gender === 'nu' ? 'Nữ mệnh' : 'Nam mệnh'} · tuổi {chart.zodiac}</div>
+          <dl className="relative mt-3.5 grid grid-cols-[auto_1fr] gap-x-3.5 gap-y-1.5 rounded-xl border border-[#e4d3b6] bg-white/85 px-4 py-3 text-left text-[12.5px] shadow-sm backdrop-blur-sm">
             <dt className="font-medium text-[#8a755b]">Dương lịch</dt><dd className="font-medium text-[#2b2118]">{chart.solarDate}</dd>
             <dt className="font-medium text-[#8a755b]">Âm lịch</dt><dd className="font-medium text-[#2b2118]">{chart.lunarText}</dd>
             <dt className="font-medium text-[#8a755b]">Giờ sinh</dt><dd className="font-medium text-[#2b2118]">{chart.time} ({chart.timeRange})</dd>

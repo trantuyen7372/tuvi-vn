@@ -5,7 +5,9 @@ import Reading from './Checkout';
 import PatternsCard from './PatternsCard';
 import StarNotes from './StarNotes';
 import FreePreview from './FreePreview';
+import StarCatalogSheet from './StarCatalogSheet';
 import type {ChartView} from '@/lib/tuvi';
+import {FIVE_ELEMENTS,starElement} from '@/lib/five-elements';
 import {TrackChartCreated} from './FunnelTracker';
 
 function PalaceDetail({ chart, name }: { chart: ChartView; name: string | null }) {
@@ -13,14 +15,87 @@ function PalaceDetail({ chart, name }: { chart: ChartView; name: string | null }
   if (!p) return <p className="text-sm text-[#8a7a62]">Bấm vào một cung trên lá số để xem chi tiết.</p>;
   return (
     <div className="text-sm">
-      <h3 className="font-serif text-lg font-bold text-son">Cung {p.name} · {p.stem} {p.branch}</h3>
-      <p className="mt-1"><b>Chính tinh:</b> {p.major.length ? p.major.map((s) => `${s.name}${s.brightness ? ` (${s.brightness})` : ''}${s.mutagen ? ` hoá ${s.mutagen}` : ''}`).join(', ') : 'Vô chính diệu'}</p>
-      {p.minor.length > 0 && <p><b>Phụ tinh:</b> {p.minor.map((s) => s.name + (s.mutagen ? ` hoá ${s.mutagen}` : '')).join(', ')}</p>}
-      {p.adjective.length > 0 && <p><b>Tạp diệu:</b> {p.adjective.map((s) => s.name).join(', ')}</p>}
-      <p><b>Tràng sinh:</b> {p.changsheng} · <b>Bác sĩ:</b> {p.boshi}</p>
-      <p><b>Đại hạn:</b> {p.decadal[0]} – {p.decadal[1]} tuổi{p.isDecadalNow ? ' (đang đi)' : ''}</p>
-      {p.yearlyName && <p><b>Năm {chart.year}:</b> là cung {p.yearlyName} của Lưu niên{p.isYearlyNow ? ' (Lưu niên Mệnh)' : ''}</p>}
-      <a className="mt-4 block rounded-lg border border-[#d9c7a3] p-3 text-son underline" href="#mo-bai-luan">Xem cách luận tổ hợp sao tại {p.name} cùng các lớp hạn →</a>
+      <div className="flex items-center justify-between border-b border-[#eadbc0] pb-2 mb-3">
+        <div>
+          <span className="text-[10px] font-bold uppercase tracking-wider text-[#8c6729]">Cung Vị Đang Chọn</span>
+          <h3 className="font-serif text-xl font-bold text-son">Cung {p.name} · {p.stem} {p.branch}</h3>
+        </div>
+        {p.isBody && <span className="rounded bg-son px-2 py-0.5 text-xs font-semibold text-white shadow-sm">Thân cư</span>}
+      </div>
+
+      <div className="space-y-3">
+        <div>
+          <span className="text-xs font-bold text-[#63503b] block mb-1">Chính tinh:</span>
+          {p.major.length ? (
+            <div className="flex flex-wrap gap-1.5">
+              {p.major.map((s) => {
+                const el = starElement(s.name);
+                const elStyle = el ? FIVE_ELEMENTS[el] : null;
+                return (
+                  <span
+                    key={s.name}
+                    className="inline-flex items-center gap-1 rounded-lg border border-[#dfceb1] bg-white px-2.5 py-1 text-xs font-bold shadow-sm"
+                    style={{ color: elStyle ? elStyle.color : '#8f1818' }}
+                  >
+                    <span>{s.name}</span>
+                    {s.brightness && <span className="text-[10px] font-semibold text-[#8a7a62]">({s.brightness})</span>}
+                    {s.mutagen && <span className="rounded bg-son px-1 text-[9px] font-bold text-white leading-4">Hóa {s.mutagen}</span>}
+                  </span>
+                );
+              })}
+            </div>
+          ) : (
+            <span className="inline-block rounded-md bg-[#faf3e6] px-2.5 py-1 text-xs italic text-[#8a7a62]">Vô chính diệu (mượn sao cung xung chiếu)</span>
+          )}
+        </div>
+
+        {p.minor.length > 0 && (
+          <div>
+            <span className="text-xs font-bold text-[#63503b] block mb-1">Phụ tinh:</span>
+            <div className="flex flex-wrap gap-1">
+              {p.minor.map((s) => {
+                const el = starElement(s.name);
+                const elStyle = el ? FIVE_ELEMENTS[el] : null;
+                return (
+                  <span
+                    key={s.name}
+                    className="inline-flex items-center gap-1 rounded-md border border-[#e5d8c1] bg-[#fffdfa] px-2 py-0.5 text-[11px] font-medium"
+                    style={{ color: elStyle ? elStyle.color : '#5c4a35' }}
+                  >
+                    <span>{s.name}</span>
+                    {s.brightness && <span className="text-[9px] text-[#8a7a62]">({s.brightness})</span>}
+                    {s.mutagen && <span className="rounded bg-son px-1 text-[8.5px] font-bold text-white">Hóa {s.mutagen}</span>}
+                  </span>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {p.adjective.length > 0 && (
+          <div>
+            <span className="text-xs font-bold text-[#63503b] block mb-1">Tạp diệu:</span>
+            <div className="flex flex-wrap gap-1">
+              {p.adjective.map((s) => (
+                <span key={s.name} className="rounded bg-[#f5ede0] border border-[#e8ddcb] px-1.5 py-0.5 text-[10px] text-[#6b5842]">
+                  {s.name}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <div className="grid grid-cols-2 gap-2 border-t border-[#eadbc0] pt-2 text-xs">
+          <div><span className="text-[#8a7a62]">Tràng sinh:</span> <b className="text-[#3b2d1f]">{p.changsheng}</b></div>
+          <div><span className="text-[#8a7a62]">Bác sĩ:</span> <b className="text-[#3b2d1f]">{p.boshi}</b></div>
+          <div><span className="text-[#8a7a62]">Đại hạn:</span> <b className="text-son">{p.decadal[0]}–{p.decadal[1]} tuổi</b>{p.isDecadalNow ? ' (đang đi)' : ''}</div>
+          {p.yearlyName && <div><span className="text-[#8a7a62]">Lưu niên:</span> <b className="text-[#b5894c]">{p.yearlyName}</b></div>}
+        </div>
+      </div>
+
+      <a className="mt-4 block rounded-lg border border-[#d9c7a3] bg-gradient-to-r from-[#fffdfa] to-[#fbf4e6] p-3 text-son font-medium underline shadow-sm transition-colors hover:border-[#b5894c]" href="#mo-bai-luan">
+        Xem cách luận tổ hợp sao tại {p.name} cùng các lớp hạn →
+      </a>
       <StarNotes palace={p.name} stars={p.major.map((s) => s.name)} />
     </div>
   );
@@ -54,6 +129,7 @@ export default function ChartResult({chart}:{chart:ChartView}){
           <PalaceDetail chart={chart} name={selected} />
         </aside>
       </div>
+      <StarCatalogSheet chart={chart} />
       <div className="mt-6"><FreePreview input={chart.input}/></div>
       <div id="mo-bai-luan" tabIndex={-1} className="mt-6 scroll-mt-5"><Reading input={chart.input}/></div>
       <div className="mt-6"><PatternsCard patterns={chart.patterns}/></div>

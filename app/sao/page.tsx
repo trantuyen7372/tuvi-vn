@@ -12,20 +12,30 @@ const ELEMENT_BADGE: Record<string, string> = {
   'Thuỷ': 'bg-[#eff6ff] text-[#1e40af] border-[#bfdbfe]',
 };
 
+const ELEMENT_BORDER: Record<string, string> = {
+  'Thổ': 'border-t-[#b5894c]',
+  'Mộc': 'border-t-[#166534]',
+  'Hoả': 'border-t-[#991b1b]',
+  'Kim': 'border-t-[#ca8a04]',
+  'Thuỷ': 'border-t-[#2563eb]',
+};
+
 export default function SaoIndex() {
   return (
     <main className="editorial-page mx-auto max-w-5xl px-4 py-10">
-      <p className="site-eyebrow mb-2"><span className="eyebrow-line" /> TỦ SÁCH TỬ VI / TRA CỨU</p>
-      <h1 className="font-serif text-3xl font-bold text-son sm:text-4xl">14 chính tinh trong Tử Vi</h1>
-      <p className="mt-3 leading-relaxed text-[#5a4a36]">Bấm vào từng sao để xem ý nghĩa truyền thống, ví dụ cách đọc và bản trích yếu cổ thư liên quan. Một sao cần được đọc cùng cung và toàn bộ bố cục, không quyết định tính cách hay sự kiện của một người.</p>
-      <p className="mt-2.5 leading-relaxed text-[#5a4a36]">Nếu mới bắt đầu, hãy đọc <a href="/huong-dan/chinh-tinh-va-phu-tinh" className="text-son underline font-medium">chính tinh và phụ tinh là gì</a> và <a href="/huong-dan/y-nghia-12-cung" className="text-son underline font-medium">ý nghĩa 12 cung</a> trước khi tra từng sao.</p>
+      <div className="relative mb-8 rounded-2xl border border-[#dcc9af] bg-gradient-to-r from-[#fffdf9] via-[#fcf5e8] to-[#f7eedc] p-7 shadow-sm">
+        <p className="site-eyebrow mb-2"><span className="eyebrow-line" /> TỦ SÁCH TỬ VI / TRA CỨU</p>
+        <h1 className="font-serif text-3xl font-bold text-son sm:text-4xl">14 chính tinh trong Tử Vi</h1>
+        <p className="mt-3 max-w-2xl leading-relaxed text-[#5a4a36]">Bấm vào từng sao để xem ý nghĩa truyền thống, ví dụ cách đọc và bản trích yếu cổ thư liên quan. Một sao cần được đọc cùng cung và toàn bộ bố cục, không quyết định tính cách hay sự kiện của một người.</p>
+        <p className="mt-2.5 leading-relaxed text-[#5a4a36]">Nếu mới bắt đầu, hãy đọc <a href="/huong-dan/chinh-tinh-va-phu-tinh" className="text-son underline font-medium">chính tinh và phụ tinh là gì</a> và <a href="/huong-dan/y-nghia-12-cung" className="text-son underline font-medium">ý nghĩa 12 cung</a> trước khi tra từng sao.</p>
+      </div>
       
-      <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {STARS.map((s, index) => (
           <a
             key={s.slug}
             href={`/sao/${s.slug}`}
-            className="group flex flex-col justify-between rounded-xl border border-[#e0d3bf] bg-gradient-to-b from-[#fffefc] to-[#fbf6ec] p-5 shadow-xs transition-all duration-200 hover:-translate-y-1 hover:border-[#b5894c] hover:shadow-md"
+            className={`group flex flex-col justify-between rounded-xl border border-[#e0d3bf] border-t-3 ${ELEMENT_BORDER[s.element] || 'border-t-son'} bg-gradient-to-b from-[#fffefc] to-[#fbf6ec] p-5 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-[#b5894c] hover:shadow-md`}
           >
             <div>
               <div className="flex items-center justify-between border-b border-[#ebdcc7] pb-2.5 mb-3.5">
@@ -33,7 +43,7 @@ export default function SaoIndex() {
                   CHÍNH TINH · {String(index + 1).padStart(2, '0')}
                 </span>
                 <span className={`rounded-full border px-2.5 py-0.5 text-xs font-semibold ${ELEMENT_BADGE[s.element] || 'bg-amber-50 text-amber-900 border-amber-200'}`}>
-                  Hành {s.element}
+                  ✦ Hành {s.element}
                 </span>
               </div>
               <div className="flex items-baseline justify-between gap-2">
