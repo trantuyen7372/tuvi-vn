@@ -7,6 +7,7 @@ import StructuredData from '@/components/StructuredData';
 import {publicMetadata,SITE_NAME,SITE_ORIGIN} from '@/lib/seo';
 import GuideCards from '@/components/GuideCards';
 import CelestialMark from '@/components/CelestialMark';
+import TodayAlmanacWidget from '@/components/TodayAlmanacWidget';
 import {GUIDES} from '@/lib/guides';
 export const dynamic='force-dynamic';
 export const metadata=publicMetadata('/','Lập lá số Tử Vi miễn phí và luận giải','Lập lá số theo ngày giờ sinh, xem 12 cung, sao, đại hạn và lưu niên. Đọc bài luận giải có căn cứ sao–cung, lưu lá số và xem lại trong tài khoản.');
@@ -96,6 +97,8 @@ export default function Home(){
         </div>
       </div>
     </div>
+
+    <TodayAlmanacWidget />
 
     <section className="home-section site-container" aria-labelledby="steps-title">
       <div className="section-heading"><div><p className="site-eyebrow">01 / HÀNH TRÌNH CỦA BẠN</p><h2 id="steps-title">Từ lá số đến bài luận,<br/>trong ba bước.</h2></div><p>Bắt đầu từ thông tin đúng.<br/>Đọc thử, rồi chọn phần bạn cần.</p></div>

@@ -7,6 +7,7 @@ import CustomerNavigation from './CustomerNavigation';
 const links=[
   {href:'/#lap-la-so',label:'Lập lá số',path:'/'},
   {href:'/bai-luan-mau',label:'Bài luận mẫu',path:'/bai-luan-mau'},
+  {href:'/xem-ngay',label:'Xem ngày',path:'/xem-ngay'},
   {href:'/huong-dan',label:'Hướng dẫn',path:'/huong-dan'},
   {href:'/sao',label:'14 chính tinh',path:'/sao'},
 ];

@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: `${BASE}/` },
     { url: `${BASE}/bai-luan-mau` },
+    { url: `${BASE}/xem-ngay` },
     { url: `${BASE}/huong-dan` },
     ...GUIDES.map(guide => ({url: `${BASE}/huong-dan/${guide.slug}`})),
     { url: `${BASE}/phuong-phap` },
