@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/bai-luan-mau` },
     { url: `${BASE}/xem-ngay` },
     { url: `${BASE}/xin-xam` },
+    { url: `${BASE}/hop-tuoi` },
     { url: `${BASE}/huong-dan` },
     ...GUIDES.map(guide => ({url: `${BASE}/huong-dan/${guide.slug}`})),
     { url: `${BASE}/phuong-phap` },

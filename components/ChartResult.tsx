@@ -6,6 +6,8 @@ import PatternsCard from './PatternsCard';
 import StarNotes from './StarNotes';
 import FreePreview from './FreePreview';
 import StarCatalogSheet from './StarCatalogSheet';
+import ShareWidget from './ShareWidget';
+import MonthlyTransitView from './MonthlyTransitView';
 import { exportChartAsPng } from '@/lib/chart-image-export';
 import type {ChartView} from '@/lib/tuvi';
 import {FIVE_ELEMENTS,starElement} from '@/lib/five-elements';
@@ -149,6 +151,11 @@ export default function ChartResult({chart}:{chart:ChartView}){
           <button type="button" className="btn-outline" onClick={() => exportChartAsPng(chart)}>
             Tải ảnh lá số <span aria-hidden="true">⤓</span>
           </button>
+          <ShareWidget
+            title={`Lá số Tử Vi ${chart.input.name || ''}`}
+            text={`Cung Mệnh tại ${chart.menhBranch}, Thân cư ${chart.thanBranch} · Năm xem hạn ${chart.year}`}
+            label="Chia sẻ"
+          />
           <button type="button" className="btn-outline" onClick={()=>dialog.current?.showModal()} aria-haspopup="dialog">
             Phóng to lá số <span aria-hidden="true">⤢</span>
           </button>
@@ -161,6 +168,7 @@ export default function ChartResult({chart}:{chart:ChartView}){
         </aside>
       </div>
       <StarCatalogSheet chart={chart} />
+      <MonthlyTransitView chart={chart} />
       <div className="mt-6"><FreePreview input={chart.input}/></div>
       <div id="mo-bai-luan" tabIndex={-1} className="mt-6 scroll-mt-5"><Reading input={chart.input}/></div>
       <div className="mt-6"><PatternsCard patterns={chart.patterns}/></div>

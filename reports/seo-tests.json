@@ -1,8 +1,8 @@
 {
   "passed": 8,
-  "publicPages": 35,
+  "publicPages": 36,
   "checks": [
-    "35 trang công khai có title/description riêng, canonical và Open Graph đúng URL",
+    "36 trang công khai có title/description riêng, canonical và Open Graph đúng URL",
     "Mỗi trang có đúng một H1, dữ liệu Website/breadcrumb hợp lệ khi áp dụng",
     "Sitemap dùng tên miền xuất bản và không chứa URL riêng tư",
     "6 bài hướng dẫn có Article, mục lục và nguồn; 14 trang sao có ví dụ và liên kết cổ thư",
@@ -11,5 +11,5 @@
     "10 loại trang riêng tư có noindex trong HTML và HTTP header",
     "API không lập chỉ mục; robots.txt trỏ sitemap tên miền thật"
   ],
-  "finished": "2026-11-17T07:52:12.910Z"
+  "finished": "2026-11-17T08:14:46.055Z"
 }

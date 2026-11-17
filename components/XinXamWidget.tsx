@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { getQueXam, type QueXam, type QueTier } from '@/lib/xin-xam';
+import ShareWidget from './ShareWidget';
 
 const TOPICS = [
   { id: 'general', label: 'Tất cả việc / Tổng quan' },
@@ -288,13 +289,20 @@ export default function XinXamWidget() {
 
             {/* Actions Footer */}
             <div className="mt-7 flex flex-wrap items-center justify-between gap-4 border-t border-[#ebdcc7] pt-5">
-              <button
-                type="button"
-                onClick={reset}
-                className="btn-outline px-5 py-2.5 text-xs font-bold"
-              >
-                ← Xin Quẻ Khác
-              </button>
+              <div className="flex flex-wrap items-center gap-3">
+                <button
+                  type="button"
+                  onClick={reset}
+                  className="btn-outline px-5 py-2.5 text-xs font-bold"
+                >
+                  ← Xin Quẻ Khác
+                </button>
+                <ShareWidget
+                  title={`Quẻ Xăm Quan Âm Số ${queData.number}: ${queData.title}`}
+                  text={`Vừa xin được Quẻ ${queData.number} (${queData.tier}): "${queData.summary}" trên Xem Tử Vi Online`}
+                  label="Chia sẻ quẻ xăm"
+                />
+              </div>
 
               <a
                 href="/#lap-la-so"
