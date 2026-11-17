@@ -6,6 +6,7 @@ import PatternsCard from './PatternsCard';
 import StarNotes from './StarNotes';
 import FreePreview from './FreePreview';
 import StarCatalogSheet from './StarCatalogSheet';
+import { exportChartAsPng } from '@/lib/chart-image-export';
 import type {ChartView} from '@/lib/tuvi';
 import {FIVE_ELEMENTS,starElement} from '@/lib/five-elements';
 import {TrackChartCreated} from './FunnelTracker';
@@ -142,7 +143,17 @@ export default function ChartResult({chart}:{chart:ChartView}){
           </div>
         </div>
       </section>
-      <div className="chart-tools no-print"><p>Vuốt ngang để xem đủ 12 cung. Chọn một cung để đọc chi tiết bên dưới.</p><button type="button" className="btn-outline" onClick={()=>dialog.current?.showModal()} aria-haspopup="dialog">Phóng to lá số <span aria-hidden="true">⤢</span></button></div>
+      <div className="chart-tools no-print">
+        <p>Vuốt ngang để xem đủ 12 cung. Chọn một cung để đọc chi tiết bên dưới.</p>
+        <div className="chart-tools-actions">
+          <button type="button" className="btn-outline" onClick={() => exportChartAsPng(chart)}>
+            Tải ảnh lá số <span aria-hidden="true">⤓</span>
+          </button>
+          <button type="button" className="btn-outline" onClick={()=>dialog.current?.showModal()} aria-haspopup="dialog">
+            Phóng to lá số <span aria-hidden="true">⤢</span>
+          </button>
+        </div>
+      </div>
       <div className="grid min-w-0 gap-5 lg:grid-cols-[minmax(0,1fr)_320px]">
         <ChartBoard chart={chart} selected={selected} onSelect={setSelected} />
         <aside className="chart-detail no-print">

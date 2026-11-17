@@ -240,9 +240,10 @@ body {
 .chart-overview dd { margin-top: 7px; color: #793d2f; font-size: 17px; font-weight: 600; }
 .chart-overview dd span { display: block; margin-top: 4px; color: #665744; font-size: 13px; font-weight: 400; }
 .chart-overview>p:last-child { margin-top: 20px; color: #665744; font-size: 14px; line-height: 1.8; }
-.chart-tools { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
-.chart-tools p { max-width: 480px; color: #665744; font-size: 14px; line-height: 1.8; }
-.chart-tools button { flex-shrink: 0; }
+.chart-tools { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+.chart-tools p { flex: 1 1 280px; max-width: 480px; color: #665744; font-size: 14px; line-height: 1.8; }
+.chart-tools-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; flex-shrink: 0; }
+.chart-tools-actions button { flex-shrink: 0; }
 .chart-dialog { width: min(1280px,calc(100% - 32px)); max-width: none; max-height: calc(100dvh - 32px); border: 1px solid var(--line); border-radius: 14px; padding: 24px; background: var(--giay); color: var(--muc); overscroll-behavior: contain; }
 .chart-dialog::backdrop { background: #2b2118b3; }
 body:has(.chart-dialog[open]) { overflow: hidden; }
@@ -337,6 +338,9 @@ body:has(.chart-dialog[open]) { overflow: hidden; }
   .auth-intro { padding: 0; }
   .auth-intro>.celestial-mark,.auth-intro>p:not(.site-eyebrow) { display: none; }
   .auth-intro h2 { margin-top: 10px; font-size: 26px; }
+  .chart-tools { flex-direction: column; align-items: stretch; gap: 10px; }
+  .chart-tools p { max-width: 100%; }
+  .chart-tools-actions { width: 100%; }
 }
 @media (max-width: 520px) {
   .site-container,.site-header-inner { width: calc(100% - 32px); }
@@ -422,6 +426,7 @@ body:has(.chart-dialog[open]) { overflow: hidden; }
   .chart-overview dl { grid-template-columns: minmax(0,1fr); gap: 16px; }
   .chart-overview dl>div+div { border-top: 1px solid var(--line); padding-top: 16px; }
   .chart-tools { align-items: stretch; flex-direction: column; }
+  .chart-tools-actions button { width: 100%; justify-content: center; }
   .chart-dialog { width: calc(100% - 16px); max-height: calc(100dvh - 16px); padding: 16px; }
   .chart-dialog-heading h2 { font-size: 22px; }
   .chart-detail p,.reading-panel .text-sm,.checkout-panel .text-sm { font-size: 16px; }
