@@ -56,6 +56,23 @@ export default function Home(){
           <span>✦ Vận hạn & lưu niên</span>
           <span>✦ Căn cứ sao–cung minh bạch</span>
         </div>
+        <div className="hero-questions" aria-label="Câu hỏi bạn muốn tìm câu trả lời">
+          <p className="text-xs font-semibold text-[#8c6729]">✦ Bạn đang băn khoăn điều gì nhất?</p>
+          <div className="mt-1.5 flex flex-wrap gap-1.5">
+            <a href="#lap-la-so" className="hero-question-pill">
+              💼 Năm 2026 sự nghiệp & công danh thế nào?
+            </a>
+            <a href="#lap-la-so" className="hero-question-pill">
+              💰 Tài chính & đại hạn Điền Trạch?
+            </a>
+            <a href="#lap-la-so" className="hero-question-pill">
+              💖 Tình duyên, hôn phối & gia đạo?
+            </a>
+            <a href="#lap-la-so" className="hero-question-pill">
+              🧭 Năng khiếu cốt lõi & cách cục Mệnh - Thân?
+            </a>
+          </div>
+        </div>
         <div className="hero-actions"><a className="btn" href="#lap-la-so">Lập lá số miễn phí ngay <span aria-hidden="true">↗</span></a><a className="hero-sample-link" href="/bai-luan-mau">{paid?'Đọc thử trước khi mua →':'Xem bài luận minh họa →'}</a></div>
         <p className="hero-reassurance"><span aria-hidden="true">✓</span> Miễn phí lập lá số <span aria-hidden="true">·</span> Không cần đăng nhập</p>
         <div className="hero-signature">

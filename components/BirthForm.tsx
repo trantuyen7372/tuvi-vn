@@ -90,6 +90,9 @@ export default function BirthForm({onCreated,submitLabel='Lập lá số'}:{onCr
           <select id="birth-hour" className="input" value={f.hour} onChange={(e) => set('hour', e.target.value)}>
             {CANH_GIO.map((g) => <option key={g.value} value={g.value}>{g.label}</option>)}
           </select>
+          <p className="mt-1 text-[11px] text-[#78644e]">
+            <b>Giờ Tý (23h–01h):</b> Sinh 23h–24h tính sang ngày hôm sau.
+          </p>
         </div>
         <div>
           <label htmlFor="birth-year" className="mb-1 block text-sm font-semibold">Năm xem hạn</label>

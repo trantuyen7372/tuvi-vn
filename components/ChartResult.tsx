@@ -121,6 +121,26 @@ export default function ChartResult({chart}:{chart:ChartView}){
         <p className="site-eyebrow">BẮT ĐẦU ĐỌC LÁ SỐ</p><h2 id="chart-overview-title">Nhìn nhanh lá số của bạn</h2>
         <dl><div><dt>Cung Mệnh</dt><dd>{menh?.major.length?menh.major.map(s=>s.name).join(', '):'Vô chính diệu'}{menh&&<span>Tại {menh.branch}</span>}</dd></div><div><dt>Thân cư</dt><dd>{body?.name||'—'}<span>Đọc cùng cung Mệnh</span></dd></div><div><dt>Đại hạn năm {chart.year}</dt><dd>{decade?`${decade.decadal[0]}–${decade.decadal[1]} tuổi`:'Chưa có trong phạm vi lá số'}{decade&&<span>Tại cung {decade.name}</span>}</dd></div></dl>
         <p>Đây là các mốc trên lá số. Đọc phần tổng quan bên dưới để hiểu cách các sao và cung phối hợp.</p>
+        <div className="mt-4 pt-3 border-t border-[#ebdcc7] grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs">
+          <div className="rounded-lg bg-[#fffdfa] border border-[#e8dcc8] p-2.5">
+            <span className="font-bold text-son block">✦ Cốt cách bản mệnh</span>
+            <span className="text-[#5c4a35] mt-0.5 block leading-relaxed">
+              Mệnh đóng tại {chart.menhBranch}, chủ tinh {menh?.major.map(s=>s.name).join(' & ')||'Vô chính diệu'}; định hình tố chất và tư duy cốt lõi.
+            </span>
+          </div>
+          <div className="rounded-lg bg-[#fffdfa] border border-[#e8dcc8] p-2.5">
+            <span className="font-bold text-son block">✦ Cung vị trợ lực (Thân)</span>
+            <span className="text-[#5c4a35] mt-0.5 block leading-relaxed">
+              Thân cư {body?.name||'Mệnh'} tại {chart.thanBranch}; điểm tựa hành động và cơ duyên phát triển về sau.
+            </span>
+          </div>
+          <div className="rounded-lg bg-[#fffdfa] border border-[#e8dcc8] p-2.5">
+            <span className="font-bold text-son block">✦ Trọng tâm năm {chart.year}</span>
+            <span className="text-[#5c4a35] mt-0.5 block leading-relaxed">
+              {decade ? `Đang trong đại hạn ${decade.decadal[0]}–${decade.decadal[1]} tuổi tại ${decade.name}` : `Xem lưu niên năm ${chart.year}`}; giai đoạn cần định hình chiến lược.
+            </span>
+          </div>
+        </div>
       </section>
       <div className="chart-tools no-print"><p>Vuốt ngang để xem đủ 12 cung. Chọn một cung để đọc chi tiết bên dưới.</p><button type="button" className="btn-outline" onClick={()=>dialog.current?.showModal()} aria-haspopup="dialog">Phóng to lá số <span aria-hidden="true">⤢</span></button></div>
       <div className="grid min-w-0 gap-5 lg:grid-cols-[minmax(0,1fr)_320px]">
