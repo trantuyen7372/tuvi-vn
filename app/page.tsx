@@ -10,7 +10,11 @@ import CelestialMark from '@/components/CelestialMark';
 import TodayAlmanacWidget from '@/components/TodayAlmanacWidget';
 import {GUIDES} from '@/lib/guides';
 export const dynamic='force-dynamic';
-export const metadata=publicMetadata('/','Lập lá số Tử Vi miễn phí và luận giải','Lập lá số theo ngày giờ sinh, xem 12 cung, sao, đại hạn và lưu niên. Đọc bài luận giải có căn cứ sao–cung, lưu lá số và xem lại trong tài khoản.');
+export const metadata=publicMetadata(
+  '/',
+  'Ứng Dụng Lập Lá Số Tử Vi Đẩu Số Online Miễn Phí & Luận Giải',
+  'Ứng dụng lập lá số Tử Vi Đẩu Số online miễn phí, lấy lá số chuẩn xác 12 cung, sao, đại hạn, lưu niên và xem giải đoán vận hạn trọn đời chi tiết.'
+);
 
 export default function Home(){
   const paid=process.env.PAYMENTS_ENABLED==='1';
@@ -24,6 +28,18 @@ export default function Home(){
   ];
   return <main className="home-page">
     <StructuredData data={{'@context':'https://schema.org','@type':'WebSite',name:SITE_NAME,url:SITE_ORIGIN,inLanguage:'vi-VN'}}/>
+    <StructuredData data={{
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: questions.map(([q, a]) => ({
+        '@type': 'Question',
+        name: q,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: a
+        }
+      }))
+    }}/>
     <section className="home-hero site-container" aria-labelledby="hero-title">
       <div className="hero-backdrop" aria-hidden="true">
         <svg viewBox="0 0 800 800" fill="none" className="hero-astrolabe-svg">
@@ -49,7 +65,7 @@ export default function Home(){
         <p className="site-eyebrow"><span className="eyebrow-line"/> TRI THỨC XƯA, GÓC NHÌN MỚI</p>
         <h1 id="hero-title">Lập lá số <span>Tử Vi</span></h1>
         <p className="hero-lead">Hiểu lá số.<br/>{' '}Mở thêm góc nhìn về chính mình.</p>
-        <p className="hero-description">Khám phá 12 cung, hệ thống sao và những chặng vận hạn từ ngày giờ sinh của bạn. Bắt đầu bằng lá số miễn phí, rồi đọc sâu hơn khi bạn sẵn sàng.</p>
+        <p className="hero-description">Ứng dụng Tử Vi Đẩu Số giúp bạn lấy lá số trọn đời miễn phí, tra cứu 12 cung bản mệnh, hệ thống chính tinh và các chặng vận hạn từ ngày giờ sinh. Lập lá số nhanh chóng, chính xác và đọc giải đoán chuyên sâu.</p>
         <div className="hero-chips" aria-label="Đặc điểm lá số">
           <span>✦ 12 Cung vị toàn diện</span>
           <span>✦ 14 Chính tinh & phụ tinh</span>

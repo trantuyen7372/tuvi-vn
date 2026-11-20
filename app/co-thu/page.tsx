@@ -1,12 +1,29 @@
 import type { Metadata } from 'next';
 import { BOOKS } from '@/lib/classics';
-import {publicMetadata} from '@/lib/seo';
+import {publicMetadata, SITE_ORIGIN} from '@/lib/seo';
+import StructuredData from '@/components/StructuredData';
 
-export const metadata: Metadata = publicMetadata('/co-thu','Cổ thư Tử Vi Đẩu Số – trích yếu tiếng Việt','Đọc trích yếu Cốt Tuỷ Phú, Tử Vi Đẩu Số Toàn Tập và Toàn Thư bằng tiếng Việt; tìm hiểu nguyên lý xem sao, cung và vận hạn.');
+export const metadata: Metadata = publicMetadata(
+  '/co-thu',
+  'Trọn Bộ Cổ Thư Tử Vi Đẩu Số – Bản Dịch Nghĩa & Cốt Tủy Phú',
+  'Trọn bộ trích yếu cổ thư Tử Vi Đẩu Số dịch nghĩa tiếng Việt: Cốt Tủy Phú, Tử Vi Đẩu Số Toàn Tập và Toàn Thư. Nắm vững khẩu quyết an sao, 12 cung và bí quyết luận đoán.'
+);
 
 export default function CoThu() {
   return (
     <main className="editorial-page mx-auto max-w-4xl px-4 py-10">
+      <StructuredData data={{
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Trọn bộ Cổ thư Tử Vi Đẩu Số',
+        description: 'Ba bộ cổ thư kinh điển của môn Tử Vi Đẩu Số dịch nghĩa tiếng Việt',
+        itemListElement: BOOKS.map((b, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          name: b.title,
+          url: `${SITE_ORIGIN}/co-thu/${b.slug}`
+        }))
+      }} />
       <div className="relative mb-8 rounded-2xl border border-[#dcc9af] bg-gradient-to-r from-[#fffdf9] via-[#fcf5e8] to-[#f7eedc] p-7 shadow-sm">
         <p className="site-eyebrow mb-2"><span className="eyebrow-line" /> TỦ SÁCH TỬ VI / NGUỒN THAM KHẢO</p>
         <h1 className="font-serif text-3xl font-bold text-son sm:text-4xl">Cổ thư Tử Vi Đẩu Số</h1>

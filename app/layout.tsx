@@ -8,8 +8,8 @@ import FunnelTracker from '@/components/FunnelTracker';
 
 export const metadata: Metadata = {
   metadataBase:new URL(SITE_ORIGIN),
-  title: {default:'Lập lá số Tử Vi miễn phí và luận giải | '+SITE_NAME,template:'%s | '+SITE_NAME},
-  description: 'Lập lá số Tử Vi Đẩu Số miễn phí, xem 12 cung, đại hạn, lưu niên và luận giải chi tiết.',
+  title: {default:'Ứng dụng Lập lá số Tử Vi Đẩu Số online miễn phí | '+SITE_NAME,template:'%s | '+SITE_NAME},
+  description: 'Ứng dụng lập lá số Tử Vi Đẩu Số online miễn phí, lấy lá số chuẩn xác 12 cung, đại hạn, lưu niên và xem giải đoán vận hạn trọn đời chi tiết.',
   verification: {google: process.env.GOOGLE_SITE_VERIFICATION || undefined},
   icons: {
     icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],

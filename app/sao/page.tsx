@@ -1,8 +1,13 @@
 import type { Metadata } from 'next';
 import { STARS } from '@/lib/stars';
-import {publicMetadata} from '@/lib/seo';
+import {publicMetadata, SITE_ORIGIN} from '@/lib/seo';
+import StructuredData from '@/components/StructuredData';
 
-export const metadata: Metadata = publicMetadata('/sao','14 chính tinh trong Tử Vi – ý nghĩa từng sao','Tìm hiểu 14 chính tinh, tính chất và cách đọc sao trong các cung. Đối chiếu ý nghĩa truyền thống với chính tinh và phụ tinh trên lá số của bạn.');
+export const metadata: Metadata = publicMetadata(
+  '/sao',
+  '14 Chính Tinh trong Tử Vi Đẩu Số: Ý Nghĩa, Vị Trí & Cách Luận',
+  'Tra cứu trọn bộ 14 chính tinh trong Tử Vi Đẩu Số: Tử Vi, Thiên Cơ, Thái Dương, Vũ Khúc... Phân tích miếu hãm, ngũ hành, tính chất và cách luận giải chuẩn xác.'
+);
 
 const ELEMENT_BADGE: Record<string, string> = {
   'Thổ': 'bg-[#fbf3e5] text-[#7a5522] border-[#e2d0b5]',
@@ -23,6 +28,18 @@ const ELEMENT_BORDER: Record<string, string> = {
 export default function SaoIndex() {
   return (
     <main className="editorial-page mx-auto max-w-5xl px-4 py-10">
+      <StructuredData data={{
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: '14 Chính Tinh trong Tử Vi Đẩu Số',
+        description: 'Danh mục 14 chính tinh chủ quản trên lá số Tử Vi Đẩu Số',
+        itemListElement: STARS.map((s, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          name: `Sao ${s.name}`,
+          url: `${SITE_ORIGIN}/sao/${s.slug}`
+        }))
+      }} />
       <div className="relative mb-8 rounded-2xl border border-[#dcc9af] bg-gradient-to-r from-[#fffdf9] via-[#fcf5e8] to-[#f7eedc] p-7 shadow-sm">
         <p className="site-eyebrow mb-2"><span className="eyebrow-line" /> TỦ SÁCH TỬ VI / TRA CỨU</p>
         <h1 className="font-serif text-3xl font-bold text-son sm:text-4xl">14 chính tinh trong Tử Vi</h1>

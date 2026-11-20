@@ -105,8 +105,8 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: 'khong-biet-gio-sinh',
-    title: 'Không biết giờ sinh có lập lá số Tử Vi được không?',
-    description: 'Cần làm gì khi chưa biết giờ sinh, sinh gần ranh giới canh giờ hoặc chỉ nhớ khoảng giờ? Hiểu giới hạn trước khi lập và đọc lá số.',
+    title: 'Không biết giờ sinh có xem Tử Vi được không? Cách xác định chuẩn',
+    description: 'Không biết chính xác giờ sinh hoặc chỉ nhớ khoảng giờ thì lấy lá số Tử Vi thế nào? Hướng dẫn cách định giờ sinh chuẩn xác và đối chiếu thực tế.',
     intro: 'Bạn có thể tạo một lá số với giờ giả định, nhưng kết quả chỉ ứng với giờ đã chọn. Website hiện yêu cầu chọn canh giờ và không có chức năng tự tìm lại giờ sinh.',
     sections: [
       {id: 'vi-sao-can-gio', title: 'Vì sao giờ sinh là dữ liệu cần xác nhận?', paragraphs: [

@@ -20,9 +20,22 @@ export default async function GuidePage({params}: {params: Promise<{slug: string
   const guide = findGuide((await params).slug);
   if (!guide) notFound();
   const path = `/huong-dan/${guide.slug}`;
+  const questionSections = guide.sections.filter(s => s.title.includes('?'));
   return <main className="editorial-page mx-auto max-w-3xl px-4 py-10">
     <Breadcrumbs items={[{name: 'Trang chủ', path: '/'}, {name: 'Hướng dẫn', path: '/huong-dan'}, {name: guide.title, path}]}/>
     <StructuredData data={{'@context': 'https://schema.org', '@type': 'Article', headline: guide.title, description: guide.description, inLanguage: 'vi-VN', mainEntityOfPage: new URL(path, SITE_ORIGIN).href, author: {'@type': 'Organization', name: SITE_NAME, url: `${SITE_ORIGIN}/phuong-phap`}, publisher: {'@type': 'Organization', name: SITE_NAME, url: SITE_ORIGIN}}}/>
+    {questionSections.length > 0 && <StructuredData data={{
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: questionSections.map(s => ({
+        '@type': 'Question',
+        name: s.title,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: s.paragraphs.join(' ')
+        }
+      }))
+    }}/>}
     <article>
       <h1 className="font-serif text-3xl font-bold leading-tight text-son md:text-4xl">{guide.title}</h1>
       <p className="mt-3 text-sm leading-relaxed text-[#6b5b45]">Nội dung do chúng tôi biên soạn. <a href="/phuong-phap" className="underline">Nguồn và phương pháp</a></p>
