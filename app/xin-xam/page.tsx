@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { publicMetadata } from '@/lib/seo';
 import XinXamWidget from '@/components/XinXamWidget';
+import StructuredData from '@/components/StructuredData';
 
 export const metadata: Metadata = publicMetadata(
   '/xin-xam',
@@ -8,9 +9,36 @@ export const metadata: Metadata = publicMetadata(
   'Tĩnh tâm xin xăm Quan Âm trực tuyến với 100 linh quẻ cổ truyền, thơ tứ tuyệt, điển cố xưa và lời bình giải chi tiết cho công danh, tài lộc, gia đạo.'
 );
 
+const XIN_XAM_FAQS = [
+  {
+    question: 'Xin xăm Quan Âm online có linh nghiệm không?',
+    answer: 'Cổ nhân dạy: "Tâm thành tất ứng". Khi xin xăm trực tuyến, nếu giữ tâm ý thanh tịnh, chuyên nhất hướng thiện và thành tâm cầu lời khuyên thì lời quẻ đều mang tính chiêm nghiệm và soi sáng đường đi rất chuẩn xác.'
+  },
+  {
+    question: 'Mỗi ngày nên xin xăm Quan Âm mấy lần?',
+    answer: 'Mỗi ngày chỉ nên xin một quẻ cho một việc muốn hỏi. Tránh việc xin liên tiếp nhiều quẻ cho cùng một việc khiến tâm ý bị phân tán.'
+  },
+  {
+    question: 'Ý nghĩa các thứ bậc quẻ xăm Quan Âm?',
+    answer: '100 quẻ xăm Quan Âm được chia thành các bậc: Thượng Thượng (Đại Cát Đại Lợi), Thượng Cát (May Mắn Thuận Lợi), Trung Cát (Trung Bình Cát Lợi), Trung Bình (Bình Thường Ổn Định) và Hạ Hạ (Cần Cẩn Trọng Tích Đức Hóa Giải).'
+  }
+];
+
 export default function XinXamPage() {
   return (
     <main className="editorial-page mx-auto max-w-5xl px-4 py-10">
+      <StructuredData data={{
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: XIN_XAM_FAQS.map(faq => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer
+          }
+        }))
+      }} />
       {/* Header Card */}
       <div className="relative mb-8 rounded-2xl border border-[#dcc9af] bg-gradient-to-r from-[#fffdf9] via-[#fcf5e8] to-[#f7eedc] p-6 sm:p-8 shadow-sm">
         <p className="site-eyebrow mb-2">

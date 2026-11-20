@@ -21,8 +21,8 @@ const inputSource = {name: 'Phương pháp và quy ước nhập dữ liệu tr�
 export const GUIDES: Guide[] = [
   {
     slug: 'cach-doc-la-so-tu-vi',
-    title: 'Cách đọc lá số Tử Vi cho người mới: bắt đầu từ đâu?',
-    description: 'Hướng dẫn đọc lá số theo từng bước: kiểm tra ngày giờ sinh, xác định Mệnh và Thân, xem các cung, chính tinh, đại hạn và lưu niên.',
+    title: 'Cách Đọc Lá Số Tử Vi Chi Tiết Từng Bước Cho Người Mới',
+    description: 'Hướng dẫn cách đọc lá số Tử Vi chi tiết từ cơ bản: Nhận diện Cung Mệnh, Thân, 14 chính tinh, phụ tinh, đại hạn và lưu niên chuẩn xác.',
     intro: 'Một lá số có nhiều tên sao và ký hiệu, nhưng bạn không cần đọc tất cả cùng lúc. Hãy bắt đầu từ dữ liệu sinh, sau đó đọc từng lớp thông tin. Bài này giúp bạn sử dụng lá số trên website và hiểu cách diễn giải truyền thống.',
     sections: [
       {id: 'kiem-tra-du-lieu', title: '1. Kiểm tra ngày, loại lịch và giờ sinh', paragraphs: [
@@ -47,8 +47,8 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: 'y-nghia-12-cung',
-    title: 'Ý nghĩa 12 cung trong lá số Tử Vi và cách tra cứu',
-    description: 'Tra cứu ý nghĩa 12 cung Tử Vi: Mệnh, Phụ Mẫu, Phúc Đức, Điền Trạch, Quan Lộc, Nô Bộc, Thiên Di, Tật Ách, Tài Bạch, Tử Nữ, Phu Thê, Huynh Đệ.',
+    title: 'Ý Nghĩa 12 Cung Trong Tử Vi Đẩu Số: Mệnh, Thân, Tài, Quan...',
+    description: 'Tra cứu chi tiết ý nghĩa 12 cung Tử Vi: Mệnh, Phụ Mẫu, Phúc Đức, Điền Trạch, Quan Lộc, Nô Bộc, Thiên Di, Tật Ách, Tài Bạch, Tử Tức, Phu Thê, Huynh Đệ.',
     intro: 'Mười hai cung là mười hai nhóm chủ đề dùng để tổ chức việc đọc lá số theo truyền thống. Tên cung cho biết bạn đang xem lĩnh vực nào; sao nằm trong cung là một lớp thông tin khác. Không thể chỉ nhìn tên cung để kết luận tốt hoặc xấu.',
     sections: [
       {id: 'muoi-hai-cung', title: '12 cung thường được hiểu như thế nào?', paragraphs: ['Bảng dưới đây giải thích phạm vi biểu tượng, không mô tả những sự kiện chắc chắn sẽ xảy ra trong đời một người.'], items: [
@@ -79,8 +79,8 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: 'nhap-ngay-am-hay-duong',
-    title: 'Lập lá số Tử Vi nhập ngày âm hay dương lịch?',
-    description: 'Cách chọn âm lịch hoặc dương lịch khi lập lá số, đánh dấu tháng nhuận, đối chiếu ngày sau chuyển đổi và tránh nhập nhầm ngày sinh.',
+    title: 'Lập Lá Số Tử Vi Nên Nhập Ngày Âm Hay Ngày Dương Lịch?',
+    description: 'Hướng dẫn chọn loại lịch âm hoặc dương khi lập lá số Tử Vi online. Cách tính tháng nhuận, đổi ngày giờ sinh can chi chính xác nhất.',
     intro: 'Website cho phép nhập cả âm lịch và dương lịch. Hãy chọn loại lịch đúng với ngày sinh bạn đang có. Bạn không cần tự chuyển ngày nếu đã biết chắc ngày đó thuộc lịch nào.',
     sections: [
       {id: 'chon-loai-lich', title: 'Có ngày dương lịch: nhập trực tiếp', paragraphs: [
@@ -131,8 +131,8 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: 'dai-han-va-luu-nien',
-    title: 'Đại hạn và lưu niên là gì? Cách xem trên lá số',
-    description: 'Phân biệt lá số gốc, đại hạn 10 năm và lưu niên theo năm xem hạn; cách đọc khoảng tuổi và giới hạn của thông tin vận năm trên website.',
+    title: 'Cách Xem Đại Hạn 10 Năm & Lưu Niên Từng Năm Trong Tử Vi',
+    description: 'Hướng dẫn cách xem đại hạn 10 năm và lưu niên từng năm trên lá số Tử Vi. Cách nhận diện vận hạn thăng trầm, cơ hội tài lộc và giai đoạn cần cẩn trọng.',
     intro: 'Đại hạn và lưu niên là hai lớp thời gian trong cách luận Tử Vi truyền thống. Hiểu chúng là những khung tham khảo giúp bạn tránh nhầm một đoạn nói về giai đoạn dài với kết luận cho một năm cụ thể.',
     sections: [
       {id: 'ba-lop', title: 'Lá số gốc, đại hạn và lưu niên khác nhau ra sao?', paragraphs: [
@@ -157,8 +157,8 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: 'chinh-tinh-va-phu-tinh',
-    title: 'Chính tinh, phụ tinh và cung vô chính diệu là gì?',
-    description: 'Phân biệt 14 chính tinh với phụ tinh, hiểu cung vô chính diệu, các ký hiệu miếu vượng và tứ hóa để tránh đọc lá số từ một sao đơn lẻ.',
+    title: 'Phân Biệt 14 Chính Tinh & Phụ Tinh Trong Tử Vi Đẩu Số',
+    description: 'Phân biệt vai trò 14 chính tinh và hệ thống phụ tinh, lục sát, cát tinh trên lá số Tử Vi. Tìm hiểu cung vô chính diệu, miếu hãm và hóa khí chuẩn xác.',
     intro: 'Tên sao trên lá số là những ký hiệu của hệ thống Tử Vi, không phải mô tả thiên văn trực tiếp về các ngôi sao đang ở trên trời. Bài này giúp bạn phân biệt các nhóm thông tin trước khi tra nghĩa từng sao.',
     sections: [
       {id: 'chinh-tinh', title: '14 chính tinh là lớp thông tin nào?', paragraphs: [

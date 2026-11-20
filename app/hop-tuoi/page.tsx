@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { publicMetadata } from '@/lib/seo';
 import CompatibilityView from '@/components/CompatibilityView';
+import StructuredData from '@/components/StructuredData';
 
 export const metadata: Metadata = publicMetadata(
   '/hop-tuoi',
@@ -8,9 +9,36 @@ export const metadata: Metadata = publicMetadata(
   'Bình giải tương hợp 2 tuổi theo Ngũ Hành Nạp Âm, Thiên Can Địa Chi, Cung Phi Bát Trạch và Tử Vi Đẩu Số. Nhận diện điểm sáng, thách thức và cách hóa giải thực tế.'
 );
 
+const HOP_TUOI_FAQS = [
+  {
+    question: 'Xem bói hợp tuổi vợ chồng và làm ăn dựa trên những căn cứ nào?',
+    answer: 'Hệ thống đối chiếu chuyên sâu theo 4 trụ cột truyền thống: Ngũ Hành Nạp Âm bản mệnh (tương sinh, tương khắc), Thiên Can Địa Chi (tam hợp, lục hợp, xung hại), Cung Phi Bát Trạch (Sinh Khí, Diên Niên, Tuyệt Mệnh...) và tổ hợp cung vị Tử Vi Đẩu Số.'
+  },
+  {
+    question: 'Hai người khắc mệnh ngũ hành có lấy nhau hoặc làm ăn được không?',
+    answer: 'Hoàn toàn được. Cổ thư luôn nhấn mạnh "Đức năng thắng số". Khi mệnh khắc nhau, có thể chọn năm sinh con hợp bố mẹ làm cầu nối ngũ hành trung gian, bố trí hướng phòng ngủ/bàn làm việc hợp phong thủy và đặc biệt là sự nhường nhịn, tôn trọng lẫn nhau.'
+  },
+  {
+    question: 'Cung Phi Bát Trạch ảnh hưởng thế nào đến hôn nhân?',
+    answer: 'Cung Phi dựa trên quái mệnh nam nữ kết hợp theo Bát Du Niên. Nếu gặp Sinh Khí, Diên Niên, Thiên Y thì gia đạo êm ấm thịnh vượng. Nếu gặp Tuyệt Mệnh, Ngũ Quỷ, Lục Sát, Họa Hại thì cần dùng phong thủy hướng nhà và hướng bếp để hóa giải.'
+  }
+];
+
 export default function HopTuoiPage() {
   return (
     <main className="editorial-page mx-auto max-w-5xl px-4 py-10">
+      <StructuredData data={{
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: HOP_TUOI_FAQS.map(faq => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer
+          }
+        }))
+      }} />
       {/* Header Card */}
       <div className="relative mb-8 rounded-2xl border border-[#dcc9af] bg-gradient-to-r from-[#fffdf9] via-[#fcf5e8] to-[#f7eedc] p-6 sm:p-8 shadow-sm">
         <p className="site-eyebrow mb-2">

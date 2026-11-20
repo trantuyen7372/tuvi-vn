@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { publicMetadata } from '@/lib/seo';
 import AlmanacCalendar from '@/components/AlmanacCalendar';
+import StructuredData from '@/components/StructuredData';
 
 export const metadata: Metadata = publicMetadata(
   '/xem-ngay',
@@ -8,9 +9,36 @@ export const metadata: Metadata = publicMetadata(
   'Tra cứu lịch vạn niên theo Âm Dương, xem ngày tốt xấu, giờ hoàng đạo và chọn ngày khai trương, cưới hỏi, xuất hành chính xác theo cổ thư.'
 );
 
+const ALMANAC_FAQS = [
+  {
+    question: 'Ngày hoàng đạo là gì và khác gì ngày hắc đạo?',
+    answer: 'Ngày hoàng đạo là ngày có các thiên thần thiện tinh chiếu rọi, mang lại sinh khí tốt lành, rất thích hợp cho các việc lớn như khai trương, cưới hỏi, xuất hành. Ngược lại, ngày hắc đạo là ngày có ác tinh trấn thủ, nên kiêng kỵ các việc đại sự.'
+  },
+  {
+    question: 'Thập Nhị Kiến Trừ (12 Trực) ứng dụng thế nào khi chọn ngày tốt?',
+    answer: 'Thập Nhị Trực gồm Kiến, Trừ, Mãn, Bình, Định, Chấp, Phá, Nguy, Thành, Thâu, Khai, Bế. Mỗi trực cai quản một ngày và mang ý nghĩa cát hung riêng cho từng loại công việc cụ thể.'
+  },
+  {
+    question: 'Giờ hoàng đạo trong ngày được tính như thế nào?',
+    answer: 'Mỗi ngày có 12 giờ âm lịch (tương ứng 12 địa chi). Trong đó có 6 giờ hoàng đạo (tốt) và 6 giờ hắc đạo (xấu). Khởi giờ hoàng đạo dựa trên địa chi của ngày theo bài thơ Lục Nhật Hoàng Đạo truyền thống.'
+  }
+];
+
 export default function XemNgayPage() {
   return (
     <main className="editorial-page mx-auto max-w-6xl px-4 py-10">
+      <StructuredData data={{
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: ALMANAC_FAQS.map(faq => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer
+          }
+        }))
+      }} />
       {/* Hero Header Card */}
       <div className="relative mb-8 rounded-2xl border border-[#dcc9af] bg-gradient-to-r from-[#fffdf9] via-[#fcf5e8] to-[#f7eedc] p-6 sm:p-8 shadow-sm">
         <p className="site-eyebrow mb-2">
